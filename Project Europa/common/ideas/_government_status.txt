@@ -1,0 +1,1023 @@
+ideas = {
+
+	gov_rank = { 
+		law = yes
+		duchy_rank = {
+			
+			removal_cost = -1
+			
+			cost = 0
+			
+			available = {
+				NOT = { has_idea = kingdom_rank }
+				NOT = { has_idea = empire_rank }
+			}
+			
+			modifier = {
+			}
+			
+			cancel_if_invalid = no
+		}
+		kingdom_rank = {
+			
+			removal_cost = -1
+			
+			cost = 0
+			
+			available = {
+				num_of_factories > 30
+				is_subject = no
+				NOT = { has_idea = empire_rank }
+			}
+			
+			modifier = {
+				political_power_gain = -0.1
+				production_speed_buildings_factor = 0.1
+				justify_war_goal_time = -0.1
+				consumer_goods_factor = -0.025
+			}
+			
+			cancel_if_invalid = no
+		}
+		empire_rank = {
+			
+			removal_cost = -1
+			
+			cost = 0
+			
+			available = {
+				num_of_factories > 100
+				is_subject = no
+				NOT = {has_idea = duchy_rank }
+			}
+			
+			modifier = {
+				political_power_gain = -0.2
+				production_speed_buildings_factor = 0.2
+				justify_war_goal_time = -0.2
+				consumer_goods_factor = -0.05
+			}
+			
+			cancel_if_invalid = no
+		}
+	}
+	gov_type = { 
+		law = yes
+		monarchy_type = {
+			
+			removal_cost = -1
+			
+			cost = 500
+			
+			allowed_to_remove = {
+				always = yes
+			}
+			on_add = {
+				#remove_ideas = {
+				#	despotic_monarchy
+				#	feudal_monarchy
+				#	administrative_monarchy
+				#	constitutional_monarchy
+				#	enlightened_despotism
+				#	revolutionary_empire
+				#	elective_monarchy
+				#	daimyo
+				#	shogunate
+				#	khanate
+				#}
+			 }
+			modifier = {
+			}
+			
+			cancel_if_invalid = no
+		}
+		republic_type = {
+			
+			removal_cost = -1
+			
+			cost = 500
+			
+			allowed_to_remove = {
+				always = yes
+			}
+			
+			modifier = {
+			}
+			
+			cancel_if_invalid = no
+		}
+		theocracy_type = {
+			
+			removal_cost = -1
+			
+			cost = 500
+			
+			allowed_to_remove = {
+				always = yes
+			}
+			
+			modifier = {
+			}
+			
+			cancel_if_invalid = no
+		}
+	}
+	gov_subtype = { 
+		law = yes
+		#GENERIC MONARCHY SUBTYPES#
+		despotic_monarchy = {
+			
+			removal_cost = -1
+			
+			cost = 100
+			
+			visible = {
+				has_idea = monarchy_type
+			}
+			
+			available = {
+				has_tech = feudal_monarchy_tech
+			}
+			
+			modifier = {
+				war_support_factor = 0.05
+				production_speed_buildings_factor = 0.025
+				compliance_gain = 0.2
+				consumer_goods_factor = -0.025
+			}
+			
+			cancel_if_invalid = no
+		}
+		feudal_monarchy = {
+			
+			removal_cost = -1
+			
+			visible = {
+				has_idea = monarchy_type
+			}
+			
+			available = {
+				has_tech = feudal_monarchy_tech
+			}
+			
+			cost = 100
+			
+			modifier = {
+				cic_to_target_factor = -0.25
+				mic_to_target_factor = -0.25	
+				conscription_factor = 0.1
+				production_speed_buildings_factor = 0.05
+				consumer_goods_factor = -0.025
+			}
+			
+			cancel_if_invalid = no
+		}
+		administrative_monarchy = {
+			
+			removal_cost = -1
+			
+			visible = {
+				has_idea = monarchy_type
+			}
+			
+			available = {
+				has_tech = early_modern_administration_tech
+			}
+			
+			cost = 100
+			
+			modifier = {	
+				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = 0.1
+				political_power_factor = 0.05
+				production_speed_buildings_factor = 0.075
+				consumer_goods_factor = -0.05
+			}
+			
+			cancel_if_invalid = no
+		}
+		constitutional_monarchy = {
+			
+			removal_cost = -1
+			
+			visible = {
+				has_idea = monarchy_type
+			}
+			
+			available = {
+				has_tech = the_constitution_tech
+			}
+			
+			cost = 100
+			
+			modifier = {	
+				war_support_factor = -0.3
+				political_power_gain = 1
+				production_speed_buildings_factor = 0.075
+				consumer_goods_factor = -0.1				
+			}
+			
+			cancel_if_invalid = no
+		}
+		enlightened_despotism = {
+			
+			removal_cost = -1
+			
+			visible = {
+				has_idea = monarchy_type
+			}
+			
+			available = {
+				has_tech = rights_of_man_tech
+			}
+			
+			cost = 100
+			
+			modifier = {	
+				political_power_factor = 0.075
+				conscription_factor = 0.1
+				consumer_goods_factor = -0.1
+				production_speed_buildings_factor = 0.075
+				war_support_factor = 0.1
+			}
+			
+			cancel_if_invalid = no
+		}
+		revolutionary_empire = {
+			
+			removal_cost = -1
+			
+			visible = {
+				has_idea = monarchy_type
+			}
+			
+			available = {
+				has_tech = revolutionary_ideals_tech
+				has_idea = empire_rank
+			}
+			
+			cost = 100
+			
+			modifier = {
+				army_org_Factor = 0.1
+				conscription_factor = 0.25
+				production_speed_buildings_factor = 0.075
+				consumer_goods_factor = -0.2			
+			}
+			
+			cancel_if_invalid = no
+		}
+		#UNIQUE MONARCHY SUBTYPES#
+		elective_monarchy = {
+			
+			removal_cost = -1
+			
+			allowed = {
+				original_tag = POL
+			}
+			
+			visible = {
+				has_idea = monarchy_type
+			}
+			
+			available = {
+				has_idea = monarchy_type
+				always = no
+			}
+			
+			cost = 100
+			
+			modifier = {
+				cic_to_target_factor = -0.25
+				mic_to_target_factor = -0.25
+				production_speed_buildings_factor = 0.05
+				war_support_factor = -0.3
+				consumer_goods_factor = -0.05
+				compliance_gain = 0.2
+			}
+			
+			cancel_if_invalid = no
+			
+			allowed_to_remove = {
+				always = no
+			}
+		}
+		daimyo = {
+			
+			removal_cost = -1
+			
+			allowed = {
+				always = no
+			}
+			
+			visible = {
+				has_idea = monarchy_type
+			}
+			
+			available = {
+				has_idea = monarchy_type
+				always = no
+			}
+			
+			cost = 100
+			
+			modifier = {
+				army_defence_factor = 0.1
+				army_attack_factor = 0.1
+				army_org_factor = 0.1
+			}
+			
+			cancel_if_invalid = no
+			
+			allowed_to_remove = {
+				always = no
+			}
+		}
+		shogunate = {
+			
+			removal_cost = -1
+			
+			allowed = {
+				always = no
+			}
+			
+			visible = {
+				has_idea = monarchy_type
+			}
+			
+			available = {
+				has_idea = monarchy_type
+				always = no
+			}
+			
+			cost = 100
+			
+			modifier = {
+				justify_war_goal_time=-0.25
+				war_support_factor=0.05
+				production_speed_buildings_factor=0.05
+			}
+			
+			cancel_if_invalid = no
+			
+			allowed_to_remove = {
+				always = no
+			}
+		}
+		khanate = {
+			
+			removal_cost = -1
+			
+			allowed = {
+				always = no
+			}
+			
+			visible = {
+				has_idea = monarchy_type
+			}
+			
+			available = {
+				has_idea = monarchy_type
+				always = no
+			}
+			
+			cost = 100
+			
+			modifier = {
+				supply_consumption_factor = -0.2
+				conscription_factor = 0.2
+			}
+			
+			cancel_if_invalid = no
+			
+			allowed_to_remove = {
+				always = no
+			}
+		}
+		#GENERIC REPUBLIC SUBTYPES#
+		merchant_republic = {
+			
+			removal_cost = -1
+			
+			cost = 100
+			
+			visible = {
+				has_idea = republic_type
+			}
+			
+			available = {
+				has_tech = feudal_monarchy_tech
+				num_of_controlled_states < 10
+			}
+			
+			modifier = {
+				extra_trade_to_target_factor = 0.5
+				trade_cost_for_target_factor = -0.5
+				production_speed_buildings_factor = 0.025
+				consumer_goods_factor = -0.025
+				local_resources_factor=0.2
+				war_support_factor = -0.5
+			}
+			
+			cancel_if_invalid = no
+		}
+		oligarchic_republic = {
+			
+			removal_cost = -1
+			
+			cost = 100
+			
+			visible = {
+				has_idea = republic_type
+			}
+			
+			available = {
+				has_tech = feudal_monarchy_tech
+			}
+			
+			modifier = {
+				political_power_factor = 0.05
+				stability_factor = 0.05
+				production_speed_buildings_factor = 0.05
+				consumer_goods_factor = -0.05
+				war_support_factor = -0.5
+			}
+			
+			cancel_if_invalid = no
+		}
+		administrative_republic = {
+			
+			removal_cost = -1
+			
+			visible = {
+				has_idea = republic_type
+			}
+			
+			available = {
+				has_tech = early_modern_administration_tech
+			}
+			
+			cost = 100
+			
+			modifier = {	
+				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = 0.1
+				consumer_goods_factor = -0.075
+				production_speed_buildings_factor = 0.075
+				war_support_factor = -0.3
+			}
+			
+			cancel_if_invalid = no
+		}
+		republican_dictatorship = {
+			
+			removal_cost = -1
+			
+			visible = {
+				has_idea = republic_type
+			}
+			
+			available = {
+				always = no
+			}
+			
+			cost = 100
+			
+			modifier = {	
+				compliance_gain = 0.2
+				army_org_Factor = 0.1
+				consumer_goods_factor = -0.1
+				production_speed_buildings_factor = 0.075
+				war_support_weekly = -0.01
+			}
+			
+			cancel_if_invalid = no
+		}
+		constitutional_republic = {
+			
+			removal_cost = -1
+			
+			visible = {
+				has_idea = republic_type
+			}
+			
+			available = {
+				has_tech = the_constitution_tech
+			}
+			
+			cost = 100
+			
+			modifier = {	
+				extra_trade_to_target_factor = 0.1
+				trade_cost_for_target_factor = -0.1
+				local_resources_factor=0.1
+				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = 0.1
+				consumer_goods_factor = -0.1
+				production_speed_buildings_factor = 0.075
+				war_support_factor = -0.3
+			}
+			
+			cancel_if_invalid = no
+		}
+		bureaucratic_despotism = {
+			
+			removal_cost = -1
+			
+			visible = {
+				has_idea = republic_type
+			}
+			
+			available = {
+				always = no
+			}
+			
+			cost = 100
+			
+			modifier = {	
+				stability_factor = 0.2
+				consumer_goods_factor = -0.1
+				production_speed_buildings_factor = 0.075
+			}
+			
+			cancel_if_invalid = no
+		}
+		revolutionary_republic = {
+			
+			removal_cost = -1
+			
+			visible = {
+				has_idea = republic_type
+			}
+			
+			available = {
+				has_tech = revolutionary_ideals_tech
+				has_idea = empire_rank
+			}
+			
+			cost = 100
+			
+			modifier = {
+				compliance_gain = 0.2
+				army_org_Factor = 0.1
+				consumer_goods_factor = -0.2
+				production_speed_buildings_factor = 0.075
+			}
+			
+			cancel_if_invalid = no
+		}
+		#UNIQUE REPUBLIC SUBTYPES#
+		
+		#THEOCRACY SUBTYPES#
+		papacy = {
+			
+			removal_cost = -1
+			
+			cost = 100
+			
+			visible = {
+				has_idea = theocracy_type
+			}
+			
+			available = {
+				original_tag = PAP
+				has_idea = kingdom_rank
+			}
+			
+			modifier = {
+				compliance_gain = 0.2
+				consumer_goods_factor = -0.05
+				production_speed_buildings_factor = 0.1
+			}
+			
+			allowed_to_remove = {
+				always=no
+			}
+			
+			cancel_if_invalid = no
+		}
+		theocracy = {
+			
+			removal_cost = -1
+			
+			cost = 100
+			
+			visible = {
+				has_idea = theocracy_type
+			}
+			
+			modifier = {
+				compliance_gain = 0.2
+				drift_defence_factor = 0.2
+				consumer_goods_factor = -0.025
+				production_speed_buildings_factor = 0.05
+			}
+			
+			cancel_if_invalid = no
+		}
+		monastic_order = {
+			
+			removal_cost = -1
+			
+			cost = 100
+			
+			visible = {
+				has_idea = theocracy_type
+			}
+			
+			modifier = {
+				compliance_gain = 0.2
+				production_speed_bunker_factor = 0.2
+				production_speed_buildings_factor = 0.025
+			}
+			
+			cancel_if_invalid = no
+		}
+	}
+	institutions = { 
+		law = yes
+		tribalism = {
+			
+			removal_cost = -1
+			
+			cost = 0
+
+			available = {
+				NOT = {
+					OR = {
+						has_idea = feudalism
+						has_idea = renaissance
+						has_idea = colonialism
+					}
+				}
+			}
+			
+			modifier = {
+				research_speed_factor = -0.5
+			}
+			
+			cancel_if_invalid = no
+		}
+		feudalism = {
+			
+			removal_cost = -1
+			
+			cost = 250
+
+			available = {
+				any_country = {
+					AND = {
+						is_neighbor_of = ROOT
+						has_idea = feudalism
+					}
+				}
+				has_idea = tribalism
+			}
+			
+			modifier = {
+				military_leader_cost_factor = -0.2
+			}
+			
+			cancel_if_invalid = no
+		}
+		renaissance = {
+			
+			removal_cost = -1
+			
+			cost = 500
+
+			available = {
+				any_country = {
+					AND = {
+						is_neighbor_of = ROOT
+						has_idea = renaissance
+					}
+				}
+				has_idea = feudalism
+			}
+			
+			modifier = {
+				production_speed_buildings_factor = 0.05
+				research_speed_factor = 0.125
+			}
+			
+			cancel_if_invalid = no
+		}
+		colonialism = {
+			
+			removal_cost = -1
+			
+			cost = 750
+
+			available = {
+				any_country = {
+					AND = {
+						is_neighbor_of = ROOT
+						has_idea = colonialism
+					}
+				}
+				has_idea = renaissance
+			}
+			
+			modifier = {
+				local_resources_factor = 0.1
+				research_speed_factor = 0.25
+			}
+			
+			cancel_if_invalid = no
+		}
+	}
+	economic_advisors = { 
+		# ECONOMIC	
+		generic_treasurer = {
+			
+			allowed = {
+				always=yes
+				
+			}
+
+			available = {
+			}
+			
+			traits = { treasurer }
+	
+			on_add = {
+			}
+	
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		generic_architect = {
+			
+			allowed = {
+				always=yes
+			}
+
+			available = {
+			}
+			
+			traits = { architect }
+	
+			on_add = {
+			}
+	
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		generic_artist = {
+			
+			allowed = {
+				always=yes
+			}
+
+			available = {
+			}
+			
+			traits = { artist }
+	
+			on_add = {
+			}
+	
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		generic_theologian = {
+			
+			allowed = {
+				always=yes
+			}
+
+			available = {
+			}
+			
+			traits = { theologian }
+	
+			on_add = {
+			}
+	
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		generic_philosopher = {
+			
+			allowed = {
+				always=yes
+			}
+
+			available = {
+			}
+			
+			traits = { philosopher }
+	
+			on_add = {
+			}
+	
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		generic_inquisitor = {
+
+			allowed = {
+				always=yes
+			}
+
+			traits = { inquisitor }
+
+			on_add = {
+			}
+
+			ai_will_do = {
+				factor=1
+			}
+		}
+	}
+	maritime_advisors = { 
+		generic_statesman = {
+
+			allowed = {
+				always=yes
+			}
+
+			traits = { statesman }
+
+			on_add = {
+			}
+
+			ai_will_do = {
+				factor=1
+			}
+		}
+		generic_trader = {
+
+			allowed = {
+				always=yes
+			}
+
+			traits = { trader }
+
+			on_add = {
+			}
+
+			ai_will_do = {
+				factor=1
+			}
+		}
+		generic_navigator = {
+
+			allowed = {
+				always=yes
+			}
+
+			traits = { navigator }
+
+			on_add = {
+			}
+
+			ai_will_do = {
+				factor=1
+			}
+		}
+		generic_spymaster = {
+
+			allowed = {
+				always=yes
+			}
+
+			traits = { spymaster }
+
+			on_add = {
+			}
+
+			ai_will_do = {
+				factor=1
+			}
+		}
+		generic_diplomat = {
+
+			allowed = {
+				always=yes
+			}
+
+			traits = { diplomat }
+
+			on_add = {
+			}
+
+			ai_will_do = {
+				factor=1
+			}
+		}
+		generic_naval_reformer = {
+
+			allowed = {
+				always=yes
+			}
+
+			traits = { naval_reformer }
+
+			on_add = {
+			}
+
+			ai_will_do = {
+				factor=1
+			}
+		}
+	}
+	military_advisors = {
+		generic_army_reformer = {
+
+			allowed = {
+				always=yes
+			}
+
+			traits = { army_reformer }
+
+			on_add = {
+			}
+
+			ai_will_do = {
+				factor=1
+			}
+		}
+		generic_commandant = {
+
+			allowed = {
+				always=yes
+			}
+
+			traits = { commandant }
+
+			on_add = {
+			}
+
+			ai_will_do = {
+				factor=1
+			}
+		}
+		generic_quartermaster = {
+
+			allowed = {
+				always=yes
+			}
+
+			traits = { quartermaster }
+
+			on_add = {
+			}
+
+			ai_will_do = {
+				factor=1
+			}
+		}
+		generic_army_recruiter = {
+
+			allowed = {
+				always=yes
+			}
+
+			traits = { army_recruiter }
+
+			on_add = {
+			}
+
+			ai_will_do = {
+				factor=1
+			}
+		}
+		generic_military_engineer = {
+
+			allowed = {
+				always=yes
+			}
+
+			traits = { military_engineer }
+
+			on_add = {
+			}
+
+			ai_will_do = {
+				factor=1
+			}
+		}
+		generic_stablemaster = {
+
+			allowed = {
+				always=yes
+			}
+
+			traits = { stablemaster }
+
+			on_add = {
+			}
+
+			ai_will_do = {
+				factor=1
+			}
+		}
+	}
+}

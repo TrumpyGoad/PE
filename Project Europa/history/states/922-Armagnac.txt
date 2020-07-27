@@ -1,0 +1,32 @@
+state={
+	id=922
+	name="STATE_922"
+	manpower=320339
+	buildings_max_level_factor=1
+	state_category=town
+	resources={
+		aluminium=18
+		chromium=42
+	}
+
+	history={
+		owner=FRA
+		add_core_of=FRA
+		add_core_of=ENG
+		add_core_of=GUY
+		add_core_of=AMG
+		victory_points={
+			929 5
+		}
+		buildings={
+			infrastructure=4
+			arms_factory=1
+			industrial_complex=1
+			powder_mill=1
+		}
+	}
+
+	provinces={
+		929 3740 6759 11699 13310 
+	}
+}

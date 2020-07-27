@@ -1,0 +1,31 @@
+state={
+	id=136
+	name="STATE_136"
+	manpower=72353
+	buildings_max_level_factor=1
+	state_category=large_settlement
+	resources={
+		chromium=13
+	}
+
+	history={
+		owner=SCO
+		add_core_of=SCO
+		victory_points={
+			11136 3
+		}
+		buildings={
+			infrastructure=3
+			arms_factory=1
+			industrial_complex=1
+			dockyard=1
+			11136={
+				naval_base=1
+			}
+		}
+	}
+
+	provinces={
+		200 3150 11055 11136 11207 13294 13295 
+	}
+}

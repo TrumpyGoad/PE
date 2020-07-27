@@ -1,0 +1,28 @@
+state={
+	id=965
+	name="STATE_965"
+	manpower=372692
+	buildings_max_level_factor=1
+	state_category=large_town
+	resources={
+		oil=11
+	}
+
+	history={
+		owner=MLO
+		add_core_of=MLO
+		victory_points={
+			13469 10
+		}
+		buildings={
+			infrastructure=5
+			arms_factory=1
+			industrial_complex=1
+			powder_mill=1
+		}
+	}
+
+	provinces={
+		776 6635 9741 11570 11726 13469 
+	}
+}

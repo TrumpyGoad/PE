@@ -1,0 +1,53 @@
+﻿capital = 293
+
+oob = "YEM_1444"
+
+set_research_slots = 3
+
+add_ideas = {
+	limited_conscription
+}
+set_technology = {
+	pike_weapons = 1
+	infantry_sword_weapons = 1
+	padded_armour_tech = 1
+	plate_armour_tech = 1
+	arbalest_weapons = 1
+	arquebus_weapons = 1
+	war_horse_tech = 1
+	spear_cav_tech = 1
+	lance_cavalry_tech = 1
+	cav_archers_tech = 1
+	cog_tech = 1
+	barque_tech = 1
+	galley_tech = 1
+	carrack_tech = 1
+}
+
+
+set_convoys = 4
+
+set_politics = {	
+	ruling_party = fascism
+	last_election = "1442.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+    fascism = 46.1
+    shia = 53.9
+}
+
+
+
+create_country_leader = {
+	name = "Sultan Yusuf II Rasulid"
+	desc = ""
+	picture = "/gfx/leaders/Middle East/gen_leader5.dds"
+	expire = "9999.1.1"
+	ideology = sun
+	traits = {
+		#
+	}
+}

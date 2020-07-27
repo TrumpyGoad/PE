@@ -1,0 +1,697 @@
+ideas = {
+
+	country = {
+		idea_generic_adapt_swiss_designs = {
+			
+			picture = CZE_planning_bonus
+			
+			equipment_bonus = {
+				pike_equipment = {
+					build_cost_ic = -0.1 instant = yes
+					ap_attack = 0.1
+				}
+			}
+			
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		idea_generic_compensate_weaver_guilds = {
+			
+			picture = new_deal
+			
+			equipment_bonus={
+				padded_armour_equipment = {
+					build_cost_ic = -0.1 instant = yes
+					defense = 0.1
+				}
+			}
+			
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		idea_generic_subsidise_blacksmithing = {
+			
+			picture = generic_production_bonus
+			
+			equipment_bonus={
+				infantry_sword_equipment = {
+					build_cost_ic = -0.1 instant = yes
+					soft_attack = 0.1
+				}
+			}
+			
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		idea_generic_plate_armour_standards = {
+			
+			picture = yug_federal_defense_council
+			
+			equipment_bonus={
+				plate_armour_equipment = {
+					build_cost_ic = -0.1 instant = yes
+					armor_value = 0.1
+				}
+			}
+			
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		idea_generic_embrace_chivalry1 = {
+			
+			picture = generic_intel_bonus
+			
+			equipment_bonus={
+				demilance_equipment = {
+					build_cost_ic = -0.1 instant = yes
+				}
+			}
+			modifier = {
+				justify_war_goal_time=-0.2
+			}
+			
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		idea_generic_embrace_chivalry2 = {
+			
+			picture = generic_intel_bonus
+			
+			equipment_bonus={
+				demilance_equipment = {
+					build_cost_ic = -0.1 instant = yes
+					breakthrough = 0.1
+				}
+			}
+			modifier = {
+				justify_war_goal_time=-0.2
+				war_support_factor=0.1
+			}
+			
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		idea_generic_embrace_chivalry3 = {
+			
+			picture = generic_intel_bonus
+			
+			equipment_bonus={
+				demilance_equipment = {
+					build_cost_ic = -0.1 instant = yes
+					breakthrough = 0.1
+				}
+			}
+			modifier = {
+				justify_war_goal_time=-0.2
+				war_support_factor=0.1
+				drift_defence_factor=0.5
+				stability_factor=0.1
+			}
+			
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		idea_generic_cossack_estates1 = {
+			
+			picture = mex_revolutionary_army
+			
+			modifier = {
+				production_oil_factor=0.1
+				conscription_factor=0.05
+			}
+			
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		idea_generic_cossack_estates2 = {
+			
+			picture = mex_revolutionary_army
+			equipment_bonus={
+				war_horse = {
+					maximum_speed = 0.2 instant = yes
+				}
+			}
+			modifier = {
+				production_oil_factor=0.1
+				conscription_factor=0.05
+				training_time_factor=-0.1
+			}
+			
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		idea_generic_cossack_estates3 = {
+			
+			picture = mex_revolutionary_army
+			
+			equipment_bonus={
+				war_horse = {
+					maximum_speed = 0.2 instant = yes
+				}
+			}
+			modifier = {
+				production_oil_factor=0.1
+				conscription_factor=0.05
+				training_time_factor=-0.1
+				stability_factor=0.1
+				political_power_gain=0.1
+			}
+			
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		idea_generic_slavic_equestrians1 = {
+			
+			picture = hol_shell_shocked_spectator
+			
+			modifier = {
+				conscription_factor=0.1
+			}
+			
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		idea_generic_slavic_equestrians2 = {
+			
+			picture = hol_shell_shocked_spectator
+			
+			equipment_bonus={
+				war_horse = {
+					maximum_speed = 0.1 instant = yes
+				}
+				pike_equipment = {
+					soft_attack = 0.1 instant = yes
+				}
+			}
+			modifier = {
+				conscription_factor=0.1
+			}
+			
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		idea_generic_slavic_equestrians3 = {
+			
+			picture = hol_shell_shocked_spectator
+			
+			equipment_bonus={
+				war_horse = {
+					maximum_speed = 0.1 instant = yes
+				}
+				pike_equipment = {
+					soft_attack = 0.1 instant = yes
+				}
+			}
+			modifier = {
+				conscription_factor=0.1
+				drift_defence_factor=-0.25
+				political_power_factor=0.1
+			}
+			
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		idea_generic_empower_the_archery_guilds1 = {
+			
+			picture = generic_army_problems
+			
+			modifier = {
+				stability_factor=0.1
+			}
+			
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		idea_generic_empower_the_archery_guilds2 = {
+			
+			picture = generic_army_problems
+			
+			equipment_bonus={
+				bow_equipment = {
+					ap_attack = 0.1 instant = yes
+					hard_attack = 0.1
+				}
+			}
+			modifier = {
+				stability_factor=0.1
+			}
+			
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		idea_generic_empower_the_archery_guilds3 = {
+			
+			picture = generic_army_problems
+			
+			equipment_bonus={
+				bow_equipment = {
+					ap_attack = 0.1 instant = yes
+					hard_attack = 0.1
+				}
+			}
+			modifier = {
+				stability_factor=0.1
+				war_support_factor=0.1
+				political_power_gain=0.1
+			}
+			
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		idea_generic_diminish_the_archery_guilds1 = {
+			
+			picture = chi_wargaming_division
+			
+			equipment_bonus={
+				arbalest_equipment = {
+					soft_attack = 0.1 instant = yes
+				}
+			}
+			
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		idea_generic_diminish_the_archery_guilds2 = {
+			
+			picture = chi_wargaming_division
+			
+			equipment_bonus={
+				arbalest_equipment = {
+					soft_attack = 0.1 instant = yes
+					build_cost_ic = -0.2
+				}
+			}
+			
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		idea_generic_abandon_the_archery_guilds1 = {
+			
+			picture = generic_infantry_equipment_manufacturer_2
+			
+			equipment_bonus={
+				arquebus_equipment = {
+					ap_attack = 0.1 instant = yes
+				}
+			}
+			
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		idea_generic_abandon_the_archery_guilds2 = {
+			
+			picture = generic_infantry_equipment_manufacturer_2
+			
+			equipment_bonus={
+				arquebus_equipment = {
+					ap_attack = 0.1 instant = yes
+					build_cost_ic = -0.2
+				}
+			}
+			
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		idea_generic_lax_recruitment_standards = {
+			
+			picture = generic_manpower_bonus
+			
+			modifier = {
+				training_time_factor=-0.2
+				conscription_factor=0.1
+			}
+			
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		idea_generic_stationary_firepower1 = {
+			
+			picture = generic_artillery_manufacturer_2
+			
+			equipment_bonus={
+				mortar_equipment = {
+					defense = 0.2 instant = yes
+				}
+			}
+			
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		idea_generic_stationary_firepower2 = {
+			
+			picture = generic_artillery_manufacturer_2
+			
+			equipment_bonus={
+				mortar_equipment = {
+					defense = 0.2 instant = yes
+					soft_attack = 0.1
+					build_cost_ic = -0.2
+				}
+			}
+			
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		idea_generic_mobile_bombardments1 = {
+			
+			picture = generic_artillery_manufacturer_1
+			
+			equipment_bonus={
+				field_gun_equipment = {
+					build_cost_ic = -0.1 instant=yes
+				}
+			}
+			
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		idea_generic_mobile_bombardments2 = {
+			
+			picture = generic_artillery_manufacturer_1
+			
+			equipment_bonus={
+				field_gun_equipment = {
+					build_cost_ic = -0.1 instant=yes
+					maximum_speed = 0.2
+					breakthrough = 0.1
+				}
+			}
+			
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		idea_generic_endorse_the_roman_papacy1 = {
+			
+			picture = holy_see_approval
+			
+			modifier = {
+			
+			}
+			
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		idea_generic_endorse_the_roman_papacy2 = {
+			
+			picture = holy_see_approval
+			
+			modifier = {
+			
+			}
+			
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		idea_generic_endorse_the_roman_papacy3 = {
+			
+			picture = holy_see_approval
+			
+			modifier = {
+			
+			}
+			
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		idea_generic_rebuke_the_roman_papacy1 = {
+			
+			picture = ast_abandon_the_westminster_system
+			
+			modifier = {
+			
+			}
+			
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		idea_generic_rebuke_the_roman_papacy2 = {
+			
+			picture = ast_abandon_the_westminster_system
+			
+			modifier = {
+			
+			}
+			
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		idea_generic_rebuke_the_roman_papacy3 = {
+			
+			picture = ast_abandon_the_westminster_system
+			
+			modifier = {
+			
+			}
+			
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		idea_generic_obey_byzantine_authorities1 = {
+			
+			picture = yug_orthodox_church_support
+			
+			modifier = {
+			
+			}
+			
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		idea_generic_obey_byzantine_authorities2 = {
+			
+			picture = yug_orthodox_church_support
+			
+			modifier = {
+			
+			}
+			
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		idea_generic_obey_byzantine_authorities3 = {
+			
+			picture = yug_orthodox_church_support
+			
+			modifier = {
+			
+			}
+			
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		idea_generic_professional_sailors1 = {
+			
+			picture = FRA_army_of_aggression_focus
+			
+			modifier = {
+			
+			}
+			
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		idea_generic_professional_sailors2 = {
+			
+			picture = FRA_army_of_aggression_focus
+			
+			modifier = {
+			
+			}
+			
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		idea_generic_enslaved_oarsmen1 = {
+			
+			picture = hol_de_vaarplicht
+			
+			modifier = {
+			
+			}
+			
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		idea_generic_enslaved_oarsmen2 = {
+			
+			picture = hol_de_vaarplicht
+			
+			modifier = {
+			
+			}
+			
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		idea_generic_floating_fortresses1 = {
+			
+			picture = generic_coastal_defense_ships2
+			
+			modifier = {
+			
+			}
+			
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		idea_generic_floating_fortresses2 = {
+			
+			picture = generic_coastal_defense_ships2
+			
+			modifier = {
+			
+			}
+			
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		idea_generic_cheaper_carrack_production1 = {
+			
+			picture = generic_the_london_naval_treaty
+			
+			modifier = {
+			
+			}
+			
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		idea_generic_cheaper_carrack_production2 = {
+			
+			picture = generic_the_london_naval_treaty
+			
+			modifier = {
+			
+			}
+			
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		idea_generic_sturdier_trade_vessels1 = {
+			
+			picture = eng_steady_as_she_goes
+			
+			modifier = {
+			
+			}
+			
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		idea_generic_sturdier_trade_vessels2 = {
+			
+			picture = eng_steady_as_she_goes
+			
+			modifier = {
+			
+			}
+			
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		idea_generic_streamlined_cog_production1 = {
+			
+			picture = can_wartime_prices_and_trade_board
+			
+			modifier = {
+			
+			}
+			
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		idea_generic_streamlined_cog_production2 = {
+			
+			picture = can_wartime_prices_and_trade_board
+			
+			modifier = {
+			
+			}
+			
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		idea_generic_diminish_guild_autonomy = {
+			
+			picture = generic_disjointed_gov
+			
+			modifier = {
+			
+			}
+			
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		idea_generic_favour_guild_autonomy = {
+			
+			picture = rom_carol_ii_hedonist
+			
+			modifier = {
+			
+			}
+			
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		idea_generic_exploitation_effort = {
+			
+			picture = generic_exploit_mines
+			
+			modifier = {
+			
+			}
+			
+			ai_will_do = {
+				factor = 0
+			}
+		}
+	}
+}

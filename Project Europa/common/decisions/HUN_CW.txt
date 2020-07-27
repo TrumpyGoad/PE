@@ -1,0 +1,42 @@
+HCW_cat = {
+	czech_merc = {
+		
+		cost = 50
+		
+		icon=GFX_decision_generic_prepare_civil_war
+			
+		ai_will_do = {
+			factor = 1000
+		}
+			
+		allowed = {
+			original_tag=HUN
+		}
+		
+		available = {
+			has_idea=HCW_idea_czech_merc
+			OR={
+				has_war=yes
+				has_civil_war=yes
+			}
+		}
+		
+		visible = {
+			original_tag=HUN		
+		}
+
+		complete_effect = {
+			hidden_effect={
+				if={
+					limit={ ROOT={ has_country_flag=chosen_vladislav } }
+					load_oob=HCW_Czech_Merc_POL
+				}
+				else_if={
+					limit={ ROOT={ has_country_flag=chosen_ladislaus } }
+					load_oob=HCW_Czech_Merc_AUS
+				}
+			}
+			custom_effect_tooltip = HCW_CZE_Merc
+		}
+	}
+}

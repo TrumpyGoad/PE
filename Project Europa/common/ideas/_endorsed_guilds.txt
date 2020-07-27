@@ -1,0 +1,539 @@
+ideas = {
+
+	infantry_guilds = { 
+		law = yes
+		swordsmen_guild = {
+			
+			removal_cost = 0
+			
+			cost = 100
+
+			allowed={
+				always = yes
+			}
+			available={}
+			
+			equipment_bonus = {
+				sword_equipment = {
+					build_cost_ic = -0.1 instant = yes
+				}
+			}
+			
+			modifier = {
+				army_core_attack_factor = 0.05
+			}
+			
+			cancel_if_invalid = no
+		}
+		polearm_guild = {
+			
+			removal_cost = 0
+			
+			cost = 100
+
+			allowed={
+				always = yes
+			}
+			available={}
+			
+			allowed_to_remove = {
+				
+			}
+			
+			equipment_bonus = {
+				pike_equipment = {
+					build_cost_ic = -0.1 instant = yes
+				}
+			}
+			
+			modifier = {
+				army_core_defence_factor = 0.05
+			}
+			
+			cancel_if_invalid = no
+		}
+		peasant_guild = {
+			
+			removal_cost = 0
+			
+			cost = 100
+
+			allowed={
+				always = yes
+			}
+			available={}
+			
+			allowed_to_remove = {
+				
+			}
+			
+			modifier = {
+				conscription_factor=0.1
+				experience_loss_factor=0.25
+			}
+			
+			cancel_if_invalid = no
+		}
+	}
+	ranged_guilds = { 
+		law = yes
+		archery_guild = {
+			
+			removal_cost = 0
+			
+			cost = 100
+
+			allowed={
+				always = yes
+			}
+			available={}
+			
+			allowed_to_remove = {
+				
+			}
+			
+			equipment_bonus = {
+				bow_equipment = {
+					build_cost_ic = -0.1 instant = yes
+				}
+			}
+			
+			modifier = {
+				experience_gain_factor = 0.1
+			}
+			
+			cancel_if_invalid = no
+		}
+		mechanical_guild = {
+			
+			removal_cost = 0
+			
+			cost = 100
+
+			allowed={
+				always = yes
+			}
+			available={}
+			
+			allowed_to_remove = {
+				
+			}
+			
+			equipment_bonus = {
+				arbalest_equipment = {
+					build_cost_ic = -0.1 instant = yes
+				}
+			}
+			
+			modifier = {
+				training_time_factor = -0.1
+			}
+			
+			cancel_if_invalid = no
+		}
+		gunsmith_guild = {
+			
+			removal_cost = 0
+			
+			cost = 100
+
+			allowed={
+				always = yes
+			}
+			available={}
+			
+			allowed_to_remove = {
+				
+			}
+			
+			equipment_bonus = {
+				arquebus_equipment = {
+					build_cost_ic = -0.1 instant = yes
+				}
+			}
+			
+			modifier = {
+				production_speed_powder_mill_factor=0.2
+			}
+			
+			cancel_if_invalid = no
+		}
+	}
+	armour_guilds = { 
+		law = yes		
+		blacksmith_guild = {
+			
+			removal_cost = 0
+			
+			cost = 100
+
+			allowed={
+				always = yes
+			}
+			available={}
+			
+			allowed_to_remove = {
+				
+			}
+			
+			equipment_bonus = {
+				plate_armour_equipment = {
+					build_cost_ic = -0.1 instant = yes
+				}
+			}
+			
+			modifier = {
+				equipment_conversion_speed=0.1
+			}
+			
+			cancel_if_invalid = no
+		}		
+		weaver_guild = {
+			
+			removal_cost = 0
+			
+			cost = 100
+
+			allowed={
+				always = yes
+			}
+			available={}
+			
+			allowed_to_remove = {
+				
+			}
+			
+			equipment_bonus = {
+				padded_armour_equipment = {
+					build_cost_ic = -0.1 instant = yes
+				}
+			}
+			
+			modifier = {
+				line_change_production_efficiency_factor=0.1
+			}
+			
+			cancel_if_invalid = no
+		}	
+		tanner_guild = {
+			
+			removal_cost = 0
+			
+			cost = 100
+
+			allowed={
+				always = yes
+			}
+			available={}
+			
+			allowed_to_remove = {
+				
+			}
+			
+			equipment_bonus = {
+				padded_armour_equipment = {
+					build_cost_ic = -0.05 instant = yes
+				}
+				plate_armour_equipment = {
+					build_cost_ic = -0.05 instant = yes
+				}
+			}
+			
+			modifier = {
+				production_factory_efficiency_gain_factor=0.05
+			}
+			
+			cancel_if_invalid = no
+		}
+	}
+	cavalry_guilds = { 
+		law = yes
+		rearing_guild = {
+			
+			removal_cost = 0
+			
+			cost = 100
+
+			allowed={
+				always = yes
+			}
+			available={}
+			
+			allowed_to_remove = {
+				
+			}
+			
+			equipment_bonus = {
+				war_horse = {
+					build_cost_ic = -0.1 instant = yes
+				}
+			}
+			
+			modifier = {
+				production_oil_factor=0.1
+			}
+			
+			cancel_if_invalid = no
+		}
+		knight_guild = {
+			
+			removal_cost = 0
+			
+			cost = 100
+
+			allowed={
+				always = yes
+			}
+			available={}
+			
+			allowed_to_remove = {
+				
+			}
+			
+			equipment_bonus = {
+				lance_equipment = {
+					build_cost_ic = -0.1 instant = yes
+				}
+			}
+			
+			modifier = {
+				offensive_war_stability_factor=0.15
+			}
+			
+			cancel_if_invalid = no
+		}
+		steppe_guild = {
+			
+			removal_cost = 0
+			
+			cost = 100
+
+			allowed={
+				always = yes
+			}
+			available={}
+			
+			allowed_to_remove = {
+				
+			}
+			
+			modifier = {
+				war_support_factor=0.05
+				army_speed_factor=0.1
+			}
+			
+			cancel_if_invalid = no
+		}
+	}
+	sailor_guilds = { 
+		law = yes
+		slave_sailor_guild = {
+			
+			removal_cost = 0
+			
+			cost = 100
+
+			allowed={
+				always = yes
+			}
+			available={}
+			
+			allowed_to_remove = {
+				
+			}
+			
+			modifier = {
+				convoy_raiding_efficiency_factor=0.1
+				naval_retreat_chance=0.05
+			}
+			
+			cancel_if_invalid = no
+		}
+		prison_sailor_guild = {
+			
+			removal_cost = 0
+			
+			cost = 100
+
+			allowed={
+				always = yes
+			}
+			available={}
+			
+			allowed_to_remove = {
+				
+			}
+			
+			modifier = {
+				naval_speed_factor=0.1
+			}
+			
+			cancel_if_invalid = no
+		}
+		domestic_sailor_guild = {
+			
+			removal_cost = 0
+			
+			cost = 100
+
+			allowed={
+				always = yes
+			}
+			available={}
+			
+			allowed_to_remove = {
+				
+			}
+			
+			modifier = {
+				convoy_escort_efficiency=0.1
+				naval_retreat_speed=0.05
+			}
+			
+			cancel_if_invalid = no
+		}
+	}
+	maritime_guilds = { 
+		law = yes
+		trader_guild = {
+			
+			removal_cost = 0
+			
+			cost = 100
+
+			allowed={
+				always = yes
+			}
+			available={}
+			
+			allowed_to_remove = {
+				
+			}
+			
+			equipment_bonus = {
+				barque = {
+					build_cost_ic = -0.1 instant = yes
+				}
+			}
+			
+			modifier = {
+				local_resources_factor=0.1
+			}
+			
+			cancel_if_invalid = no
+		}
+		charter_guild = {
+			
+			removal_cost = 0
+			
+			cost = 100
+
+			allowed={
+				always = yes
+			}
+			available={}
+			
+			allowed_to_remove = {
+				
+			}
+			
+			equipment_bonus = {
+				cog = {
+					build_cost_ic = -0.2 instant = yes
+				}
+			}
+			
+			modifier = {
+				navy_max_range_factor=0.1
+			}
+			
+			cancel_if_invalid = no
+		}
+		carpenter_guild = {
+			
+			removal_cost = 0
+			
+			cost = 100
+
+			allowed={
+				always = yes
+			}
+			available={}
+			
+			allowed_to_remove = {
+				
+			}
+			
+			modifier = {
+				industrial_capacity_dockyard=0.05
+			}
+			
+			cancel_if_invalid = no
+		}
+	}
+	extraction_guilds = { 
+		law = yes
+		lumber_guild = {
+			
+			removal_cost = 0
+			
+			cost = 100
+
+			allowed={
+				always = yes
+			}
+			available={}
+			
+			allowed_to_remove = {
+				
+			}
+			
+			modifier = {
+				production_speed_industrial_complex_factor=0.1
+			}
+			
+			cancel_if_invalid = no
+		}
+		miner_guild = {
+			
+			removal_cost = 0
+			
+			cost = 100
+
+			allowed={
+				always = yes
+			}
+			available={}
+			
+			allowed_to_remove = {
+			}
+			
+			modifier = {
+				production_speed_arms_factory_factor=0.1			
+			}
+			
+			cancel_if_invalid = no
+		}
+		farmer_guild = {
+			
+			removal_cost = 0
+			
+			cost = 100
+
+			allowed={
+				always = yes
+			}
+			available={}
+			
+			allowed_to_remove = {
+				
+			}
+			
+			modifier = {
+				MONTHLY_POPULATION=0.25
+			}
+			
+			cancel_if_invalid = no
+		}
+	}
+}

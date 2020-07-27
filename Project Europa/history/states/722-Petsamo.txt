@@ -1,0 +1,29 @@
+
+state={
+	id=722
+	name="STATE_722"
+	manpower=26255
+	buildings_max_level_factor=1
+	state_category=large_settlement
+	resources={
+		chromium=12
+	}
+
+	history={
+		owner=NOV
+		add_core_of=NOV
+		add_core_of=KRL
+		victory_points={
+			6150 3
+		}
+		buildings={
+			infrastructure=3
+			arms_factory=0
+			industrial_complex=0
+		}
+	}
+
+	provinces={
+		52 139 3050 3133 3187 6052 6150 6153 9105 9176 9181 11046 11156 11162 13109 13887 
+	}
+}

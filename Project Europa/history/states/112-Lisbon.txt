@@ -1,0 +1,28 @@
+state={
+	id=112
+	name="STATE_112"
+	resources={
+		oil=17
+	}
+
+	history={
+		owner = POR
+		add_core_of = POR
+		victory_points = { 11805 10 }
+		buildings={
+			infrastructure = 5
+			arms_factory = 1
+			industrial_complex = 1
+			dockyard = 1
+			11805 = { naval_base = 3 }
+			powder_mill = 1
+		}
+	}
+
+	provinces={
+		844 924 970 3861 11768 11805 
+	}
+	manpower=322549
+	buildings_max_level_factor=1.000
+	state_category=large_town
+}

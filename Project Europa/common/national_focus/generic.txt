@@ -1,0 +1,2177 @@
+focus_tree = {
+	id = generic_focus
+	
+	country = {
+		factor = 1
+	}
+	
+	default = yes
+	reset_on_civilwar = no
+	
+	continuous_focus_position = { x = 50 y = 800 }
+	
+	focus = {
+		id = goal_generic_army_effort
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 9
+		y = 0
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = land_army_tc
+			}
+		}
+	}
+	###MELEE WEAPONS EFFORT###
+	focus = {
+		id = goal_generic_melee_weapons_effort
+		icon = GFX_focus_generic_swords
+		prerequisite = { focus = goal_generic_army_effort }
+		x = 1
+		y = 1
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.75
+				uses = 1
+				category = melee_weapons_tc
+			}
+		}
+	}
+	focus = {
+		id = goal_generic_adapt_swiss_designs
+		icon = GFX_focus_attack_switzerland
+		prerequisite = { focus = goal_generic_melee_weapons_effort }
+		mutually_exclusive = { focus = goal_generic_subsidise_blacksmithing }
+		x = 0
+		y = 2
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas=idea_generic_adapt_swiss_designs
+			add_tech_bonus = {
+				ahead_reduction = 1
+				uses = 1
+				category = pike_weapons_tc
+			}
+		}
+	}
+	focus = {
+		id = goal_generic_compensate_weaver_guilds
+		icon = GFX_focus_generic_concessions
+		prerequisite = {
+			focus = goal_generic_subsidise_blacksmithing
+			focus = goal_generic_adapt_swiss_designs
+		}
+		mutually_exclusive = { focus = goal_generic_plate_armour_standards }
+		x = 0
+		y = 3
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas=idea_generic_compensate_weaver_guilds
+			add_tech_bonus = {
+				ahead_reduction = 1
+				uses = 1
+				category = padded_armour_tc
+			}
+		}
+	}
+	focus = {
+		id = goal_generic_subsidise_blacksmithing
+		icon = GFX_focus_generic_blacksmith
+		prerequisite = { focus = goal_generic_melee_weapons_effort }
+		mutually_exclusive = { focus = goal_generic_adapt_swiss_designs }
+		x = 2
+		y = 2
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas=idea_generic_subsidise_blacksmithing
+			add_tech_bonus = {
+				ahead_reduction = 1
+				uses = 1
+				category = sword_weapons_tc
+			}
+		}
+	}
+	focus = {
+		id = goal_generic_plate_armour_standards
+		icon = GFX_goal_generic_defence
+		prerequisite = {
+			focus = goal_generic_subsidise_blacksmithing
+			focus = goal_generic_adapt_swiss_designs
+		}
+		mutually_exclusive = { focus = goal_generic_compensate_weaver_guilds }
+		x = 2
+		y = 3
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas=idea_generic_plate_armour_standards
+			add_tech_bonus = {
+				ahead_reduction = 1
+				uses = 1
+				category = plate_armour_tc
+			}
+		}
+	}
+	###CAVALRY EFFORT###
+	focus = {
+		id = goal_generic_cavalry_effort
+		icon = GFX_goal_generic_cavalry
+		prerequisite = { focus = goal_generic_army_effort }
+		x = 6
+		y = 1
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.75
+				uses = 1
+				category = cavalry
+			}
+		}
+	}
+	focus = {
+		id = goal_generic_embrace_chivalry
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = goal_generic_cavalry_effort }
+		mutually_exclusive = { 
+			focus = goal_generic_assimilate_cossack_estates
+			focus = goal_generic_invite_slavic_equestrians
+		}
+		x = 4
+		y = 2
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas=idea_generic_embrace_chivalry1
+			add_tech_bonus = {
+				ahead_reduction = 1
+				uses = 1
+				category = demilance_weapons_tc
+			}
+		}
+	}
+	focus = {
+		id = goal_generic_host_tourney_jousts
+		icon = GFX_goal_generic_propaganda
+		prerequisite = { focus = goal_generic_embrace_chivalry }
+		x = 4
+		y = 3
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = idea_generic_embrace_chivalry1
+				add_idea = idea_generic_embrace_chivalry2
+			}
+		}
+	}
+	focus = {
+		id = goal_generic_reestablish_holy_orders
+		icon = GFX_focus_holy_assistance
+		prerequisite = { focus = goal_generic_host_tourney_jousts }
+		x = 4
+		y = 4
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = idea_generic_embrace_chivalry2
+				add_idea = idea_generic_embrace_chivalry3
+			}
+		}
+	}
+	focus = {
+		id = goal_generic_assimilate_cossack_estates
+		icon = GFX_focus_generic_self_management
+		prerequisite = { focus = goal_generic_cavalry_effort }
+		mutually_exclusive = { 
+			focus = goal_generic_embrace_chivalry
+			focus = goal_generic_invite_slavic_equestrians
+		}
+		x = 6
+		y = 2
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas=idea_generic_cossack_estates1
+		}
+	}
+	focus = {
+		id = goal_generic_steppe_training_techniques
+		icon = GFX_focus_eng_special_air_service
+		prerequisite = { focus = goal_generic_assimilate_cossack_estates }
+		x = 6
+		y = 3
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = idea_generic_cossack_estates1
+				add_idea = idea_generic_cossack_estates2
+			}
+		}
+	}
+	focus = {
+		id = goal_generic_accommodate_nomadic_tribes
+		icon = GFX_focus_generic_treaty
+		prerequisite = { focus = goal_generic_steppe_training_techniques }
+		x = 6
+		y = 4
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = idea_generic_cossack_estates2
+				add_idea = idea_generic_cossack_estates3
+			}
+		}
+	}
+	focus = {
+		id = goal_generic_invite_slavic_equestrians
+		icon = GFX_goal_generic_military_deal
+		prerequisite = { focus = goal_generic_cavalry_effort }
+		mutually_exclusive = { 
+			focus = goal_generic_embrace_chivalry
+			focus = goal_generic_assimilate_cossack_estates
+		}
+		x = 8
+		y = 2
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas=idea_generic_slavic_equestrians1
+		}
+	}
+	focus = {
+		id = goal_generic_study_balkan_tactics
+		icon = GFX_goal_generic_position_armies
+		prerequisite = { focus = goal_generic_invite_slavic_equestrians }
+		x = 8
+		y = 3
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = idea_generic_slavic_equestrians1
+				add_idea = idea_generic_slavic_equestrians2
+			}
+		}
+	}
+	focus = {
+		id = goal_generic_tolerate_heretical_riders
+		icon = GFX_focus_generic_diplomatic_treaty
+		prerequisite = { focus = goal_generic_study_balkan_tactics }
+		x = 8
+		y = 4
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = idea_generic_slavic_equestrians2
+				add_idea = idea_generic_slavic_equestrians3
+			}
+		}
+	}
+	###RANGED WEAPONS EFFORT###
+	focus = {
+		id = goal_generic_ranged_weapons_effort
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = goal_generic_army_effort }
+		x = 12
+		y = 1
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.75
+				uses = 1
+				category = ranged_weapons_tc
+			}
+		}
+	}
+	focus = {
+		id = goal_generic_empower_the_archery_guilds
+		icon = GFX_focus_eng_concessions_to_the_trade_unions
+		prerequisite = { focus = goal_generic_ranged_weapons_effort }
+		mutually_exclusive = { 
+			focus = goal_generic_diminish_the_archery_guilds
+			focus = goal_generic_abandon_the_archery_guilds
+		}
+		x = 10
+		y = 2
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas=idea_generic_empower_the_archery_guilds1
+			#set_technology={ longbow_tech = 1 }
+		}
+	}
+	focus = {
+		id = goal_generic_intensive_training
+		icon = GFX_focus_generic_air_defense
+		prerequisite = { focus = goal_generic_empower_the_archery_guilds }
+		x = 10
+		y = 3
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = idea_generic_empower_the_archery_guilds1
+				add_idea = idea_generic_empower_the_archery_guilds2
+			}
+		}
+	}
+	focus = {
+		id = goal_generic_guarantee_veteran_support
+		icon = GFX_goal_generic_intelligence_exchange
+		prerequisite = { focus = goal_generic_intensive_training }
+		x = 10
+		y = 4
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = idea_generic_empower_the_archery_guilds2
+				add_idea = idea_generic_empower_the_archery_guilds3
+			}
+		}
+	}
+	focus = {
+		id = goal_generic_diminish_the_archery_guilds
+		icon = GFX_focus_eng_move_to_secure_the_dominions
+		prerequisite = { focus = goal_generic_ranged_weapons_effort }
+		mutually_exclusive = { 
+			focus = goal_generic_empower_the_archery_guilds
+			focus = goal_generic_abandon_the_archery_guilds
+		}
+		x = 12
+		y = 2
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas=idea_generic_diminish_the_archery_guilds1
+			add_tech_bonus = {
+				ahead_reduction = 1
+				uses = 1
+				category = arbalest_weapons_tc
+			}
+		}
+	}
+	focus = {
+		id = goal_generic_arbalests_en_masse
+		icon = GFX_goal_generic_production2
+		prerequisite = { focus = goal_generic_diminish_the_archery_guilds }
+		x = 12
+		y = 3
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = idea_generic_diminish_the_archery_guilds1
+				add_idea = idea_generic_diminish_the_archery_guilds2
+			}
+		}
+	}
+	focus = {
+		id = goal_generic_abandon_the_archery_guilds
+		icon = GFX_focus_mex_soldaderas
+		prerequisite = { focus = goal_generic_ranged_weapons_effort }
+		mutually_exclusive = { 
+			focus = goal_generic_empower_the_archery_guilds
+			focus = goal_generic_diminish_the_archery_guilds
+		}
+		x = 14
+		y = 2
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas=idea_generic_abandon_the_archery_guilds1
+			add_tech_bonus = {
+				ahead_reduction = 1
+				uses = 1
+				category = arquebus_weapons_tc
+			}
+		}
+	}
+	focus = {
+		id = goal_generic_endorse_gunsmithing
+		icon = GFX_goal_generic_military_sphere
+		prerequisite = { focus = goal_generic_abandon_the_archery_guilds }
+		x = 14
+		y = 3
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = idea_generic_abandon_the_archery_guilds1
+				add_idea = idea_generic_abandon_the_archery_guilds2
+			}
+		}
+	}
+	focus = {
+		id = goal_generic_lax_recruitment_standards
+		icon = GFX_focus_generic_military_academy
+		prerequisite = { 
+			focus = goal_generic_arbalests_en_masse
+			focus = goal_generic_endorse_gunsmithing
+		}
+		x = 13
+		y = 4
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas=idea_generic_lax_recruitment_standards
+		}
+	}
+	###ARTILLERY EFFORT###
+	focus = {
+		id = goal_generic_artillery_effort
+		icon = GFX_goal_generic_army_artillery
+		prerequisite = { focus = goal_generic_army_effort }
+		x = 17
+		y = 1
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.75
+				uses = 1
+				category = artillery
+			}
+		}
+	}
+	focus = {
+		id = goal_generic_stationary_firepower
+		icon = GFX_goal_generic_construct_military
+		prerequisite = { focus = goal_generic_artillery_effort }
+		mutually_exclusive{ focus=goal_generic_mobile_bombardments }
+		x = 16
+		y = 2
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas=idea_generic_stationary_firepower1
+			add_tech_bonus = {
+				ahead_reduction = 1
+				uses = 1
+				category = mortars_tc
+			}
+		}
+	}
+	focus = {
+		id = goal_generic_embrace_turk_designs
+		icon = GFX_goal_generic_occupy_start_war
+		prerequisite = { focus = goal_generic_stationary_firepower }
+		x = 16
+		y = 3
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = idea_generic_stationary_firepower1
+				add_idea = idea_generic_stationary_firepower2
+			}
+		}
+	}
+	focus = {
+		id = goal_generic_mobile_bombardments
+		icon = GFX_goal_generic_more_territorial_claims
+		prerequisite = { focus = goal_generic_artillery_effort }
+		mutually_exclusive{ focus=goal_generic_stationary_firepower }
+		x = 18
+		y = 2
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas=idea_generic_mobile_bombardments1
+			add_tech_bonus = {
+				ahead_reduction = 1
+				uses = 1
+				category = field_guns_tc
+			}
+		}
+	}
+	focus = {
+		id = goal_generic_adopt_french_innovations
+		icon = GFX_goal_generic_special_forces
+		prerequisite = { focus = goal_generic_mobile_bombardments }
+		x = 18
+		y = 3
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = idea_generic_mobile_bombardments1
+				add_idea = idea_generic_mobile_bombardments2
+			}
+		}
+	}
+	###RELIGIOUS EFFORT###
+	focus = {
+		id = goal_generic_religious_effort
+		icon = GFX_goal_generic_demand_territory
+		x = 22
+		y = 0
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = goal_generic_endorse_the_roman_papacy
+		icon = GFX_focus_generic_self_management
+		prerequisite = { focus = goal_generic_religious_effort }
+		mutually_exclusive={
+			focus = goal_generic_rebuke_the_roman_papacy
+			focus = goal_generic_obey_byzantine_authorities
+		}
+		x = 20
+		y = 1
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas=idea_generic_endorse_the_roman_papacy1
+		}
+	}
+	focus = {
+		id = goal_generic_devout_catholicism
+		icon = GFX_focus_generic_support_the_left_right
+		prerequisite = { focus = goal_generic_endorse_the_roman_papacy }
+		x = 20
+		y = 2
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = idea_generic_endorse_the_roman_papacy1
+				add_idea = idea_generic_endorse_the_roman_papacy2
+			}
+		}
+	}
+	focus = {
+		id = goal_generic_a_new_crusade
+		icon = GFX_focus_generic_strike_at_democracy1
+		prerequisite = { focus = goal_generic_devout_catholicism }
+		x = 20
+		y = 3
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = idea_generic_endorse_the_roman_papacy2
+				add_idea = idea_generic_endorse_the_roman_papacy3
+			}
+		}
+	}
+	focus = {
+		id = goal_generic_rebuke_the_roman_papacy
+		icon = GFX_focus_mex_triumph_over_the_cristeros
+		prerequisite = { focus = goal_generic_religious_effort }
+		mutually_exclusive={
+			focus = goal_generic_endorse_the_roman_papacy
+			focus = goal_generic_obey_byzantine_authorities
+		}
+		x = 22
+		y = 1
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas=idea_generic_rebuke_the_roman_papacy1
+		}
+	}
+	focus = {
+		id = goal_generic_acknowledge_heretics
+		icon = GFX_goal_tripartite_pact
+		prerequisite = { focus = goal_generic_rebuke_the_roman_papacy }
+		x = 22
+		y = 2
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = idea_generic_rebuke_the_roman_papacy1
+				add_idea = idea_generic_rebuke_the_roman_papacy2
+			}
+		}
+	}
+	focus = {
+		id = goal_generic_the_monarchs_faith
+		icon = GFX_focus_rom_royal_dictatorship
+		prerequisite = { focus = goal_generic_acknowledge_heretics }
+		x = 22
+		y = 3
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = idea_generic_rebuke_the_roman_papacy2
+				add_idea = idea_generic_rebuke_the_roman_papacy3
+			}
+		}
+	}
+	focus = {
+		id = goal_generic_obey_byzantine_authorities
+		icon = GFX_goal_generic_national_unity
+		prerequisite = { focus = goal_generic_religious_effort }
+		mutually_exclusive={
+			focus = goal_generic_endorse_the_roman_papacy
+			focus = goal_generic_rebuke_the_roman_papacy
+		}
+		x = 24
+		y = 1
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas=idea_generic_obey_byzantine_authorities1
+		}
+	}
+	focus = {
+		id = goal_generic_orthodox_church_autonomy
+		icon = GFX_goal_generic_neutrality_focus
+		prerequisite = { focus = goal_generic_obey_byzantine_authorities }
+		x = 24
+		y = 2
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = idea_generic_obey_byzantine_authorities1
+				add_idea = idea_generic_obey_byzantine_authorities2
+			}
+		}
+	}
+	focus = {
+		id = goal_generic_embrace_the_great_schism
+		icon = GFX_focus_eng_organise_the_blackshirts
+		prerequisite = { focus = goal_generic_orthodox_church_autonomy }
+		x = 24
+		y = 3
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = idea_generic_obey_byzantine_authorities2
+				add_idea = idea_generic_obey_byzantine_authorities3
+			}
+		}
+	}
+	###NAVY EFFORT###
+	focus = {
+		id = goal_generic_naval_effort
+		icon = GFX_goal_generic_construct_naval_dockyard
+		x = 13
+		y = 5
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = goal_generic_galley_effort
+		icon = GFX_goal_generic_wolf_pack
+		prerequisite = { focus = goal_generic_naval_effort }
+		x = 9
+		y = 6
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = goal_generic_professional_sailors
+		icon = GFX_goal_generic_amphibious_assault
+		prerequisite = { focus = goal_generic_galley_effort }
+		mutually_exclusive={ focus = goal_generic_enslaved_oarsmen }
+		x = 8
+		y = 7
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas=idea_generic_professional_sailors1
+		}
+	}
+	focus = {
+		id = goal_generic_adapt_byzantine_designs
+		icon = GFX_goal_generic_position_armies
+		prerequisite = { focus = goal_generic_professional_sailors }
+		x = 8
+		y = 8
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = idea_generic_professional_sailors1
+				add_idea = idea_generic_professional_sailors2
+			}
+		}
+	}
+	focus = {
+		id = goal_generic_enslaved_oarsmen
+		icon = GFX_focus_CZE_german_puppet
+		prerequisite = { focus = goal_generic_galley_effort }
+		mutually_exclusive={ focus = goal_generic_professional_sailors }
+		x = 10
+		y = 7
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas=idea_generic_enslaved_oarsmen1
+		}
+	}
+	focus = {
+		id = goal_generic_enforced_berber_standards
+		icon = GFX_goal_generic_forceful_treaty
+		prerequisite = { focus = goal_generic_enslaved_oarsmen }
+		x = 10
+		y = 8
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = idea_generic_enslaved_oarsmen1
+				add_idea = idea_generic_enslaved_oarsmen2
+			}
+		}
+	}
+	focus = {
+		id = goal_generic_carrack_effort
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		prerequisite = { focus = goal_generic_naval_effort }
+		x = 13
+		y = 6
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = goal_generic_floating_fortresses
+		icon = GFX_goal_generic_build_tank
+		prerequisite = { focus = goal_generic_carrack_effort }
+		mutually_exclusive={ focus = goal_generic_cheaper_carrack_production }
+		x = 12
+		y = 7
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas=idea_generic_floating_fortresses1
+		}
+	}
+	focus = {
+		id = goal_generic_english_naval_standards
+		icon = GFX_goal_generic_navy_cruiser
+		prerequisite = { focus = goal_generic_floating_fortresses }
+		x = 12
+		y = 8
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = idea_generic_floating_fortresses1
+				add_idea = idea_generic_floating_fortresses2
+			}
+		}
+	}
+	focus = {
+		id = goal_generic_cheaper_carrack_production
+		icon = GFX_goal_generic_air_production
+		prerequisite = { focus = goal_generic_carrack_effort }
+		mutually_exclusive={ focus = goal_generic_floating_fortresses }
+		x = 14
+		y = 7
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas=idea_generic_cheaper_carrack_production1
+		}
+	}
+	focus = {
+		id = goal_generic_mediterranean_armadas
+		icon = GFX_focus_generic_little_entente
+		prerequisite = { focus = goal_generic_cheaper_carrack_production }
+		x = 14
+		y = 8
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = idea_generic_cheaper_carrack_production1
+				add_idea = idea_generic_cheaper_carrack_production2
+			}
+		}
+	}
+	focus = {
+		id = goal_generic_maritime_mercantilism
+		icon = GFX_goal_generic_positive_trade_relations
+		prerequisite = { focus = goal_generic_naval_effort }
+		x = 17
+		y = 6
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = goal_generic_sturdier_trade_vessels
+		icon = GFX_focus_generic_coastal_fort
+		prerequisite = { focus = goal_generic_maritime_mercantilism }
+		mutually_exclusive = { focus = goal_generic_streamlined_cog_production }
+		x = 16
+		y = 7
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas=idea_generic_sturdier_trade_vessels1
+		}
+	}
+	focus = {
+		id = goal_generic_iberian_trade_networks
+		icon = GFX_focus_usa_reestablish_the_gold_standard
+		prerequisite = { focus = goal_generic_sturdier_trade_vessels }
+		x = 16
+		y = 8
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = idea_generic_sturdier_trade_vessels1
+				add_idea = idea_generic_sturdier_trade_vessels2
+			}
+		}
+	}
+	focus = {
+		id = goal_generic_streamlined_cog_production
+		icon = GFX_goal_generic_occupy_states_coastal
+		prerequisite = { focus = goal_generic_maritime_mercantilism }
+		mutually_exclusive = { focus = goal_generic_sturdier_trade_vessels }
+		x = 18
+		y = 7
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas=idea_generic_streamlined_cog_production1
+		}
+	}
+	focus = {
+		id = goal_generic_italian_merchant_flotillas
+		icon = GFX_focus_hol_united_netherlands
+		prerequisite = { focus = goal_generic_streamlined_cog_production }
+		x = 18
+		y = 8
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = idea_generic_streamlined_cog_production1
+				add_idea = idea_generic_streamlined_cog_production2
+			}
+		}
+	}
+	focus = {
+		id = goal_generic_industrial_effort
+		icon = GFX_goal_generic_production
+		x = 22
+		y = 4
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = goal_generic_artisan_effort1
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = goal_generic_industrial_effort }
+		x = 20
+		y = 5
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = goal_generic_artisan_effort2
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = goal_generic_artisan_effort1 }
+		x = 20
+		y = 6
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = goal_generic_artisan_effort3
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = goal_generic_artisan_effort2 }
+		x = 20
+		y = 7
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = goal_generic_craftsman_effort1
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = goal_generic_industrial_effort }
+		x = 24
+		y = 5
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = goal_generic_craftsman_effort2
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = goal_generic_craftsman_effort1 }
+		x = 24
+		y = 6
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = goal_generic_craftsman_effort3
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = goal_generic_craftsman_effort2 }
+		x = 24
+		y = 7
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = goal_generic_diminish_guild_autonomy
+		icon = GFX_goal_generic_dangerous_deal
+		prerequisite = { focus = goal_generic_craftsman_effort3 }
+		prerequisite = { focus = goal_generic_artisan_effort3 }
+		mutually_exclusive={ focus = goal_generic_favour_guild_autonomy }
+		x = 20
+		y = 8
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas=idea_generic_diminish_guild_autonomy
+		}
+	}
+	focus = {
+		id = goal_generic_favour_guild_autonomy
+		icon = GFX_goal_generic_intelligence_exchange
+		prerequisite = { focus = goal_generic_craftsman_effort3 }
+		prerequisite = { focus = goal_generic_artisan_effort3 }
+		mutually_exclusive={ focus = goal_generic_diminish_guild_autonomy }
+		x = 24
+		y = 8
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas=idea_generic_favour_guild_autonomy
+		}
+	}
+	focus = {
+		id = goal_generic_research_slot1
+		icon = GFX_focus_research
+		prerequisite = {
+			focus = goal_generic_favour_guild_autonomy
+			focus = goal_generic_diminish_guild_autonomy
+		}
+		x = 22
+		y = 9
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = goal_generic_research_slot2
+		icon = GFX_focus_research2
+		prerequisite = { focus = goal_generic_research_slot1 }
+		x = 22
+		y = 10
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = goal_generic_infrastructure_effort1
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = goal_generic_industrial_effort }
+		x = 22
+		y = 5
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = goal_generic_infrastructure_effort2
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = goal_generic_infrastructure_effort1 }
+		x = 22
+		y = 6
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = goal_generic_exploitation_effort
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = goal_generic_infrastructure_effort2 }
+		x = 22
+		y = 7
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas=idea_generic_exploitation_effort
+		}
+	}
+}

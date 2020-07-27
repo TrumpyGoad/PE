@@ -1,0 +1,29 @@
+
+state={
+	id=34
+	name="STATE_34"
+	manpower=203597
+	buildings_max_level_factor=1
+	state_category=town
+	resources={
+		chromium=36
+	}
+
+	history={
+		owner=LIE
+		add_core_of=LIE
+		victory_points={
+			9444 5
+		}
+		buildings={
+			infrastructure=4
+			arms_factory=1
+			industrial_complex=1
+			powder_mill=1
+		}
+	}
+
+	provinces={
+		6537 9444 11407 13560 13562 
+	}
+}

@@ -1,0 +1,30 @@
+state={
+	id=164
+	name="STATE_164"
+	manpower=193171
+	buildings_max_level_factor=1
+	state_category=large_settlement
+	resources={
+	}
+
+	history={
+		owner=KNI
+		add_core_of=KNI
+		victory_points={
+			10007 3
+		}
+		buildings={
+			infrastructure=3
+			arms_factory=1
+			industrial_complex=1
+			dockyard=1
+			10007={
+				naval_base=1
+			}
+		}
+	}
+
+	provinces={
+		7003 10007 	
+	}
+}

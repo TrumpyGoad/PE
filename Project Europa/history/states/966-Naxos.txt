@@ -1,0 +1,30 @@
+state={
+	id=966
+	name="STATE_966"
+	manpower=100683
+	buildings_max_level_factor=1
+	state_category=large_settlement
+	resources={
+	}
+
+	history={
+		owner=NAX
+		add_core_of=NAX
+		victory_points={
+			13921 3
+		}
+		buildings={
+			infrastructure=3
+			arms_factory=0
+			industrial_complex=0
+			dockyard=0
+			13921={
+				naval_base=1
+			}
+		}
+	}
+
+	provinces={
+		3401 13921 
+	}
+}

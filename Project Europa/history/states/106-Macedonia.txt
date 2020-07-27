@@ -1,0 +1,31 @@
+
+state={
+	id=106
+	name="STATE_106"
+	manpower=183415
+	buildings_max_level_factor=1
+	state_category=large_settlement
+	resources={
+		oil=2
+		steel=30
+	}
+
+	history={
+		owner=TUR
+		add_core_of=TUR
+		add_core_of=SER
+		add_core_of=BUL
+		victory_points={
+			833 3
+		}
+		buildings={
+			infrastructure=3
+			arms_factory=1
+			industrial_complex=1
+		}
+	}
+
+	provinces={
+		833 907 974 3833 3882 11856 
+	}
+}

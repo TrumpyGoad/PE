@@ -1,0 +1,34 @@
+
+state={
+	id=460
+	name="STATE_460"
+	manpower=92800
+	buildings_max_level_factor=1
+	state_category=large_settlement
+	resources={
+		oil=2
+		steel=24
+	}
+
+	history={
+		owner=TUN
+		add_core_of=TUN
+		add_core_of=KBA
+		victory_points={
+			7065 3
+		}
+		buildings={
+			infrastructure=3
+			arms_factory=1
+			industrial_complex=1
+			dockyard=1
+			4046={
+				naval_base=1
+			}
+		}
+	}
+
+	provinces={
+		4046 7065 7166 10078 11939 
+	}
+}

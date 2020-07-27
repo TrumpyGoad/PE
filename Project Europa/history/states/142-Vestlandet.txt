@@ -1,0 +1,32 @@
+
+state={
+	id=142
+	name="STATE_142"
+	manpower=39514
+	buildings_max_level_factor=1
+	state_category=large_settlement
+	resources={
+		oil=1
+	}
+
+	history={
+		owner=NOR
+		add_core_of=NOR
+		victory_points={
+			122 3
+		}
+		buildings={
+			infrastructure=3
+			arms_factory=0
+			industrial_complex=1
+			dockyard=1
+			122={
+				naval_base=1
+			}
+		}
+	}
+
+	provinces={
+		65 122 199 3090 3114 3180 3188 6145 6216 13871 13882 
+	}
+}

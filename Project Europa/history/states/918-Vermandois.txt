@@ -1,0 +1,29 @@
+state={
+	id=918
+	name="STATE_918"
+	manpower=258096
+	buildings_max_level_factor=1
+	state_category=town
+	resources={
+		oil=8
+	}
+
+	history={
+		owner=FRA
+		add_core_of=FRA
+		add_core_of=CHP
+		add_core_of=PIC
+		victory_points={
+			9561 5
+		}
+		buildings={
+			infrastructure=4
+			arms_factory=1
+			industrial_complex=1
+		}
+	}
+
+	provinces={
+		6585 9561 13363 13364 
+	}
+}

@@ -1,0 +1,355 @@
+﻿	add_namespace = colonisation_system
+
+country_event = { #START EXPEDITION
+	id = colonisation_system.1
+	title = colonisation_system.1.t
+	desc = colonisation_system.1.d
+
+	picture = SHIP_SAILING_CEP
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = colonisation_system.1.a
+		declare_war_on={
+			target=NAT
+			type=annex_everything
+		}
+		hidden_effect={
+			ROOT={ country_event={ id=colonisation_system.2 days=20 } }
+			set_country_flag=colonisation_underway
+		}
+	}
+}
+country_event = { #START COLONISING
+	id = colonisation_system.2
+	title = colonisation_system.2.t
+	desc = colonisation_system.2.d
+
+	picture = COLONISATION_CEP
+	
+	is_triggered_only = yes
+	
+	immediate={
+		hidden_effect={
+			every_state={
+				limit={
+					is_owned_by=NAT
+					is_controlled_by=ROOT
+				}
+				set_state_flag=colony@ROOT
+			}
+		}
+	}
+	
+	option = {
+		name = colonisation_system.2.a
+		if={
+			limit={ num_occupied_states<0 }
+			clr_country_flag=colonisation_underway
+			add_timed_idea={
+				idea=colonial_fatigue
+				days=30
+			}
+			add_political_power=-50
+		}
+		white_peace=NAT
+		every_state={
+			limit={ has_state_flag=colony@ROOT }
+			ROOT = { transfer_state = PREV }
+		}
+	}
+	option = {
+		name = colonisation_system.2.b
+		if={
+			limit={
+				NOT={
+					OR={
+						has_idea=weary_explorers
+						has_idea=exhausted_explorers
+					}
+				}
+			}
+			add_political_power=-50
+			ROOT={ country_event={ id=colonisation_system.2 days=20 } }
+			add_ideas=weary_explorers
+		}
+		else_if={
+			limit={
+				has_idea=weary_explorers
+			}
+			add_political_power=-100
+			ROOT={ country_event={ id=colonisation_system.2 days=20 } }
+			swap_ideas={
+				remove_idea=weary_explorers
+				add_idea=exhausted_explorers
+			}
+		}
+		else_if={
+			limit={
+				has_idea=exhausted_explorers
+			}
+			add_political_power=-150
+			ROOT={ country_event={ id=colonisation_system.2 days=20 } }
+		}
+	}
+}
+country_event = { #FINISH COLONISING
+	id = colonisation_system.3
+	title = colonisation_system.3.t
+	desc = colonisation_system.3.d
+
+	picture = TRADE_GOODS_CEP
+	
+	trigger = {
+		any_owned_state={
+			has_state_flag=colony@ROOT
+		}
+		has_country_flag=colonisation_underway
+	}
+	
+	mean_time_to_happen = {
+		days = 200
+		modifier = {
+			factor = 0.75 #MORE FREQUENT CIVIL WARS
+			has_idea=native_repression_policy
+		}
+		modifier = {
+			factor = 1.5
+			has_idea=native_coexistence_policy
+		}
+	}
+	
+	option = {
+		name = colonisation_system.3.a
+		every_state={
+			limit={ has_state_flag=colony@ROOT }
+			add_core_of=ROOT
+			clr_state_flag=colony@ROOT
+		}
+		hidden_effect={
+			clr_country_flag=colonisation_underway
+			remove_ideas={
+				integrating_natives
+				intolerant_natives
+				growing_colony
+				suffering_colony
+			}
+		}
+	}
+}
+country_event = { #DISCOVER RESOURCES
+	id = colonisation_system.4
+	title = colonisation_system.4.t
+	desc = colonisation_system.4.d
+
+	picture = GLOBAL_TRADE_AMERICAS_CEP
+	
+	trigger = {
+		any_owned_state={
+			has_state_flag=colony@ROOT
+		}
+		has_country_flag=colonisation_underway
+	}
+	
+	mean_time_to_happen = {
+		days = 300
+		modifier = {
+			factor = 0.5
+			has_idea=native_trading_policy
+		}
+	}
+	option = {
+		custom_effect_tooltip = tt_temp_col_sys3
+		hidden_effect={ activate_decision=temp_col_sys3 }
+	}
+}
+country_event = { #INFLUX OF SETTLERS
+	id = colonisation_system.5
+	title = colonisation_system.5.t
+	desc = colonisation_system.5.d
+
+	picture = SHIP_SAILING_CEP
+	
+	trigger = {
+		any_owned_state={
+			has_state_flag=colony@ROOT
+		}
+		has_country_flag=colonisation_underway
+	}
+	
+	mean_time_to_happen = {
+		days = 300
+		modifier = {
+			factor = 0.75 #MORE FREQUENT CIVIL WARS
+			has_idea=native_repression_policy
+		}
+	}
+	option = {
+		name = colonisation_system.5.a
+		random_owned_state	={
+			limit={ has_state_flag=colony@ROOT }
+			add_extra_state_shared_building_slots=1
+		}
+		custom_effect_tooltip = tt_temp_col_sys1
+		hidden_effect={ activate_decision=temp_col_sys1 }
+	}
+}
+country_event = { #NATIVES INTEGRATE
+	id = colonisation_system.6
+	title = colonisation_system.6.t
+	desc = colonisation_system.6.d
+
+	picture = NATIVES_CEP
+	
+	trigger = {
+		any_owned_state={
+			has_state_flag=colony@ROOT
+		}
+		has_country_flag=colonisation_underway
+		NOT={ has_idea=native_repression_policy }
+	}
+	
+	mean_time_to_happen = {
+		days = 300
+		modifier = {
+			factor = 0.5
+			has_idea=native_coexistence_policy
+		}
+		modifier = {
+			factor = 0.75
+			has_idea=native_trading_policy
+		}
+	}
+	option = {
+		name = colonisation_system.6.a
+		add_ideas=integrating_natives
+		random_owned_state	={
+			limit={ has_state_flag=colony@ROOT }
+			add_extra_state_shared_building_slots=1
+		}
+		custom_effect_tooltip = tt_temp_col_sys2
+		hidden_effect={ activate_decision=temp_col_sys2 }
+	}
+	option = {
+		name = colonisation_system.6.b
+		add_ideas=intolerant_natives
+	}
+}
+
+country_event = { #NATIVES REVOLT
+	id = colonisation_system.7
+	title = colonisation_system.7.t
+	desc = colonisation_system.7.d
+
+	picture = TRIBES_MEETING_CEP
+	
+	trigger = {
+		any_owned_state={
+			has_state_flag=colony@ROOT
+		}
+		NOT={ has_idea=integrating_natives }
+		has_country_flag=colonisation_underway
+		OR={
+			has_idea=native_repression_policy
+			has_idea=native_trading_policy
+			AND={
+				has_idea=native_coexistence_policy
+				has_idea=intolerant_natives
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 500
+		modifier = {
+			factor = 0.5
+			has_idea=native_repression_policy
+		}
+		modifier = {
+			factor = 0.75
+			has_country_flag=intolerant_natives
+		}
+	}
+	option = {
+		name = colonisation_system.7.a
+		start_civil_war = {
+			ideology = communism
+			size=0.1
+			states=all
+			states_filter={
+				has_state_flag=colony@ROOT
+			}
+		}
+	}
+	option = {
+		name = colonisation_system.7.b
+		every_owned_state={
+			limit={ has_state_flag=colony@ROOT }
+			NAT={ transfer_state=PREV }
+			clr_state_flag=colony@ROOT
+		}
+		clr_country_flag=colonisation_underway
+		add_timed_idea={
+			idea=colonial_fatigue
+			days=30
+		}
+	}
+}
+
+country_event = { #GROWING COLONY
+	id = colonisation_system.8
+	title = colonisation_system.8.t
+	desc = colonisation_system.8.d
+
+	picture = FARMING_CEP
+	
+	trigger = {
+		NOT={ has_idea=suffering_colony }
+		NOT={ has_idea=growing_colony }
+		any_owned_state={
+			has_state_flag=colony@ROOT
+		}
+		has_country_flag=colonisation_underway
+	}
+	
+	mean_time_to_happen = {
+		days = 300
+	}
+	option = {
+		name = colonisation_system.8.a
+		random_owned_state	={
+			limit={ has_state_flag=colony@ROOT }
+			add_extra_state_shared_building_slots=1
+		}
+		add_ideas=growing_colony
+	}
+}
+country_event = { #SUFFERING COLONY
+	id = colonisation_system.9
+	title = colonisation_system.9.t
+	desc = colonisation_system.9.d
+
+	picture = REFUGEES_FLEEING_CEP
+	
+	trigger = {
+		NOT={ has_idea=suffering_colony }
+		NOT={ has_idea=growing_colony }
+		any_owned_state={
+			has_state_flag=colony@ROOT
+		}
+		has_country_flag=colonisation_underway
+	}
+	
+	mean_time_to_happen = {
+		days = 300
+	}
+	option = {
+		name = colonisation_system.9.a
+		random_owned_state	={
+			limit={ has_state_flag=colony@ROOT }
+			add_extra_state_shared_building_slots=-1
+		}
+		add_ideas=suffering_colony
+	}
+}

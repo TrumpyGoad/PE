@@ -1,0 +1,28 @@
+
+state={
+	id=28
+	name="STATE_28"
+	manpower=258644
+	buildings_max_level_factor=1
+	state_category=town
+	resources={
+		oil=13
+	}
+
+	history={
+		owner=ALS
+		add_core_of=ALS
+		victory_points={
+			13395 5
+		}
+		buildings={
+			infrastructure=4
+			arms_factory=1
+			industrial_complex=1
+		}
+	}
+
+	provinces={
+		549 1346 9503 13393 13395 
+	}
+}

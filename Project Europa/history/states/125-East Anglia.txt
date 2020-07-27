@@ -1,0 +1,34 @@
+
+state={
+	id=125
+	name="STATE_125"
+	resources={
+		oil=8
+		aluminium=15
+	}
+
+	history={
+		owner = ENG
+		add_core_of = ENG
+		victory_points = {
+			221 5 
+		}
+		buildings = {
+			infrastructure = 4
+			arms_factory = 1
+			industrial_complex = 1
+			dockyard = 1
+			221 = {
+				naval_base = 2
+
+			}
+		}
+	}
+
+	provinces={
+		221 11253 11374 13245 
+	}
+	manpower=142745
+	buildings_max_level_factor=1.000
+	state_category=town
+}

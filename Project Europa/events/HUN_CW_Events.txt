@@ -1,0 +1,792 @@
+﻿	add_namespace = HUN_CW_event
+
+country_event = { #DIET OF BUDA
+	id = HUN_CW_event.1
+	title = HUN_CW_event.1.t
+	desc = HUN_CW_event.1.d
+
+	picture = DIET_CEP
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = HUN_CW_event.1.a
+
+	}
+}
+country_event = { #CORONATION
+	id = HUN_CW_event.2
+	title = HUN_CW_event.2.t
+	desc = HUN_CW_event.2.d
+
+	picture = LIBERUM_VETO_CEP
+	
+	fire_only_once = yes
+	
+	trigger = {
+		OR={
+			has_completed_focus=HUN_focus_choose_vladislav
+			has_completed_focus=HUN_focus_choose_hunyadi
+			has_completed_focus=HUN_focus_choose_ladislaus
+			AND={
+				tag=HUN
+				NOT={
+					OR={
+						has_completed_focus=HUN_focus_choose_vladislav
+						has_completed_focus=HUN_focus_choose_hunyadi
+						has_completed_focus=HUN_focus_choose_ladislaus
+					}
+				}
+				date>1440.5.1
+			}
+		}
+	}
+	
+	mean_time_to_happen = { days = 30 }
+	
+	option = {
+		name = HUN_CW_event.2.a
+		if={
+			limit={	
+				NOT={
+					OR={
+						has_completed_focus=HUN_focus_choose_vladislav
+						has_completed_focus=HUN_focus_choose_hunyadi
+						has_completed_focus=HUN_focus_choose_ladislaus
+					}
+				}
+			}
+			hidden_effect={
+				set_country_flag=chosen_vladislav
+				complete_national_focus=HUN_focus_debate_succession
+				complete_national_focus=HUN_focus_choose_vladislav
+				add_political_power=-140
+			}
+		}
+		if={
+			limit={
+				OR={
+					has_country_flag=chosen_vladislav
+					NOT={
+						OR={
+							has_completed_focus=HUN_focus_choose_vladislav
+							has_completed_focus=HUN_focus_choose_hunyadi
+							has_completed_focus=HUN_focus_choose_ladislaus
+						}
+					}
+				}
+			}
+			add_threat=5
+			hidden_effect = {
+				set_capital = 43
+				create_corps_commander = {
+					name = "John Hunyadi"
+					portrait_path="gfx/leaders/HUN/John_Hunyadi.dds"
+					traits = { unyielding_defender infantry_leader }
+					skill = 2
+				}
+				start_civil_war = {
+					ruling_party = neutrality
+					ideology = neutrality
+					size = 0.5
+					capital = 1225
+					states = { 70 72 1229 1228 71 664 1225 155 1212 1211 109 163 }
+				}
+				POL={ puppet=PREV }
+				set_popularities = {
+					neutrality = 63.3
+					protestant = 0
+					reformed = 0
+					orthodox = 36.7
+					coptic = 0
+					anglican = 0
+					fascism = 0
+					shia = 0
+					ibadi = 0
+					theravada = 0
+					vajrayana = 0
+					mahayana = 0
+					confucian = 0
+					shinto = 0
+					hindu = 0
+					sikh = 0
+					communism = 0
+					fetishist = 0
+					totemist = 0
+					inti = 0
+					nahuatl = 0
+					mayan = 0
+					tengri = 0
+					norse = 0
+					democratic = 0
+					zoroastrian = 0
+				}
+				random_other_country = {
+					limit = {
+						original_tag = HUN
+						has_government = neutrality
+					}
+					set_country_flag=chosen_ladislaus
+					load_focus_tree=new_hungarian_focus
+					complete_national_focus=HUN_focus_debate_succession
+					complete_national_focus=HUN_focus_choose_ladislaus
+					load_oob = "HCW_AUS_1440"
+					set_equipment_fraction = 0.6
+					set_stability = 0.9
+					set_war_support = 0.8
+					set_cosmetic_tag = HUN_civil_war
+					kill_country_leader=yes
+					create_country_leader = {
+						name = "Elizabeth von Luxembourg"
+						desc = ""
+						picture = "gfx/leaders/HUN/Elizabeth_of_Luxembourg.dds"
+						expire = "9999.1.1"
+						ideology = cat
+						traits = { }
+					}
+					create_corps_commander = {
+						name = "Ulrich II"
+						portrait_path="gfx/leaders/HUN/Ulrich_II.dds"
+						traits = { thorough_planner }
+						skill = 2
+					}
+					AUS={ puppet=PREV }
+					set_popularities = {
+						neutrality = 100
+						protestant = 0
+						reformed = 0
+						orthodox = 0
+						coptic = 0
+						anglican = 0
+						fascism = 0
+						shia = 0
+						ibadi = 0
+						theravada = 0
+						vajrayana = 0
+						mahayana = 0
+						confucian = 0
+						shinto = 0
+						hindu = 0
+						sikh = 0
+						communism = 0
+						fetishist = 0
+						totemist = 0
+						inti = 0
+						nahuatl = 0
+						mayan = 0
+						tengri = 0
+						norse = 0
+						democratic = 0
+						zoroastrian = 0
+					}
+					declare_war_on={
+						target=HUN
+						type=civil_war
+					}
+					country_event = { id = HUN_CW_event.6 }
+				}
+				kill_country_leader=yes
+				create_country_leader = {
+					name = "Władysław III"
+					desc = ""
+					picture = "gfx/leaders/POL/Vladislav_III.dds"
+					expire = "9999.1.1"
+					ideology = cat
+					traits = { }
+				}
+				#news_event = { hours = 6 id = news.63 }
+				set_global_flag = hungarian_civil_war
+				
+				load_oob = "HCW_POL_1440"
+				set_equipment_fraction = 0.6
+				set_stability = 0.9
+				set_war_support = 0.8
+			}
+			custom_effect_tooltip = vladislav_chosen
+		}
+		else_if={
+			limit={
+				has_country_flag=chosen_ladislaus
+			}
+			add_threat=5
+			hidden_effect = {
+				create_corps_commander = {
+					name = "Ulrich II"
+					portrait_path="gfx/leaders/HUN/Ulrich_II.dds"
+					traits = { thorough_planner }
+					skill = 2
+				}
+				set_capital = 1225
+				start_civil_war = {
+					ruling_party = neutrality
+					ideology = neutrality
+					size = 0.5
+					capital = 43
+					states = { 43 1226 1227 1230 1231 1232 76 73 84 83 82 154 45 1215 1216 1233 }
+				}
+				AUS={ puppet=PREV }
+				set_popularities = {
+					neutrality = 100
+					protestant = 0
+					reformed = 0
+					orthodox = 0
+					coptic = 0
+					anglican = 0
+					fascism = 0
+					shia = 0
+					ibadi = 0
+					theravada = 0
+					vajrayana = 0
+					mahayana = 0
+					confucian = 0
+					shinto = 0
+					hindu = 0
+					sikh = 0
+					communism = 0
+					fetishist = 0
+					totemist = 0
+					inti = 0
+					nahuatl = 0
+					mayan = 0
+					tengri = 0
+					norse = 0
+					democratic = 0
+					zoroastrian = 0
+				}
+				random_other_country = {
+					limit = {
+						original_tag = HUN
+						has_government = neutrality
+					}
+					set_country_flag=chosen_vladislav
+					load_focus_tree=new_hungarian_focus
+					complete_national_focus=HUN_focus_debate_succession
+					complete_national_focus=HUN_focus_choose_vladislav
+					kill_country_leader=yes
+					create_country_leader = {
+						name = "Władysław III"
+						desc = ""
+						picture = "gfx/leaders/POL/Vladislav_III.dds"
+						expire = "9999.1.1"
+						ideology = cat
+						traits = { }
+					}
+					create_corps_commander = {
+						name = "John Hunyadi"
+						portrait_path="gfx/leaders/HUN/John_Hunyadi.dds"
+						traits = { unyielding_defender infantry_leader }
+						skill = 2
+					}
+					load_oob = "HCW_POL_1440"
+					set_equipment_fraction = 0.6
+					set_stability = 0.9
+					set_war_support = 0.8
+					set_cosmetic_tag = HUN_civil_war
+					POL={ puppet=PREV }
+					set_popularities = {
+						neutrality = 63.3
+						protestant = 0
+						reformed = 0
+						orthodox = 36.7
+						coptic = 0
+						anglican = 0
+						fascism = 0
+						shia = 0
+						ibadi = 0
+						theravada = 0
+						vajrayana = 0
+						mahayana = 0
+						confucian = 0
+						shinto = 0
+						hindu = 0
+						sikh = 0
+						communism = 0
+						fetishist = 0
+						totemist = 0
+						inti = 0
+						nahuatl = 0
+						mayan = 0
+						tengri = 0
+						norse = 0
+						democratic = 0
+						zoroastrian = 0
+					}
+					declare_war_on={
+						target=HUN
+						type=civil_war
+					}
+					country_event = { id = HUN_CW_event.6 }
+				}
+				kill_country_leader=yes
+				create_country_leader = {
+					name = "Elizabeth von Luxembourg"
+					desc = ""
+					picture = "gfx/leaders/HUN/Elizabeth_of_Luxembourg.dds"
+					expire = "9999.1.1"
+					ideology = cat
+					traits = { }
+				}
+				#news_event = { hours = 6 id = news.63 }
+				set_global_flag = hungarian_civil_war
+				
+				load_oob = "HCW_AUS_1440"
+				set_equipment_fraction = 0.6
+				set_stability = 0.9
+				set_war_support = 0.8
+			}
+		}
+		else_if={
+			limit={
+				has_country_flag=chosen_hunyadi
+			}
+			hidden_effect={
+				create_corps_commander = {
+					name = "John Hunyadi"
+					portrait_path="gfx/leaders/HUN/John_Hunyadi.dds"
+					traits = { unyielding_defender infantry_leader }
+					skill = 2
+				}
+				create_country_leader = {
+					name = "John Hunyadi"
+					desc = ""
+					picture = "gfx/leaders/HUN/John_Hunyadi.dds"
+					expire = "9999.1.1"
+					ideology = cat
+					traits = { }
+				}
+				load_oob = "HCW_HUN_1440"
+				set_equipment_fraction = 0.6
+				POL={ country_event = { id = HUN_CW_event.5 days=1 } }
+				AUS={ country_event = { id = HUN_CW_event.5 days=1 } }
+			}
+		}
+	}
+}
+country_event = { #POLAND INTERVENTION
+	id = HUN_CW_event.3
+	title = HUN_CW_event.3.t
+	desc = HUN_CW_event.3.d
+
+	picture = BORDER_TENSION_CEP
+	
+	is_triggered_only = yes
+
+	option = {
+		name = HUN_CW_event.3.a #DIRECT INTERVENTION
+		ai_chance = { factor = 75 }
+		add_threat=2.5
+		if={
+			limit={
+				FROM={ has_country_flag=chosen_ladislaus }
+			}
+			add_to_war = {
+				targeted_alliance = FROM.FROM 
+				enemy = FROM
+				hostility_reason = asked_to_join
+			}
+		}
+		else_if={
+			limit={
+				FROM={ has_country_flag=chosen_vladislav }
+			}
+			add_to_war = {
+				targeted_alliance = FROM 
+				enemy = FROM.FROM
+				hostility_reason = asked_to_join
+			}
+		}
+	}
+	option = {
+		name = HUN_CW_event.3.b #VOLUNTEERS AND EQUIPMENT
+		ai_chance = { factor = 0 }
+		send_equipment = {
+			equipment = pike_equipment
+			amount = 1000
+			target = FROM
+		}
+		add_opinion_modifier = {
+			target = FROM
+			modifier = HCW_aid_modifier
+		}
+	}
+	option = {
+		name = HUN_CW_event.3.c #ABANDON THEM
+		ai_chance = { factor = 0 }
+		release = FROM
+		add_opinion_modifier = {
+			target = FROM
+			modifier = HCW_abandoned_modifier
+		}
+		FROM={
+			kill_country_leader=yes
+			create_country_leader = {
+				name = "John Hunyadi"
+				desc = ""
+				picture = "gfx/leaders/HUN/John_Hunyadi.dds"
+				expire = "9999.1.1"
+				ideology = cat
+				traits = { }
+			}
+		}
+	}
+}
+country_event = { #AUSTRIA INTERVENTION
+	id = HUN_CW_event.4
+	title = HUN_CW_event.4.t
+	desc = HUN_CW_event.4.d
+
+	picture = BORDER_TENSION_CEP
+	
+	is_triggered_only = yes
+
+	option = {
+		name = HUN_CW_event.4.a #DIRECT INTERVENTION
+		add_threat=2.5
+		ai_chance = { factor = 75 }
+		if={
+			limit={
+				FROM={ has_country_flag=chosen_ladislaus }
+			}
+			add_to_war = {
+				targeted_alliance = FROM 
+				enemy = FROM.FROM
+				hostility_reason = asked_to_join
+			}
+		}
+		else_if={
+			limit={
+				FROM={ has_country_flag=chosen_vladislav }
+			}
+			add_to_war = {
+				targeted_alliance = FROM.FROM 
+				enemy = FROM
+				hostility_reason = asked_to_join
+			}
+		}
+	}
+	option = {
+		name = HUN_CW_event.4.b #VOLUNTEERS AND EQUIPMENT
+		ai_chance = { factor = 0 }
+		send_equipment = {
+			equipment = pike_equipment
+			amount = 1000
+			target = FROM
+		}
+		add_opinion_modifier = {
+			target = FROM
+			modifier = HCW_aid_modifier
+		}
+	}
+	option = {
+		name = HUN_CW_event.4.c #ABANDON THEM
+		ai_chance = { factor = 0 }
+		if={
+			limit={
+				FROM={ has_country_flag=chosen_ladislaus }
+			}
+			release=FROM
+			add_opinion_modifier = {
+				target = FROM
+				modifier = HCW_dynastic_traitors
+			}
+		}
+		else_if={
+			limit={
+				FROM={ has_country_flag=chosen_vladislav }
+			}
+			release = FROM.FROM
+			add_opinion_modifier = {
+				target = FROM.FROM
+				modifier = HCW_dynastic_traitors
+			}
+		}
+	}
+}
+
+country_event = { #DISGRACE FROM HUNGARY
+	id = HUN_CW_event.5
+	title = HUN_CW_event.5.t
+	desc = HUN_CW_event.5.d
+
+	picture = NOBLE_ESTATE_TAKE_OVER_CEP
+	
+	is_triggered_only = yes
+	fire_only_once=yes
+		
+	option = {
+		name = HUN_CW_event.5.a
+		add_threat=2.5
+		declare_war_on={
+			target=HUN
+			type=puppet_wargoal_focus
+		}
+	}
+	option = {
+		name = HUN_CW_event.5.b
+		create_wargoal = {
+			type = puppet_wargoal_focus
+			target = HUN
+		}
+		
+	}
+	option = {
+		name = HUN_CW_event.5.c
+		add_stability=-0.1
+	}
+}
+country_event = { #TEMP EVENT #1
+	id = HUN_CW_event.6
+	title = HUN_CW_event.6.t
+	desc = HUN_CW_event.6.d
+
+	picture = DIET_CEP
+	
+	is_triggered_only = yes
+	fire_only_once=yes
+	
+	hidden=yes
+	
+	immediate={
+		POL={ country_event = { id = HUN_CW_event.3 days=1 } }
+		AUS={ country_event = { id = HUN_CW_event.4 days=1 } }
+	}
+	option = {
+		name = HUN_CW_event.6.a
+		
+	}
+}
+country_event = { #HRE VOLUNTEERS REQUEST
+	id = HUN_CW_event.7
+	title = HUN_CW_event.7.t
+	desc = HUN_CW_event.7.d
+
+	picture = DIPLOMACY_CEP
+	
+	is_triggered_only = yes
+
+	option = { #ACCEPT - AI VOLUNTEERS AND PLAYER GIVES MANPOWER
+		name = HUN_CW_event.7.a
+		ai_chance = {
+			factor = 60
+			modifier = {
+				factor = 0.1
+				has_opinion={
+					target=FROM
+					value < 0
+				}
+			}
+		}
+		set_country_flag=HRE_volunteers
+		add_opinion_modifier = { target = FROM modifier = HCW_HRE_granted_aid }
+		FROM={
+			add_to_variable = {
+				var = HCW_HRE_accept_count
+				value = 1
+			}
+			add_to_variable = {
+				var = HCW_HRE_response_count
+				value = 1
+			}
+			country_event={ id = HUN_CW_event.8 days=1 }
+		}
+	}
+	option = { #DECLINE
+		name = HUN_CW_event.7.b
+		ai_chance = {
+			factor = 40
+		}
+		FROM={
+			add_to_variable = {
+				var = HCW_HRE_response_count
+				value = 1
+			}
+			add_to_variable = {
+				var = HCW_HRE_refuse_count
+				value = 1
+			}
+			country_event={ id = HUN_CW_event.8 }
+		}
+		add_opinion_modifier = { target = FROM modifier = HCW_HRE_refused_aid }
+		
+	}
+}
+country_event = { #HRE TEMP EVENT
+	id = HUN_CW_event.8
+	title = HUN_CW_event.8.t
+	desc = HUN_CW_event.8.d
+
+	picture = NOBLE_ESTATE_DEMANDS_CEP
+	
+	is_triggered_only = yes
+	
+	hidden=yes
+
+	option = {
+		name = HUN_CW_event.8.a
+		if={
+			limit={ check_variable = { HCW_HRE_response_count = 7 } }
+			country_event={ id=HUN_CW_event.9 days=1 }
+		}
+	}
+}
+country_event = { #HRE VOLUNTEERS SUMMARY
+	id = HUN_CW_event.9
+	title = HUN_CW_event.9.t
+	desc = HUN_CW_event.9.d
+
+	picture = NOBLE_ESTATE_DEMANDS_CEP
+	
+	is_triggered_only = yes
+	fire_only_once=yes
+
+	option = {
+		name = HUN_CW_event.9.a
+		if={
+			limit={ check_variable = { HCW_HRE_accept_count = 7 } }
+			add_ideas=HRE_unanimous_investment
+		}
+		else_if={
+			limit={ check_variable = { HCW_HRE_accept_count < 3 } }
+			add_ideas=HRE_negligible_investment
+		}
+		else_if={
+			limit={ check_variable = { HCW_HRE_accept_count > 2 } }
+			add_ideas=HRE_moderate_investment
+		}
+	}
+}
+country_event = { #BALKAN COALITION PROPOSAL
+	id = HUN_CW_event.10
+	title = HUN_CW_event.10.t
+	desc = HUN_CW_event.10.d
+
+	picture = DIET_CEP
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = HUN_CW_event.10.a
+		ai_chance = {
+			factor = 80
+			modifier = {
+				factor = 0.1
+				has_opinion={
+					target=FROM
+					value < 0
+				}
+			}
+		}
+		FROM = {
+			add_to_faction = ROOT
+			country_event={ id=HUN_CW_event.11 days=1 }
+		}
+	}
+	option = {
+		name = HUN_CW_event.10.b
+		ai_chance = {
+			factor = 20
+			modifier = {
+				factor = 0.1
+				has_opinion={
+					target=FROM
+					value > 50
+				}
+			}
+		}
+		FROM={
+			country_event={ id=HUN_CW_event.12 days=1 }
+		}
+	}
+}
+country_event = { #BALKAN COALITION ACCEPTED
+	id = HUN_CW_event.11
+	title = HUN_CW_event.11.t
+	desc = HUN_CW_event.11.d
+
+	picture = FAT_WARRIORS_CEP
+	
+	is_triggered_only = yes
+
+	option = {
+		name = HUN_CW_event.11.a
+	}
+}
+country_event = { #BALKAN COALITION REFUSED
+	id = HUN_CW_event.12
+	title = HUN_CW_event.12.t
+	desc = HUN_CW_event.12.d
+
+	picture = NOBLE_ESTATE_TAKE_OVER_CEP
+	
+	is_triggered_only = yes
+
+	option = {
+		name = HUN_CW_event.12.a
+		add_opinion_modifier = { target = FROM modifier = HCW_refused_coalition }
+	}
+}
+country_event = { #HOLY SEE PETITION
+	id = HUN_CW_event.13
+	title = HUN_CW_event.13.t
+	desc = HUN_CW_event.13.d
+
+	picture = TREATY_CEP
+	
+	is_triggered_only = yes
+
+	option = {
+		name = HUN_CW_event.13.a
+		add_opinion_modifier = { target = FROM modifier = HCW_approved_petition }
+		add_opinion_modifier = { target = AUS modifier = HCW_HRE_approved_petition }
+		FROM={
+			country_event={ id=HUN_CW_event.14 days=1 }
+		}
+	}
+	option = {
+		name = HUN_CW_event.13.b
+		add_opinion_modifier = { target = FROM modifier = HCW_refused_petition }
+		FROM={ country_event={ id=HUN_CW_event.15 days=1 } }
+	}
+}
+country_event = { #HOLY SEE PETITION GRANTED
+	id = HUN_CW_event.14
+	title = HUN_CW_event.14.t
+	desc = HUN_CW_event.14.d
+
+	picture = CHURCH_ESTATE_UPSET_CEP
+	
+	is_triggered_only = yes
+
+	option = {
+		name = HUN_CW_event.14.a
+		add_ideas=holy_see_approval
+	}
+}
+country_event = { #HOLY SEE PETITION REFUSED
+	id = HUN_CW_event.15
+	title = HUN_CW_event.15.t
+	desc = HUN_CW_event.15.d
+
+	picture = CHURCH_ESTATE_UPSET_CEP
+	
+	is_triggered_only = yes
+
+	option = {
+		name = HUN_CW_event.15.a
+		add_political_power=100
+	}
+}
+country_event = { #HUNGARY SECURED
+	id = HUN_CW_event.16
+	title = HUN_CW_event.16.t
+	desc = HUN_CW_event.16.d
+
+	picture = CONQUEST_CEP
+	
+	is_triggered_only = yes
+
+	option = {
+		name = HUN_CW_event.16.a
+		add_ideas=HUN_secured
+	}
+}

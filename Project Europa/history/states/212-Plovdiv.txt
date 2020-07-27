@@ -1,0 +1,29 @@
+
+state={
+	id=212
+	name="STATE_212"
+	manpower=191220
+	buildings_max_level_factor=1
+	state_category=large_settlement
+	resources={
+		chromium=24
+	}
+
+	history={
+		owner=TUR
+		add_core_of=TUR
+		add_core_of=BUL
+		victory_points={
+			6952 3
+		}
+		buildings={
+			infrastructure=3
+			arms_factory=0
+			industrial_complex=1
+		}
+	}
+
+	provinces={
+		878 893 6814 6923 6952 6967 6982 9862 11813 
+	}
+}

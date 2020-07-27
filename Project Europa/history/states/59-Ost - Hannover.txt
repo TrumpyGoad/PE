@@ -1,0 +1,29 @@
+
+state={
+	id=59
+	name="STATE_59"
+	manpower=129012
+	buildings_max_level_factor=1
+	state_category=large_settlement
+	resources={
+		aluminium=10
+		chromium=23
+	}
+
+	history={
+		owner=BRU
+		add_core_of=BRU
+		victory_points={
+			13587 3
+		}
+		buildings={
+			infrastructure=3
+			arms_factory=1
+			industrial_complex=1
+		}
+	}
+
+	provinces={
+		3395 6377 11493 13587 
+	}
+}

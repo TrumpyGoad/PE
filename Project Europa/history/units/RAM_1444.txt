@@ -1,0 +1,49 @@
+﻿division_template = {
+	name = "Infantry Regiment"
+	division_names_group = TUR_INF_01
+
+	regiments = {
+		swordsmen = { x = 0 y = 0 }
+		pikemen = { x = 0 y = 1 }
+		arquebusiers = { x = 1 y = 0 }
+		pikemen = { x = 1 y = 1 }
+	}
+	support = {
+		arquebusiers_support = { x = 0 y = 0 }
+		arbalests_support = { x = 0 y = 1 } 
+	}
+}
+division_template = {
+	name = "Cavalry Regiment"
+	division_names_group = TUR_CAV_01
+
+	regiments = {
+		spear_cav = { x = 0 y = 0 }
+		cav_archers = { x = 0 y = 1 }
+		spear_cav = { x = 1 y = 0 }
+		lance_cavalry = { x = 1 y = 1 }
+	}
+}
+units = {
+	#RAMAZAN#
+	division= {	
+		location = 11746
+		division_template = "Infantry Regiment"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+
+	}
+	navy = {
+		base = 11746
+		location = 11746
+		#Barques
+		ship = { name = "Barque 1" definition = barque equipment = { barque_1 = {amount = 1 owner = RAM } } }
+		ship = { name = "Barque 2" definition = barque equipment = { barque_1 = {amount = 1 owner = RAM } } }
+		#Galleys
+		ship = { name = "Galley 1" definition = galley equipment = { galley_1 = {amount = 1 owner = RAM } } }
+		ship = { name = "Galley 2" definition = galley equipment = { galley_1 = {amount = 1 owner = RAM } } }
+		ship = { name = "Galley 3" definition = galley equipment = { galley_1 = {amount = 1 owner = RAM } } }
+		ship = { name = "Galley 4" definition = galley equipment = { galley_1 = {amount = 1 owner = RAM } } }
+		ship = { name = "Galley 5" definition = galley equipment = { galley_1 = {amount = 1 owner = RAM } } }
+	}
+}

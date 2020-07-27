@@ -1,0 +1,32 @@
+
+state={
+	id=36
+	name="STATE_36"
+	manpower=212601
+	buildings_max_level_factor=1
+	state_category=town
+	resources={
+		oil=8
+	}
+
+	history={
+		owner=FRI
+		add_core_of=FRI
+		victory_points={
+			13595 5
+		}
+		buildings={
+			infrastructure=4
+			arms_factory=0
+			industrial_complex=1
+			dockyard=1
+			13595={
+				naval_base=2
+			}
+		}
+	}
+
+	provinces={
+		6336 13591 13595 
+	}
+}

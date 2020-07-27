@@ -1,0 +1,85 @@
+﻿division_template = {
+	name = "Infantry Regiment"
+	division_names_group = ARB_INF_01
+
+	regiments = {
+		swordsmen = { x = 0 y = 0 }
+		pikemen = { x = 0 y = 1 }
+		arbalests = { x = 1 y = 0 }
+		pikemen = { x = 1 y = 1 }
+	}
+	support = {
+		arbalests_support = { x = 0 y = 0 }
+		arbalests_support = { x = 0 y = 1 } 
+	}
+}
+division_template = {
+	name = "Cavalry Regiment"
+	division_names_group = ARB_CAV_01
+
+	regiments = {
+		spear_cav = { x = 0 y = 0 }
+		cav_archers = { x = 0 y = 1 }
+		spear_cav = { x = 1 y = 0 }
+		cav_archers = { x = 1 y = 1 }
+	}
+}
+units = {
+	#FEZ#
+	division= {	
+		location = 11987
+		division_template = "Infantry Regiment"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+
+	}
+	division= {	
+		location = 11987
+		division_template = "Infantry Regiment"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+
+	}
+	division= {	
+		location = 11987
+		division_template = "Infantry Regiment"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+
+	}
+	division= {	
+		location = 11987
+		division_template = "Infantry Regiment"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+
+	}
+	division= {	
+		location = 11987
+		division_template = "Cavalry Regiment"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+
+	}
+	division= {	
+		location = 11987
+		division_template = "Cavalry Regiment"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+
+	}
+	navy = {
+		base = 9945
+		location = 9945
+		#Carracks
+		ship = { name = "Early Carrack 1" definition = carrack equipment = { carrack_1 = {amount = 1 owner = MOR } } }
+		ship = { name = "Early Carrack 2" definition = carrack equipment = { carrack_1 = {amount = 1 owner = MOR } } }
+		ship = { name = "Early Carrack 3" definition = carrack equipment = { carrack_1 = {amount = 1 owner = MOR } } }
+		#Barques
+		ship = { name = "Barque 1" definition = barque equipment = { barque_1 = {amount = 1 owner = MOR } } }
+		ship = { name = "Barque 2" definition = barque equipment = { barque_1 = {amount = 1 owner = MOR } } }
+		ship = { name = "Barque 3" definition = barque equipment = { barque_1 = {amount = 1 owner = MOR } } }
+		ship = { name = "Barque 4" definition = barque equipment = { barque_1 = {amount = 1 owner = MOR } } }
+		ship = { name = "Barque 5" definition = barque equipment = { barque_1 = {amount = 1 owner = MOR } } }
+	}
+}

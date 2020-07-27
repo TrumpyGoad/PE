@@ -1,0 +1,35 @@
+
+state={
+	id=731
+	name="STATE_731"
+	manpower=308683
+	buildings_max_level_factor=1
+	state_category=town
+	resources={
+		oil=8
+		aluminium=16
+	}
+
+	history={
+		owner=TUR
+		add_core_of=TUR
+		add_core_of=BYZ
+		victory_points={
+			11818 5
+		}
+		buildings={
+			infrastructure=4
+			arms_factory=1
+			industrial_complex=1
+			powder_mill=1
+			dockyard=1
+			3936={
+				naval_base=2
+			}
+		}
+	}
+
+	provinces={
+		895 3526 3936 6886 6930 6990 9930 10163 11818 
+	}
+}

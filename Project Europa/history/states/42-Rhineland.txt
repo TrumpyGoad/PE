@@ -1,0 +1,28 @@
+
+state={
+	id=42
+	name="STATE_42"
+	manpower=132237
+	buildings_max_level_factor=1
+	state_category=large_settlement
+	resources={
+		chromium=24
+	}
+
+	history={
+		owner=TRR
+		add_core_of=TRR
+		victory_points={
+			9575 3
+		}
+		buildings={
+			infrastructure=3
+			arms_factory=0
+			industrial_complex=1
+		}
+	}
+
+	provinces={
+		9575 11435 11470 13546 
+	}
+}

@@ -1,0 +1,27 @@
+sub_unit_categories = {
+	category_tanks
+	category_light_infantry
+    category_front_line
+	category_all_infantry
+	category_support_battalions
+	category_all_armor
+	category_army
+	category_line_artillery
+	category_artillery
+	category_fighter
+	category_heavy_fighter
+	category_cas
+	category_special_forces
+	######MOD SHIT#####
+	category_pikemen
+	category_melee_inf
+	category_ranged_inf
+	category_arbalests
+	category_archers
+	category_swordsmen
+	category_arquebusiers
+	category_cavalry
+	category_lance_cavalry
+	category_spear_cav
+	category_cav_archers
+}

@@ -1,0 +1,402 @@
+spriteTypes = {	
+	#GUILDS
+	spriteType = {
+		name = "GFX_idea_swordsmen_guild"
+		texturefile = "gfx/interface/ideas/swordsmen_guild.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_polearm_guild"
+		texturefile = "gfx/interface/ideas/polearm_guild.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_peasant_guild"
+		texturefile = "gfx/interface/ideas/peasant_guild.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_archery_guild"
+		texturefile = "gfx/interface/ideas/archery_guild.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_mechanical_guild"
+		texturefile = "gfx/interface/ideas/mechanical_guild.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_gunsmith_guild"
+		texturefile = "gfx/interface/ideas/gunsmith_guild.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_blacksmith_guild"
+		texturefile = "gfx/interface/ideas/blacksmith_guild.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_weaver_guild"
+		texturefile = "gfx/interface/ideas/weaver_guild.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_tanner_guild"
+		texturefile = "gfx/interface/ideas/tanner_guild.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_rearing_guild"
+		texturefile = "gfx/interface/ideas/rearing_guild.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_knight_guild"
+		texturefile = "gfx/interface/ideas/knight_guild.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_steppe_guild"
+		texturefile = "gfx/interface/ideas/steppe_guild.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_slave_sailor_guild"
+		texturefile = "gfx/interface/ideas/slave_sailor_guild.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_prison_sailor_guild"
+		texturefile = "gfx/interface/ideas/prison_sailor_guild.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_domestic_sailor_guild"
+		texturefile = "gfx/interface/ideas/domestic_sailor_guild.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_trader_guild"
+		texturefile = "gfx/interface/ideas/trader_guild.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_charter_guild"
+		texturefile = "gfx/interface/ideas/charter_guild.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_carpenter_guild"
+		texturefile = "gfx/interface/ideas/carpenter_guild.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_lumber_guild"
+		texturefile = "gfx/interface/ideas/lumber_guild.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_miner_guild"
+		texturefile = "gfx/interface/ideas/miner_guild.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_farmer_guild"
+		texturefile = "gfx/interface/ideas/peasant_guild.dds"
+	}
+	#HUNGARY
+	spriteType = {
+		name = "GFX_idea_holy_see_approval"
+		texturefile = "gfx/interface/ideas/holy_see_approval.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_HRE_moderate_investment"
+		texturefile = "gfx/interface/ideas/HRE_moderate_investment.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_HRE_negligible_investment"
+		texturefile = "gfx/interface/ideas/HRE_negligible_investment.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_HRE_unanimous_investment"
+		texturefile = "gfx/interface/ideas/HRE_unanimous_investment.dds"
+	}
+	#
+	spriteType = {
+		name = "GFX_idea_native_coexistence_policy"
+		texturefile = "gfx/interface/ideas/native_coexistence.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_native_trading_policy"
+		texturefile = "gfx/interface/ideas/native_trading.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_native_repression_policy"
+		texturefile = "gfx/interface/ideas/native_repression.dds"
+	}
+	#
+	spriteType = {
+		name = "GFX_idea_tribalism"
+		texturefile = "gfx/interface/ideas/tribalism.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_feudalism"
+		texturefile = "gfx/interface/ideas/feudalism.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_renaissance"
+		texturefile = "gfx/interface/ideas/renaissance.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_colonialism"
+		texturefile = "gfx/interface/ideas/colonialism.dds"
+	}
+	#
+	spriteType = {
+		name = "GFX_idea_land_policy"
+		texturefile = "gfx/interface/ideas/land_policy_add.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_pike_and_shot"
+		texturefile = "gfx/interface/ideas/pike_and_shot.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_hit_and_run"
+		texturefile = "gfx/interface/ideas/hit_and_run.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_chivalry"
+		texturefile = "gfx/interface/ideas/chivalry.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_sengoku_jidai"
+		texturefile = "gfx/interface/ideas/sengoku_jidai.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_antiquity"
+		texturefile = "gfx/interface/ideas/antiquity.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_pike_square"
+		texturefile = "gfx/interface/ideas/pike_square.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_markmanship"
+		texturefile = "gfx/interface/ideas/markmanship.dds"
+	}
+	#
+	spriteType = {
+		name = "GFX_idea_naval_policy"
+		texturefile = "gfx/interface/ideas/naval_policy_add.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_fleet_being"
+		texturefile = "gfx/interface/ideas/fleet_in_being.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_free_oarsmen"
+		texturefile = "gfx/interface/ideas/free_oarsmen.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_merchant_navy"
+		texturefile = "gfx/interface/ideas/merchant_navy.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ship_raiding"
+		texturefile = "gfx/interface/ideas/ship_raiding.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_wooden_wall"
+		texturefile = "gfx/interface/ideas/wooden_wall.dds"
+	}
+	#MOD STUFF#
+	spriteType = {
+		name = "GFX_idea_duchy_rank"
+		texturefile = "gfx/interface/ideas/duchy_rank.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_kingdom_rank"
+		texturefile = "gfx/interface/ideas/kingdom_rank.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_empire_rank"
+		texturefile = "gfx/interface/ideas/empire_rank.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_monarchy_type"
+		texturefile = "gfx/interface/ideas/monarchy_type.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_republic_type"
+		texturefile = "gfx/interface/ideas/republic_type.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_theocracy_type"
+		texturefile = "gfx/interface/ideas/theocracy_type.dds"
+	}
+	#MONARCHY SUBTYPES#
+	spriteType = {
+		name = "GFX_idea_despotic_monarchy"
+		texturefile = "gfx/interface/ideas/despotic_m.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_feudal_monarchy"
+		texturefile = "gfx/interface/ideas/feudal_m.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_administrative_monarchy"
+		texturefile = "gfx/interface/ideas/administrative_m.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_constitutional_monarchy"
+		texturefile = "gfx/interface/ideas/constitutional_m.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_enlightened_despotism"
+		texturefile = "gfx/interface/ideas/enlightened_m.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_revolutionary_empire"
+		texturefile = "gfx/interface/ideas/revolutionary_m.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_elective_monarchy"
+		texturefile = "gfx/interface/ideas/monarchy_type.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_shogunate"
+		texturefile = "gfx/interface/ideas/shogun.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_daimyo"
+		texturefile = "gfx/interface/ideas/daimyo.dds"
+	}
+	#REPUBLIC SUBTYPES#
+	spriteType = {
+		name = "GFX_idea_merchant_republic"
+		texturefile = "gfx/interface/ideas/merchant_r.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_oligarchic_republic"
+		texturefile = "gfx/interface/ideas/oligarchic_r.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_administrative_republic"
+		texturefile = "gfx/interface/ideas/administrative_r.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_republican_dictatorship"
+		texturefile = "gfx/interface/ideas/dictatorship_r.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_constitutional_republic"
+		texturefile = "gfx/interface/ideas/constitutional_r.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_bureaucratic_despotism"
+		texturefile = "gfx/interface/ideas/bureaucratic_despot_r.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_revolutionary_republic"
+		texturefile = "gfx/interface/ideas/revolutionary_r.dds"
+	}
+	#THEOCRACY SUBTYPES#
+	spriteType = {
+		name = "GFX_idea_papacy"
+		texturefile = "gfx/interface/ideas/papacy_t.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_theocracy"
+		texturefile = "gfx/interface/ideas/theocracy_t.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_monastic_order"
+		texturefile = "gfx/interface/ideas/monastic_t.dds"
+	}
+	#MONARCH POINTS#
+	spriteType = {
+		name = "GFX_idea_adm0"
+		texturefile = "gfx/interface/ideas/adm0.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_adm1"
+		texturefile = "gfx/interface/ideas/adm1.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_adm2"
+		texturefile = "gfx/interface/ideas/adm2.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_adm3"
+		texturefile = "gfx/interface/ideas/adm3.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_adm4"
+		texturefile = "gfx/interface/ideas/adm4.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_adm5"
+		texturefile = "gfx/interface/ideas/adm5.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_adm6"
+		texturefile = "gfx/interface/ideas/adm6.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_dip0"
+		texturefile = "gfx/interface/ideas/dip0.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_dip1"
+		texturefile = "gfx/interface/ideas/dip1.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_dip2"
+		texturefile = "gfx/interface/ideas/dip2.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_dip3"
+		texturefile = "gfx/interface/ideas/dip3.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_dip4"
+		texturefile = "gfx/interface/ideas/dip4.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_dip5"
+		texturefile = "gfx/interface/ideas/dip5.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_dip6"
+		texturefile = "gfx/interface/ideas/dip6.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_mil0"
+		texturefile = "gfx/interface/ideas/mil0.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_mil1"
+		texturefile = "gfx/interface/ideas/mil1.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_mil2"
+		texturefile = "gfx/interface/ideas/mil2.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_mil3"
+		texturefile = "gfx/interface/ideas/mil3.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_mil4"
+		texturefile = "gfx/interface/ideas/mil4.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_mil5"
+		texturefile = "gfx/interface/ideas/mil5.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_mil6"
+		texturefile = "gfx/interface/ideas/mil6.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_hre_member"
+		texturefile = "gfx/interface/ideas/hre_member.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_hre_elector"
+		texturefile = "gfx/interface/ideas/hre_elector.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_hre_emperor"
+		texturefile = "gfx/interface/ideas/hre_emperor.dds"
+	}
+	#EVENT IDEAS#
+	spriteType = {
+		name = "GFX_idea_catholic_cross"
+		texturefile = "gfx/interface/ideas/catholic_cross.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_catholic_cross_burning"
+		texturefile = "gfx/interface/ideas/catholic_cross_burning.dds"
+	}
+}

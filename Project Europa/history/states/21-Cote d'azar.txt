@@ -1,0 +1,33 @@
+
+state={
+	id=21
+	name="STATE_21"
+	manpower=436975
+	buildings_max_level_factor=1
+	state_category=large_town
+	resources={
+		chromium=43
+	}
+
+	history={
+		owner=PRO
+		add_core_of=PRO
+		victory_points={
+			11834 5
+		}
+		buildings={
+			infrastructure=4
+			arms_factory=1
+			industrial_complex=1
+			dockyard=1
+			powder_mill=1
+			11834={
+				naval_base=2
+			}
+		}
+	}
+
+	provinces={
+		911 956 11834 11849 11875 
+	}
+}

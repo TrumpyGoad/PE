@@ -1,0 +1,69 @@
+idea_categories = {
+	# ledger can be define for idea > idea slot > idea category
+	# first one overrides the others
+	# multiple ledgers can be defined, in that case will show on all
+	# possible values : army, air, navy, military (shows on all military ledgers), civilian, all (shows up everywhere), hidden (does not show up)
+	
+	hidden_ideas = {
+		hidden = yes
+	
+		cost = 0
+		removal_cost = -1
+		
+		ledger = hidden
+	}
+
+	country = {
+		national_spirit = yes
+		
+		cost = 0
+		removal_cost = -1
+		
+		ledger = hidden
+	}
+	
+	government_status = {
+		slot = gov_rank
+		slot = gov_type
+		slot = gov_subtype
+		slot = national_priority
+		slot = economic_advisors
+		slot = maritime_advisors
+		slot = military_advisors
+		
+		ledger = civilian
+		
+		cost = 100
+		removal_cost = 0
+	}
+	
+	government_policies = {
+		slot = mobilization_laws
+		slot = trade_laws
+		slot = economy
+		slot = colonisation_laws
+		slot = institutions
+		slot = land_policy
+		slot = naval_policy
+		
+		ledger = civilian
+		
+		cost = 100
+		removal_cost = 0
+	}
+	
+	endorsed_guilds = {
+		slot = infantry_guilds
+		slot = ranged_guilds
+		slot = armour_guilds
+		slot = cavalry_guilds
+		slot = sailor_guilds
+		slot = maritime_guilds
+		slot = extraction_guilds
+		
+		ledger = civilian
+		
+		cost = 100
+		removal_cost = 0
+	}
+}

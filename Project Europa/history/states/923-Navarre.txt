@@ -1,0 +1,29 @@
+state={
+	id=923
+	name="STATE_923"
+	resources={
+		steel=21.000
+	}
+
+	history={
+		owner = NAV
+		add_core_of = NAV
+		victory_points = {
+			9857 3 
+		}
+		buildings = {
+			infrastructure = 3
+			arms_factory = 0
+			industrial_complex = 1
+
+		}
+
+	}
+
+	provinces={
+		932 3931 3933 9857 13215 13227 13228 
+	}
+	manpower=83257
+	buildings_max_level_factor=1.000
+	state_category=large_settlement
+}

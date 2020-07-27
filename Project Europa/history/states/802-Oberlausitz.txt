@@ -1,0 +1,28 @@
+state={
+	id=802
+	name="STATE_802"
+	manpower=116022
+	buildings_max_level_factor=1
+	state_category=large_settlement
+	resources={
+		aluminium=6
+		chromium=15
+	}
+
+	history={
+		owner=CZE
+		add_core_of=CZE
+		victory_points={
+			3514 3
+		}
+		buildings={
+			infrastructure=3
+			arms_factory=0
+			industrial_complex=1
+		}
+	}
+
+	provinces={
+		3514 9535 11401 11517 13672 
+	}
+}

@@ -1,0 +1,34 @@
+
+state={
+	id=103
+	name="STATE_103"
+	manpower=266341
+	buildings_max_level_factor=1
+	state_category=town
+	resources={
+		oil=13
+		aluminium=14
+	}
+
+	history={
+		owner=VNC
+		add_core_of=VNC
+		add_core_of=CRO
+		victory_points={
+			13931 5
+		}
+		buildings={
+			infrastructure=4
+			arms_factory=1
+			industrial_complex=1
+			dockyard=1
+			3943={
+				naval_base=2
+			}
+		}
+	}
+
+	provinces={
+		3924 3943 3974 11816 13927 13931 
+	}
+}

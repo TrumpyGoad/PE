@@ -1,0 +1,137 @@
+# Allows you to create your own dynamic keys
+# to be called in localization.
+# defined_text -> this is it, we're defining the text
+# text -> a discrete entry that can be picked to display in loc.
+# trigger -> determines if a text entry will be picked or not.
+# (The triggers need to be valid for the scope the key is called in
+# (eg Root or From.From).)
+# localization_key -> points to the localization key
+# that'll be used if trigger passes
+
+defined_text = { # Hungarian Civil War Leader
+	name = GetHCWLeader
+	text = {
+		trigger = {
+			HUN = { has_country_flag = chosen_ladislaus }
+		}
+		localization_key = HCW_chosen_ladislaus
+	}
+	text = {
+		trigger = {
+			HUN = { has_country_flag = chosen_vladislav }
+		}
+		localization_key = HCW_chosen_vladislav
+	}
+	text = {
+		trigger = {
+			HUN = { has_country_flag = chosen_hunyadi }
+		}
+		localization_key = HCW_chosen_hunyadi
+	}
+}
+defined_text = { # HCW Coronation Event
+	name = GetHCWCdesc
+	text = {
+		trigger = {
+			HUN = { has_country_flag = chosen_ladislaus }
+		}
+		localization_key = HCWC_Ladislaus_desc
+	}
+	text = {
+		trigger = {
+			HUN = { 
+				OR={
+					has_country_flag = chosen_vladislav
+					NOT={
+						OR={
+							has_completed_focus=HUN_focus_choose_vladislav
+							has_completed_focus=HUN_focus_choose_hunyadi
+							has_completed_focus=HUN_focus_choose_ladislaus
+						}
+					}
+				}
+			}
+		}
+		localization_key = HCWC_Vladislav_desc
+	}
+	text = {
+		trigger = {
+			HUN = { has_country_flag = chosen_hunyadi }
+		}
+		localization_key = HCWC_Hunyadi_desc
+	}
+}
+defined_text = { # HCW Coronation Event
+	name = GetHCWCopt
+	text = {
+		trigger = {
+			HUN = { has_country_flag = chosen_ladislaus }
+		}
+		localization_key = HCWC_Ladislaus_opt
+	}
+	text = {
+		trigger = {
+			HUN = { 
+				OR={
+					has_country_flag = chosen_vladislav
+					NOT={
+						OR={
+							has_completed_focus=HUN_focus_choose_vladislav
+							has_completed_focus=HUN_focus_choose_hunyadi
+							has_completed_focus=HUN_focus_choose_ladislaus
+						}
+					}
+				}
+			}
+		}
+		localization_key = HCWC_Vladislav_opt
+	}
+	text = {
+		trigger = {
+			HUN = { has_country_flag = chosen_hunyadi }
+		}
+		localization_key = HCWC_Hunyadi_opt
+	}
+}
+defined_text = { # HCW Outcome Event
+	name = GetHCWOutcome
+	text = {
+		trigger = {
+			HUN = { has_country_flag = chosen_ladislaus }
+		}
+		localization_key = HCW_Ladislaus_Outcome
+	}
+	text = {
+		trigger = {
+			HUN = { has_country_flag = chosen_vladislav }
+		}
+		localization_key = HCW_Vladislav_Outcome
+	}
+	text = {
+		trigger = {
+			HUN = { has_country_flag = chosen_hunyadi }
+		}
+		localization_key = HCW_Hunyadi_Outcome
+	}
+}
+defined_text = { # HCW Outcome Event Opts
+	name = GetHCWOutcomeOpt
+	text = {
+		trigger = {
+			HUN = { has_country_flag = chosen_ladislaus }
+		}
+		localization_key = HCW_Ladislaus_OutcomeOpt
+	}
+	text = {
+		trigger = {
+			HUN = { has_country_flag = chosen_vladislav }
+		}
+		localization_key = HCW_Vladislav_OutcomeOpt
+	}
+	text = {
+		trigger = {
+			HUN = { has_country_flag = chosen_hunyadi }
+		}
+		localization_key = HCW_Hunyadi_OutcomeOpt
+	}
+}

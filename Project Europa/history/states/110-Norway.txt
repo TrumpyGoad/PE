@@ -1,0 +1,27 @@
+
+state={
+	id=110
+	name="STATE_110"
+	manpower=14375
+	buildings_max_level_factor=1
+	state_category=settlement
+	resources={
+	}
+
+	history={
+		owner=NOR
+		add_core_of=NOR
+		victory_points={
+			6042 1
+		}
+		buildings={
+			infrastructure=2
+			arms_factory=0
+			industrial_complex=0
+		}
+	}
+
+	provinces={
+		10 111 133 179 3021 3105 3136 3183 6042 6160 9135 9227 11028 11113 11206 
+	}
+}

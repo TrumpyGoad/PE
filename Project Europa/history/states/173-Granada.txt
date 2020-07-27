@@ -1,0 +1,25 @@
+state={
+	id=173
+	name="STATE_173"
+
+	history={
+		owner = GRA
+		add_core_of = GRA
+		victory_points = { 1090 3 }
+		buildings={
+			infrastructure = 3
+			arms_factory = 1
+			industrial_complex = 1
+			dockyard = 1
+			10063 = { naval_base = 1 }
+			powder_mill = 1
+		}
+	}
+
+	provinces={
+		1090 1176 4095 7068 10063 
+	}
+	manpower=184354
+	buildings_max_level_factor=1.000
+	state_category=town
+}

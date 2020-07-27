@@ -1,0 +1,28 @@
+
+state={
+	id=462
+	name="STATE_462"
+	manpower=170520
+	buildings_max_level_factor=1
+	state_category=large_settlement
+	resources={
+	}
+
+	history={
+		owner=MRK
+		add_core_of=MOR
+		add_core_of=MRK
+		victory_points={
+			13757 5
+		}
+		buildings={
+			infrastructure=3
+			arms_factory=1
+			industrial_complex=1
+		}
+	}
+
+	provinces={
+		4139 13754 13757 13762 
+	}
+}

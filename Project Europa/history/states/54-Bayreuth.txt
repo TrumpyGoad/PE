@@ -1,0 +1,28 @@
+
+state={
+	id=54
+	name="STATE_54"
+	manpower=85470
+	buildings_max_level_factor=1
+	state_category=town
+	resources={
+		oil=6
+	}
+
+	history={
+		owner=WBG
+		add_core_of=WBG
+		victory_points={
+			11417 5
+		}
+		buildings={
+			infrastructure=4
+			arms_factory=0
+			industrial_complex=0
+		}
+	}
+
+	provinces={
+		6421 9557 9572 11417 11445 13116 
+	}
+}

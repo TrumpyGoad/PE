@@ -1,0 +1,277 @@
+colonisation_CAT = {
+	start_expedition = {
+		
+		cost = 50
+		
+		icon=GFX_decision_generic_operation
+			
+		ai_will_do = {
+			factor = 50
+			modifier = {
+				factor = 0
+				ROOT={
+					OR={
+						AND={
+							has_war=yes
+							any_war_score<40
+						}
+						has_civil_war=yes
+					}
+				}
+			}
+		}
+			
+		allowed = {
+			always = yes
+		}
+		
+		available = {
+			OR={
+				has_idea=native_coexistence_policy
+				has_idea=native_trading_policy
+				has_idea=native_repression_policy
+			}
+			NOT={ has_country_flag=colonisation_underway }
+			NOT={ has_idea=colonial_fatigue }
+			OR = { 
+				any_owned_state = { is_coastal = yes }
+				any_neighbor_country = { tag = NAT }
+			}
+		}
+		
+		visible = {
+			always=yes	
+		}
+
+		complete_effect = {
+			country_event = { id = colonisation_system.1 }
+		}
+	}
+	temp_col_sys1 = {
+		
+		cost = 0
+		
+		icon=GFX_decision_generic_operation
+			
+		ai_will_do = {
+			factor = 50
+			modifier = {
+				factor = 0
+				ROOT={
+					OR={
+						AND={
+							has_war=yes
+							any_war_score<40
+						}
+						has_civil_war=yes
+					}
+				}
+			}
+		}
+			
+		allowed = {
+			always = no
+		}
+		
+		available = {
+			always = no
+		}
+		
+		visible = {
+			always=no	
+		}
+		fixed_random_seed = no
+		complete_effect = {
+			random_list={
+				20={
+					random_owned_state	={
+						limit={ has_state_flag=colony@ROOT }
+						add_manpower=20000
+					}
+				}
+				20={
+					random_owned_state	={
+						limit={ has_state_flag=colony@ROOT }
+						add_manpower=40000
+					}
+				}
+				20={
+					random_owned_state	={
+						limit={ has_state_flag=colony@ROOT }
+						add_manpower=60000
+					}
+				}
+				20={
+					random_owned_state	={
+						limit={ has_state_flag=colony@ROOT }
+						add_manpower=80000
+					}
+				}
+				20={
+					random_owned_state	={
+						limit={ has_state_flag=colony@ROOT }
+						add_manpower=100000
+					}
+				}
+			}
+		}
+	}
+	temp_col_sys2 = {
+		
+		cost = 0
+		
+		icon=GFX_decision_generic_operation
+			
+		ai_will_do = {
+			factor = 50
+			modifier = {
+				factor = 0
+				ROOT={
+					OR={
+						AND={
+							has_war=yes
+							any_war_score<40
+						}
+						has_civil_war=yes
+					}
+				}
+			}
+		}
+			
+		allowed = {
+			always = no
+		}
+		
+		available = {
+			always = no
+		}
+		
+		visible = {
+			always=no	
+		}
+		fixed_random_seed = no
+		complete_effect = {
+			random_list={
+				20={
+					random_owned_state	={
+						limit={ has_state_flag=colony@ROOT }
+						add_manpower=30000
+					}
+				}
+				20={
+					random_owned_state	={
+						limit={ has_state_flag=colony@ROOT }
+						add_manpower=40000
+					}
+				}
+				20={
+					random_owned_state	={
+						limit={ has_state_flag=colony@ROOT }
+						add_manpower=50000
+					}
+				}
+				20={
+					random_owned_state	={
+						limit={ has_state_flag=colony@ROOT }
+						add_manpower=60000
+					}
+				}
+				20={
+					random_owned_state	={
+						limit={ has_state_flag=colony@ROOT }
+						add_manpower=700000
+					}
+				}
+			}
+		}
+	}
+	temp_col_sys3 = {
+		
+		cost = 0
+		
+		icon=GFX_decision_generic_operation
+			
+		ai_will_do = {
+			factor = 50
+			modifier = {
+				factor = 0
+				ROOT={
+					OR={
+						AND={
+							has_war=yes
+							any_war_score<40
+						}
+						has_civil_war=yes
+					}
+				}
+			}
+		}
+			
+		allowed = {
+			always = no
+		}
+		
+		available = {
+			always = no
+		}
+		
+		visible = {
+			always=no	
+		}
+		fixed_random_seed = no
+		complete_effect = {
+			random_list={
+			20 = {
+				random_owned_state	={
+					limit={ has_state_flag=colony@ROOT }
+					add_resource = {
+						type = oil
+						amount = 20
+						state = PREV
+					}
+				}
+			}
+			25 = {
+				random_owned_state	={
+					limit={ has_state_flag=colony@ROOT }
+					add_resource = {
+						type = chromium
+						amount = 20
+						state = PREV
+					}
+				}
+			}
+			20 = {
+				random_owned_state	={
+					limit={ has_state_flag=colony@ROOT }
+					add_resource = {
+						type = aluminium
+						amount = 20
+						state = PREV
+					}
+				}
+			}
+			20 = {
+				random_owned_state	={
+					limit={ has_state_flag=colony@ROOT }
+					add_resource = {
+						type = steel
+						amount = 20
+						state = PREV
+					}
+				}
+			}
+			15 = {
+				random_owned_state	={
+					limit={ has_state_flag=colony@ROOT }
+					add_resource = {
+						type = tungsten
+						amount = 20
+						state = PREV
+					}
+				}
+			}
+		}
+		}
+	}
+}

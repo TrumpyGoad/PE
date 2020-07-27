@@ -1,0 +1,1347 @@
+technologies = {
+	
+	@1300 = 0
+	@1440 = 4
+	@1441 = 6
+	@1442 = 8
+	@1443 = 10
+	@1444 = 12
+	@1445 = 14
+	@1446 = 16
+	@1447 = 18
+	@1448 = 20
+	@1449 = 22
+	@1450 = 24
+	@1451 = 26
+	@1452 = 28
+	@1453 = 30
+	@1454 = 32
+	@1456 = 36
+	@1458 = 40
+
+	#LANCE WEAPONS#
+	lance_weapons = {
+
+		enable_equipments = {
+			lance_equipment_1
+		}
+		
+		path = {
+			leads_to_tech = improved_demilance
+			research_cost_coeff = 1
+		}		
+
+		research_cost = 1.5
+		start_year = 1400
+		folder = {
+			name = infantry_folder
+			position = { x = -2 y = @1440 }
+		}
+		
+		categories = {
+			land_army_tc
+			infantry_weapons_tc
+			demilance_weapons_tc
+			melee_weapons_tc
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	lance_weapons0 = {
+
+		enable_equipments = {
+			lance_equipment_2
+		}
+		
+		path = {
+			leads_to_tech = improved_demilance1
+			research_cost_coeff = 1
+		}		
+
+		research_cost = 1.5
+		start_year = 1447
+		folder = {
+			name = infantry_folder
+			position = { x = -2 y = @1447 }
+		}
+		
+		categories = {
+			land_army_tc
+			infantry_weapons_tc
+			demilance_weapons_tc
+			melee_weapons_tc
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	lance_weapons1 = {
+
+		enable_equipments = {
+			lance_equipment_3
+		}
+		
+		path = {
+			leads_to_tech = improved_demilance3
+			research_cost_coeff = 1
+		}		
+
+		research_cost = 1.5
+		start_year = 1453
+		folder = {
+			name = infantry_folder
+			position = { x = -2 y = @1453 }
+		}
+		
+		categories = {
+			land_army_tc
+			infantry_weapons_tc
+			demilance_weapons_tc
+			melee_weapons_tc
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	#IMPROVED DEMILANCE#
+	improved_demilance = {
+
+		category_lance_cavalry = {
+			soft_attack = 0.02
+			hard_attack = 0.02
+			breakthrough = 0.01
+		}
+		
+		path = {
+			leads_to_tech = improved_demilance0
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+		start_year = 1443
+		folder = {
+			name = infantry_folder
+			position = { x = -2 y = @1443 }
+		}
+		
+		categories = {
+			land_army_tc
+			infantry_weapons_tc
+			demilance_weapons_tc
+			melee_weapons_tc
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	improved_demilance0 = {
+
+		category_lance_cavalry = {
+			soft_attack = 0.02
+			hard_attack = 0.02
+			breakthrough = 0.01
+		}
+		
+		path = {
+			leads_to_tech = lance_weapons0
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+		start_year = 1445
+		folder = {
+			name = infantry_folder
+			position = { x = -2 y = @1445 }
+		}
+		
+		categories = {
+			land_army_tc
+			infantry_weapons_tc
+			demilance_weapons_tc
+			melee_weapons_tc
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	improved_demilance1 = {
+
+		category_lance_cavalry = {
+			soft_attack = 0.02
+			hard_attack = 0.02
+			breakthrough = 0.01
+		}
+		
+		path = {
+			leads_to_tech = improved_demilance2
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+		start_year = 1449
+		folder = {
+			name = infantry_folder
+			position = { x = -2 y = @1449 }
+		}
+		
+		categories = {
+			land_army_tc
+			infantry_weapons_tc
+			demilance_weapons_tc
+			melee_weapons_tc
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	improved_demilance2 = {
+
+		category_lance_cavalry = {
+			soft_attack = 0.02
+			hard_attack = 0.02
+			breakthrough = 0.01
+		}
+		
+		path = {
+			leads_to_tech = lance_weapons1
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+		start_year = 1451
+		folder = {
+			name = infantry_folder
+			position = { x = -2 y = @1451 }
+		}
+		
+		categories = {
+			land_army_tc
+			infantry_weapons_tc
+			demilance_weapons_tc
+			melee_weapons_tc
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	#PIKE WEAPONS#
+	pike_weapons = {
+
+		enable_equipments = {
+			pike_equipment_0
+			lance_equipment_0
+		}
+		
+		enable_subunits = {
+			pikemen
+		}
+		
+		path = {
+			leads_to_tech = pike_weapons0
+			research_cost_coeff = 1
+		}		
+
+		research_cost = 1.5
+		start_year = 1300
+		folder = {
+			name = infantry_folder
+			position = { x = 0 y = @1300 }
+		}
+		
+		categories = {
+			land_army_tc
+			infantry_weapons_tc
+			pike_weapons_tc
+			melee_weapons_tc
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	pike_weapons0 = {
+
+		enable_equipments = {
+			pike_equipment_1
+		}
+				
+		path = {
+			leads_to_tech = improved_langets
+			research_cost_coeff = 1
+		}
+		
+		path = {
+			leads_to_tech = lance_weapons
+			research_cost_coeff = 0.5
+		}
+
+		research_cost = 1.5
+		start_year = 1440
+		folder = {
+			name = infantry_folder
+			position = { x = 0 y = @1440 }
+		}
+		
+		categories = {
+			land_army_tc
+			infantry_weapons_tc
+			pike_weapons_tc
+			melee_weapons_tc
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	pike_weapons1 = {
+
+		enable_equipments = {
+			pike_equipment_2
+		}
+				
+		path = {
+			leads_to_tech = improved_langets1
+			research_cost_coeff = 1
+		}		
+
+		research_cost = 1.5
+		start_year = 1446
+		folder = {
+			name = infantry_folder
+			position = { x = 0 y = @1446 }
+		}
+		
+		categories = {
+			land_army_tc
+			infantry_weapons_tc
+			pike_weapons_tc
+			melee_weapons_tc
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	pike_weapons2 = {
+
+		enable_equipments = {
+			pike_equipment_3
+		}
+				
+		path = {
+			leads_to_tech = improved_langets2
+			research_cost_coeff = 1
+		}		
+
+		research_cost = 1.5
+		start_year = 1450
+		folder = {
+			name = infantry_folder
+			position = { x = 0 y = @1450 }
+		}
+		
+		categories = {
+			land_army_tc
+			infantry_weapons_tc
+			pike_weapons_tc
+			melee_weapons_tc
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	#IMPROVED LANGETS#
+	improved_langets = {
+
+		category_pikemen = {
+			soft_attack = 0.02
+			hard_attack = 0.02
+			breakthrough = 0.01
+		}
+		
+		path = {
+			leads_to_tech = improved_langets0
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+		start_year = 1442
+		folder = {
+			name = infantry_folder
+			position = { x = 0 y = @1442 }
+		}
+		
+		categories = {
+			land_army_tc
+			infantry_weapons_tc
+			pike_weapons_tc
+			melee_weapons_tc
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	improved_langets0 = {
+
+		category_pikemen = {
+			soft_attack = 0.02
+			hard_attack = 0.02
+			breakthrough = 0.01
+		}
+		
+		path = {
+			leads_to_tech = pike_weapons1
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+		start_year = 1444
+		folder = {
+			name = infantry_folder
+			position = { x = 0 y = @1444 }
+		}
+		
+		categories = {
+			land_army_tc
+			infantry_weapons_tc
+			pike_weapons_tc
+			melee_weapons_tc
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	improved_langets1 = {
+
+		category_pikemen = {
+			soft_attack = 0.02
+			hard_attack = 0.02
+			breakthrough = 0.01
+		}
+		
+		path = {
+			leads_to_tech = pike_weapons2
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+		start_year = 1448
+		folder = {
+			name = infantry_folder
+			position = { x = 0 y = @1448 }
+		}
+		
+		categories = {
+			land_army_tc
+			infantry_weapons_tc
+			pike_weapons_tc
+			melee_weapons_tc
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	improved_langets2 = {
+
+		category_pikemen = {
+			soft_attack = 0.02
+			hard_attack = 0.02
+			breakthrough = 0.01
+		}
+		
+		path = {
+			leads_to_tech = improved_langets3
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+		start_year = 1452
+		folder = {
+			name = infantry_folder
+			position = { x = 0 y = @1452 }
+		}
+		
+		categories = {
+			land_army_tc
+			infantry_weapons_tc
+			pike_weapons_tc
+			melee_weapons_tc
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	#INFANTRY SWORD WEAPONS#
+	infantry_sword_weapons = {
+
+		enable_equipments = {
+			infantry_sword_equipment_0
+		}
+		
+		enable_subunits = {
+			swordsmen
+		}
+		
+		path = {
+			leads_to_tech = improved_honing
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1.5
+		start_year = 1300
+		folder = {
+			name = infantry_folder
+			position = { x = 0 y = @1300 }
+		}
+		
+		categories = {
+			land_army_tc
+			infantry_weapons_tc
+			sword_weapons_tc
+			melee_weapons_tc
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	infantry_sword_weapons0 = {
+
+		enable_equipments = {
+			infantry_sword_equipment_1
+		}
+		
+		path = {
+			leads_to_tech = improved_honing0
+			research_cost_coeff = 1
+		}		
+		path = {
+			leads_to_tech = improved_daggers
+			research_cost_coeff = 0.5
+		}
+		research_cost = 1.5
+		start_year = 1443
+		folder = {
+			name = infantry_folder
+			position = { x = 0 y = @1443 }
+		}
+		
+		categories = {
+			land_army_tc
+			infantry_weapons_tc
+			sword_weapons_tc
+			melee_weapons_tc
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	infantry_sword_weapons1 = {
+
+		enable_equipments = {
+			infantry_sword_equipment_2
+		}
+		
+		path = {
+			leads_to_tech = improved_honing2
+			research_cost_coeff = 1
+		}		
+
+		research_cost = 1.5
+		start_year = 1450
+		folder = {
+			name = infantry_folder
+			position = { x = 0 y = @1450 }
+		}
+		
+		categories = {
+			land_army_tc
+			infantry_weapons_tc
+			sword_weapons_tc
+			melee_weapons_tc
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	#IMPROVED DAGGERS#
+	improved_daggers = {
+
+		category_light_infantry = {
+			soft_attack = 0.03
+			breakthrough = 0.01
+		}
+		
+		path = {
+			leads_to_tech = improved_daggers0
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+		start_year = 1443
+		folder = {
+			name = infantry_folder
+			position = { x = 2 y = @1443 }
+		}
+		
+		categories = {
+			land_army_tc
+			infantry_weapons_tc
+			melee_weapons_tc
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	improved_daggers0 = {
+
+		category_light_infantry = {
+			soft_attack = 0.03
+			breakthrough = 0.01
+		}
+		
+		path = {
+			leads_to_tech = improved_daggers1
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+		start_year = 1446
+		folder = {
+			name = infantry_folder
+			position = { x = 2 y = @1446 }
+		}
+		
+		categories = {
+			land_army_tc
+			infantry_weapons_tc
+			melee_weapons_tc
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	improved_daggers1 = {
+
+		category_light_infantry = {
+			soft_attack = 0.03
+			breakthrough = 0.01
+		}
+		
+		path = {
+			leads_to_tech = improved_daggers2
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+		start_year = 1449
+		folder = {
+			name = infantry_folder
+			position = { x = 2 y = @1449 }
+		}
+		
+		categories = {
+			land_army_tc
+			infantry_weapons_tc
+			melee_weapons_tc
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	improved_daggers2 = {
+
+		category_light_infantry = {
+			soft_attack = 0.03
+			breakthrough = 0.01
+		}
+		
+		path = {
+			leads_to_tech = improved_daggers3
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+		start_year = 1451
+		folder = {
+			name = infantry_folder
+			position = { x = 2 y = @1451 }
+		}
+		
+		categories = {
+			land_army_tc
+			infantry_weapons_tc
+			melee_weapons_tc
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	#IMPROVED HONING#
+	improved_honing = {
+
+		category_swordsmen = {
+			soft_attack = 0.03
+			hard_attack = 0.02
+			breakthrough = 0.01
+		}
+		
+		path = {
+			leads_to_tech = infantry_sword_weapons0
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+		start_year = 1441
+		folder = {
+			name = infantry_folder
+			position = { x = 0 y = @1441 }
+		}
+		
+		categories = {
+			land_army_tc
+			infantry_weapons_tc
+			sword_weapons_tc
+			melee_weapons_tc
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	improved_honing0 = {
+
+		category_swordsmen = {
+			soft_attack = 0.03
+			hard_attack = 0.02
+			breakthrough = 0.01
+		}
+		
+		path = {
+			leads_to_tech = improved_honing1
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+		start_year = 1445
+		folder = {
+			name = infantry_folder
+			position = { x = 0 y = @1445 }
+		}
+		
+		categories = {
+			land_army_tc
+			infantry_weapons_tc
+			sword_weapons_tc
+			melee_weapons_tc
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	improved_honing1 = {
+
+		category_swordsmen = {
+			soft_attack = 0.03
+			hard_attack = 0.02
+			breakthrough = 0.01
+		}
+		
+		path = {
+			leads_to_tech = infantry_sword_weapons1
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+		start_year = 1447
+		folder = {
+			name = infantry_folder
+			position = { x = 0 y = @1447 }
+		}
+		
+		categories = {
+			land_army_tc
+			infantry_weapons_tc
+			sword_weapons_tc
+			melee_weapons_tc
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	improved_honing2 = {
+
+		category_swordsmen = {
+			soft_attack = 0.03
+			hard_attack = 0.02
+			breakthrough = 0.01
+		}
+		
+		path = {
+			leads_to_tech = infantry_sword_equipment_2
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+		start_year = 1452
+		folder = {
+			name = infantry_folder
+			position = { x = 0 y = @1452 }
+		}
+		
+		categories = {
+			land_army_tc
+			infantry_weapons_tc
+			sword_weapons_tc
+			melee_weapons_tc
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	bow_weapons = {
+		
+		enable_subunits = {
+			archers
+		}
+		
+		enable_equipments = {
+			bow_equipment_0
+		}
+		
+		path = {
+			leads_to_tech = improved_fletching
+			research_cost_coeff = 1
+		}		
+
+		research_cost = 1.5
+		start_year = 1300
+		folder = {
+			name = infantry_folder
+			position = { x = 0 y = @1300 }
+		}
+		
+		categories = {
+			land_army_tc
+			infantry_weapons_tc
+			bow_weapons_tc
+			ranged_weapons_tc
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	bow_weapons0 = {
+		
+		enable_equipments = {
+			bow_equipment_1
+		}
+
+		research_cost = 1.5
+		start_year = 1444
+		folder = {
+			name = infantry_folder
+			position = { x = 0 y = @1444 }
+		}
+		
+		categories = {
+			land_army_tc
+			infantry_weapons_tc
+			bow_weapons_tc
+			ranged_weapons_tc
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	improved_fletching = {
+
+		category_arbalests = {
+			soft_attack = 0.03
+			hard_attack = 0.01
+		}
+		category_archers = {
+			soft_attack = 0.03
+			hard_attack = 0.01
+		}
+		
+		path = {
+			leads_to_tech = improved_fletching0
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+		start_year = 1440
+		folder = {
+			name = infantry_folder
+			position = { x = 0 y = @1440 }
+		}
+		
+		categories = {
+			land_army_tc
+			infantry_weapons_tc
+			bow_weapons_tc
+			ranged_weapons_tc
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	improved_fletching0 = {
+
+		category_arbalests = {
+			soft_attack = 0.03
+			hard_attack = 0.01
+		}
+		category_archers = {
+			soft_attack = 0.03
+			hard_attack = 0.01
+		}
+		
+		path = {
+			leads_to_tech = bow_weapons0
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 1
+		start_year = 1442
+		folder = {
+			name = infantry_folder
+			position = { x = 0 y = @1442 }
+		}
+		
+		categories = {
+			land_army_tc
+			infantry_weapons_tc
+			bow_weapons_tc
+			ranged_weapons_tc
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	arbalest_weapons = {
+		
+		enable_subunits = {
+			arbalests
+		}
+		
+		enable_equipments = {
+			arbalest_equipment_0
+		}
+		
+		path = {
+			leads_to_tech = improved_lath
+			research_cost_coeff = 1
+		}		
+
+		research_cost = 1.5
+		start_year = 1300
+		folder = {
+			name = infantry_folder
+			position = { x = 0 y = @1300 }
+		}
+		
+		categories = {
+			land_army_tc
+			infantry_weapons_tc
+			arbalest_weapons_tc
+			ranged_weapons_tc
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	arbalest_weapons0 = {
+		
+		enable_equipments = {
+			arbalest_equipment_1
+		}
+		
+		path = {
+			leads_to_tech = improved_lath0
+			research_cost_coeff = 1
+		}		
+
+		research_cost = 1.5
+		start_year = 1442
+		folder = {
+			name = infantry_folder
+			position = { x = 0 y = @1442 }
+		}
+		
+		categories = {
+			land_army_tc
+			infantry_weapons_tc
+			arbalest_weapons_tc
+			ranged_weapons_tc
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	arbalest_weapons1 = {
+		
+		enable_equipments = {
+			arbalest_equipment_2
+		}
+		
+		path = {
+			leads_to_tech = improved_lath1
+			research_cost_coeff = 1
+		}		
+
+		research_cost = 1.5
+		start_year = 1446
+		folder = {
+			name = infantry_folder
+			position = { x = 0 y = @1446 }
+		}
+		
+		categories = {
+			land_army_tc
+			infantry_weapons_tc
+			arbalest_weapons_tc
+			ranged_weapons_tc
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	improved_lath = {
+
+		category_arbalests = {
+			soft_attack = 0.03
+			hard_attack = 0.01
+		}
+		
+		path = {
+			leads_to_tech = arbalest_weapons0
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+		start_year = 1440
+		folder = {
+			name = infantry_folder
+			position = { x = 0 y = @1440 }
+		}
+		
+		categories = {
+			land_army_tc
+			infantry_weapons_tc
+			bow_weapons_tc
+			ranged_weapons_tc
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	improved_lath0 = {
+
+		category_arbalests = {
+			soft_attack = 0.03
+			hard_attack = 0.01
+		}
+		
+		path = {
+			leads_to_tech = arbalest_weapons1
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+		start_year = 1444
+		folder = {
+			name = infantry_folder
+			position = { x = 0 y = @1444 }
+		}
+		
+		categories = {
+			land_army_tc
+			infantry_weapons_tc
+			bow_weapons_tc
+			ranged_weapons_tc
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	improved_lath1 = {
+
+		category_arbalests = {
+			soft_attack = 0.03
+			hard_attack = 0.01
+		}
+		
+		#path = {
+		#	leads_to_tech = arbalest_weapons1
+		#	research_cost_coeff = 1
+		#}
+
+		research_cost = 1
+		start_year = 1450
+		folder = {
+			name = infantry_folder
+			position = { x = 0 y = @1450 }
+		}
+		
+		categories = {
+			land_army_tc
+			infantry_weapons_tc
+			bow_weapons_tc
+			ranged_weapons_tc
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	arquebus_weapons = {
+		
+		enable_subunits = {
+			arquebusiers
+		}
+		
+		enable_equipments = {
+			arquebus_equipment_0
+		}
+		
+		path = {
+			leads_to_tech = improved_serpentine
+			research_cost_coeff = 1
+		}		
+
+		research_cost = 1.5
+		start_year = 1300
+		folder = {
+			name = infantry_folder
+			position = { x = 0 y = @1300 }
+		}
+		
+		categories = {
+			land_army_tc
+			infantry_weapons_tc
+			arquebus_weapons_tc
+			ranged_weapons_tc
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	arquebus_weapons0 = {
+
+		enable_equipments = {
+			arquebus_equipment_1
+		}
+		
+		path = {
+			leads_to_tech = improved_serpentine1
+			research_cost_coeff = 1
+		}		
+
+		research_cost = 1.5
+		start_year = 1444
+		folder = {
+			name = infantry_folder
+			position = { x = 0 y = @1444 }
+		}
+		
+		categories = {
+			land_army_tc
+			infantry_weapons_tc
+			arquebus_weapons_tc
+			ranged_weapons_tc
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	arquebus_weapons1 = {
+
+		enable_equipments = {
+			arquebus_equipment_2
+		}
+		
+		path = {
+			leads_to_tech = improved_serpentine2
+			research_cost_coeff = 1
+		}		
+
+		research_cost = 1.5
+		start_year = 1448
+		folder = {
+			name = infantry_folder
+			position = { x = 0 y = @1448 }
+		}
+		
+		categories = {
+			land_army_tc
+			infantry_weapons_tc
+			arquebus_weapons_tc
+			ranged_weapons_tc
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	improved_serpentine = {
+
+		category_arquebusiers = {
+			soft_attack = 0.03
+			hard_attack = 0.01
+		}
+		
+		path = {
+			leads_to_tech = improved_serpentine0
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+		start_year = 1440
+		folder = {
+			name = infantry_folder
+			position = { x = 0 y = @1440 }
+		}
+		
+		categories = {
+			land_army_tc
+			infantry_weapons_tc
+			arquebus_weapons_tc
+			ranged_weapons_tc
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	improved_serpentine0 = {
+
+		category_arquebusiers = {
+			soft_attack = 0.03
+			hard_attack = 0.01
+		}
+		
+		path = {
+			leads_to_tech = arquebus_weapons0
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+		start_year = 1442
+		folder = {
+			name = infantry_folder
+			position = { x = 0 y = @1442 }
+		}
+		
+		categories = {
+			land_army_tc
+			infantry_weapons_tc
+			arquebus_weapons_tc
+			ranged_weapons_tc
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	improved_serpentine1 = {
+
+		category_arquebusiers = {
+			soft_attack = 0.03
+			hard_attack = 0.01
+		}
+		
+		path = {
+			leads_to_tech = arquebus_weapons1
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+		start_year = 1446
+		folder = {
+			name = infantry_folder
+			position = { x = 0 y = @1446 }
+		}
+		
+		categories = {
+			land_army_tc
+			infantry_weapons_tc
+			arquebus_weapons_tc
+			ranged_weapons_tc
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	improved_serpentine2 = {
+
+		category_arquebusiers = {
+			soft_attack = 0.03
+			hard_attack = 0.01
+		}
+		
+		path = {
+			leads_to_tech = arquebus_weapons2
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+		start_year = 1450
+		folder = {
+			name = infantry_folder
+			position = { x = 0 y = @1450 }
+		}
+		
+		categories = {
+			land_army_tc
+			infantry_weapons_tc
+			arquebus_weapons_tc
+			ranged_weapons_tc
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

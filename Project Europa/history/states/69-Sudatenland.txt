@@ -1,0 +1,28 @@
+
+state={
+	id=69
+	name="STATE_69"
+	manpower=188398
+	buildings_max_level_factor=1
+	state_category=large_settlement
+	resources={
+		chromium=18
+	}
+
+	history={
+		owner=CZE
+		add_core_of=CZE
+		victory_points={
+			13666 3
+		}
+		buildings={
+			infrastructure=3
+			arms_factory=0
+			industrial_complex=1
+		}
+	}
+
+	provinces={
+		424 3585 6470 13665 13666 
+	}
+}

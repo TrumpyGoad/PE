@@ -1,0 +1,27 @@
+state={
+	id=817
+	name="STATE_817"
+	manpower=94634
+	buildings_max_level_factor=1
+	state_category=large_settlement
+	resources={
+		chromium=9
+	}
+
+	history={
+		owner=BOS
+		add_core_of=BOS
+		victory_points={
+			9922 3
+		}
+		buildings={
+			infrastructure=3
+			arms_factory=0
+			industrial_complex=0
+		}
+	}
+
+	provinces={
+		3985 6614 6619 6957 6983 9588 9595 9922 
+	}
+}

@@ -1,0 +1,33 @@
+
+state={
+	id=338
+	name="STATE_338"
+	resources={
+		chromium=15
+	}
+	
+	history={
+		owner = ENG
+		add_core_of = ENG
+		victory_points = {
+			13301 3 
+		}
+		buildings = {
+			infrastructure = 3
+			arms_factory = 0
+			industrial_complex = 0
+			dockyard = 0
+			3369 = {
+				naval_base = 1
+
+			}
+		}
+	}
+
+	provinces={
+		3369 6378 13240 13248 13301 
+	}
+	manpower=50588
+	buildings_max_level_factor=1.000
+	state_category=large_settlement
+}

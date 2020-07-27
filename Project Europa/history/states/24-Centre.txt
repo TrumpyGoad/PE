@@ -1,0 +1,30 @@
+
+state={
+	id=24
+	name="STATE_24"
+	manpower=356845
+	buildings_max_level_factor=1
+	state_category=town
+	resources={
+		chromium=47
+	}
+
+	history={
+		owner=FRA
+		add_core_of=FRA
+		add_core_of=ORL
+		victory_points={
+			512 5
+		}
+		buildings={
+			infrastructure=4
+			arms_factory=1
+			industrial_complex=1
+			powder_mill=1
+		}
+	}
+
+	provinces={
+		512 3493 11631 13377 13383 
+	}
+}

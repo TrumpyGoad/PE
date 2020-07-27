@@ -1,0 +1,21 @@
+HRE_volunteers = {
+    enable = {
+        has_country_flag=HRE_volunteers
+    }
+    abort = {
+        NOT = {
+            has_country_flag=HRE_volunteers
+        }
+    }
+
+    ai_strategy = {
+        type = befriend
+        id = "HUN"
+        value = 200
+    }
+    ai_strategy = {
+        type = send_volunteers_desire
+        id = "HUN"
+        value = 200
+    }
+}

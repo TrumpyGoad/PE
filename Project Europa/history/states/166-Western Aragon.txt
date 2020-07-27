@@ -1,0 +1,26 @@
+state={
+	id=166
+	name="STATE_166"
+	resources={
+		oil=5
+		steel=39
+	}
+
+	history={
+		owner = ARA
+		add_core_of = ARA
+		victory_points = { 3816 5 }
+		buildings={
+			infrastructure = 4
+			arms_factory = 1
+			industrial_complex = 1
+		}
+	}
+
+	provinces={
+		790 3816 3954 9813 11793 
+	}
+	manpower=198796
+	buildings_max_level_factor=1.000
+	state_category=town
+}

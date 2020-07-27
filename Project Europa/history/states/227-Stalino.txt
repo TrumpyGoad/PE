@@ -1,0 +1,33 @@
+state={
+	id=227
+	name="STATE_227"
+	resources={
+		oil=5
+	}
+
+	history={
+		1439.10.27={
+			owner = GOL
+			add_core_of = GOL
+			add_core_of = CRI
+		}
+		1444.11.11={
+			owner = CRI
+			add_core_of = CRI
+		}
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+		}
+		victory_points = {
+			453 5 
+		}
+	}
+
+	provinces={
+		453 472 486 502 3466 3491 3508 6530 11452 11461 
+	}
+	manpower=72535
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

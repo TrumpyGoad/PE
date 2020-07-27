@@ -1,0 +1,32 @@
+state={
+	id=818
+	name="STATE_818"
+	manpower=319610
+	buildings_max_level_factor=1
+	state_category=town
+	resources={
+		oil=14
+	}
+
+	history={
+		owner=RAG
+		add_core_of=RAG
+		victory_points={
+			6889 5
+		}
+		buildings={
+			infrastructure=4
+			arms_factory=1
+			industrial_complex=1
+			powder_mill=1
+			dockyard=1
+			6889={
+				naval_base=2
+			}
+		}
+	}
+
+	provinces={
+		3868 6889 13928 
+	}
+}

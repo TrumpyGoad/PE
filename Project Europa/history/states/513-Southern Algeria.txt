@@ -1,0 +1,33 @@
+
+state={
+	id=513
+	name="STATE_513"
+	manpower=115710
+	buildings_max_level_factor=1
+	state_category=town
+	resources={
+		oil=3
+		aluminium=8
+	}
+
+	history={
+		owner=TLM
+		add_core_of=TLM
+		victory_points={
+			989 5
+		}
+		buildings={
+			infrastructure=4
+			arms_factory=1
+			industrial_complex=1
+			dockyard=0
+			989={
+				naval_base=2
+			}
+		}
+	}
+
+	provinces={
+		989 4116 12100 
+	}
+}

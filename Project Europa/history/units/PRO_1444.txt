@@ -1,0 +1,63 @@
+﻿division_template = {
+	name = "Infantry Regiment"
+	division_names_group = FRA_INF_01
+
+	regiments = {
+		pikemen = { x = 0 y = 0 }
+		pikemen = { x = 0 y = 1 }
+		pikemen = { x = 1 y = 0 }
+		arquebusiers = { x = 1 y = 1 }
+	}
+	support = {
+		arquebusiers_support = { x = 0 y = 0 }
+		arbalests_support = { x = 0 y = 1 } 
+	}
+}
+division_template = {
+	name = "Cavalry Regiment"
+	division_names_group = FRA_CAV_01
+
+	regiments = {
+		spear_cav = { x = 0 y = 0 }
+		lance_cavalry = { x = 0 y = 1 }
+		spear_cav = { x = 1 y = 0 }
+		lance_cavalry = { x = 1 y = 1 }
+	}
+}
+units = {
+	#ANJOU#
+	division= {	
+		location = 11613
+		division_template = "Infantry Regiment"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+
+	}
+	division= {	
+		location = 11613
+		division_template = "Infantry Regiment"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+
+	}
+	division= {	
+		location = 11613
+		division_template = "Cavalry Regiment"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+
+	}
+	navy = {
+		base = 11834
+		location = 11834
+		#Barques
+		ship = { name = "Barque 1" definition = barque equipment = { barque_1 = {amount = 1 owner = PRO } } }
+		ship = { name = "Barque 2" definition = barque equipment = { barque_1 = {amount = 1 owner = PRO } } }
+		ship = { name = "Barque 3" definition = barque equipment = { barque_1 = {amount = 1 owner = PRO } } }
+		ship = { name = "Barque 4" definition = barque equipment = { barque_1 = {amount = 1 owner = PRO } } }
+		ship = { name = "Barque 5" definition = barque equipment = { barque_1 = {amount = 1 owner = PRO } } }
+		ship = { name = "Barque 6" definition = barque equipment = { barque_1 = {amount = 1 owner = PRO } } }
+		ship = { name = "Barque 7" definition = barque equipment = { barque_1 = {amount = 1 owner = PRO } } }
+		ship = { name = "Barque 8" definition = barque equipment = { barque_1 = {amount = 1 owner = PRO } } }
+	}
+}

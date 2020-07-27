@@ -1,0 +1,294 @@
+# Allows you to create your own dynamic keys
+# to be called in localization.
+# defined_text -> this is it, we're defining the text
+# text -> a discrete entry that can be picked to display in loc.
+# trigger -> determines if a text entry will be picked or not.
+# (The triggers need to be valid for the scope the key is called in
+# (eg Root or From.From).)
+# localization_key -> points to the localization key
+# that'll be used if trigger passes
+
+defined_text = { # Explorer Desc
+	name = GetExplorerDesc
+	text = {
+		trigger = {
+			num_occupied_states<1
+		}
+		localization_key = expedition_failure_desc
+	}
+	text = {
+		trigger = {
+			num_occupied_states>0
+		}
+		localization_key = expedition_successful_desc
+	}
+}
+defined_text = { # Land Policy
+	name = GetLandPolicy
+	text = {
+		trigger = {
+			has_idea = pike_and_shot
+		}
+		localization_key = pike_and_shot
+	}
+	text = {
+		trigger = {
+			has_idea = hit_and_run
+		}
+		localization_key = hit_and_run
+	}
+	text = {
+		trigger = {
+			has_idea = pike_square
+		}
+		localization_key = pike_square
+	}
+	text = {
+		trigger = {
+			has_idea = sengoku_jidai
+		}
+		localization_key = sengoku_jidai
+	}
+	text = {
+		trigger = {
+			has_idea = chivalry
+		}
+		localization_key = chivalry
+	}
+	text = {
+		trigger = {
+			has_idea = markmanship
+		}
+		localization_key = markmanship
+	}
+	text = {
+		trigger = {
+			has_idea = antiquity
+		}
+		localization_key = antiquity
+	}
+}
+defined_text = { # Land Policy Stats
+	name = GetLandPolicyStats
+	text = {
+		trigger = {
+			has_idea = pike_and_shot
+		}
+		localization_key = LK_pike_and_shot_stats
+	}
+	text = {
+		trigger = {
+			has_idea = hit_and_run
+		}
+		localization_key = LK_hit_and_run_stats
+	}
+	text = {
+		trigger = {
+			has_idea = pike_square
+		}
+		localization_key = LK_pike_square_stats
+	}
+	text = {
+		trigger = {
+			has_idea = sengoku_jidai
+		}
+		localization_key = LK_sengoku_jidai_stats
+	}
+	text = {
+		trigger = {
+			has_idea = chivalry
+		}
+		localization_key = LK_chivalry_stats
+	}
+	text = {
+		trigger = {
+			has_idea = markmanship
+		}
+		localization_key = LK_markmanship_stats
+	}
+	text = {
+		trigger = {
+			has_idea = antiquity
+		}
+		localization_key = LK_antiquity_stats
+	}
+}
+defined_text = { # Peace System
+	name = GetPeaceResponseOpt
+	text = {
+		trigger = {
+			has_country_flag = accepted_deal
+		}
+		localization_key = LK_AcceptedDealOpt
+	}
+	text = {
+		trigger = {
+			has_country_flag = refused_deal
+		}
+		localization_key = LK_RefusedDealOpt
+	}
+}
+defined_text = { # Peace System
+	name = GetPeaceResponseDesc
+	text = {
+		trigger = {
+			has_country_flag = accepted_deal
+		}
+		localization_key = LK_AcceptedDealDesc
+	}
+	text = {
+		trigger = {
+			has_country_flag = refused_deal
+		}
+		localization_key = LK_RefusedDealDesc
+	}
+}
+defined_text = { # Peace System
+	name = GetPeaceContent
+	text = {
+		trigger = {
+			NOT = {
+				OR = {
+					has_country_flag = peace_victor
+					has_country_flag = peace_loser
+				}
+			}
+		}
+		localization_key = LK_WhitePeace
+	}
+	text = {
+		trigger = {
+			OR = {
+				has_country_flag = peace_victor
+				has_country_flag = peace_loser
+			}
+		}
+		localization_key = LK_ActualPeace
+	}
+}
+defined_text = { # Peace System
+	name = GetPeaceStatus
+	text = {
+		trigger = {
+			has_country_flag = peace_victor
+		}
+		localization_key = LK_Demands
+	}
+	text = {
+		trigger = {
+			has_country_flag = peace_loser
+		}
+		localization_key = LK_Concessions
+	}
+}
+defined_text = { # Peace System
+	name = GetPeaceAction
+	text = {
+		trigger = {
+			has_country_flag = peace_victor
+		}
+		localization_key = LK_Demand
+	}
+	text = {
+		trigger = {
+			has_country_flag = peace_loser
+		}
+		localization_key = LK_Offer
+	}
+}
+defined_text = { # Peace System
+	name = GetTerritorialAspect
+	text = {
+		trigger = {
+			OR = {
+				has_country_flag = demanding_neighbour_states
+				has_country_flag = offering_neighbour_states
+			}
+		}
+		localization_key = LK_NeighbourStates
+	}
+	text = {
+		trigger = {
+			OR = {
+				has_country_flag = demanding_claimed_states
+				has_country_flag = offering_claimed_states
+			}
+		}
+		localization_key = LK_ClaimedStates
+	}
+	text = {
+		trigger = {
+			OR = {
+				has_country_flag = demanding_occupied_states
+				has_country_flag = offering_occupied_states
+			}
+		}
+		localization_key = LK_OccupiedStates
+	}
+}
+defined_text = { # Peace System
+	name = GetPoliticalAspect
+	text = {
+		trigger = {
+			OR = {
+				has_country_flag = demanding_break_alliance
+				has_country_flag = offering_break_alliance
+			}
+		}
+		localization_key = LK_BreakAlliance
+	}
+	text = {
+		trigger = {
+			OR = {
+				has_country_flag = demanding_vassalisation
+				has_country_flag = offering_vassalisation
+			}
+		}
+		localization_key = LK_Vassalisation
+	}
+	text = {
+		trigger = {
+			OR = {
+				has_country_flag = demanding_claim_revocation
+				has_country_flag = offering_claim_revocation
+			}
+		}
+		localization_key = LK_ClaimRevocation
+	}
+}
+defined_text = { # Peace System
+	name = GetEconomicAspect
+	text = {
+		trigger = {
+			OR = {
+				has_country_flag = demanding_monetary_sum
+				has_country_flag = offering_monetary_sum
+			}
+		}
+		localization_key = LK_MonetarySum
+	}
+	text = {
+		trigger = {
+			OR = {
+				has_country_flag = demanding_war_reparations
+				has_country_flag = offering_war_reparations
+			}
+		}
+		localization_key = LK_WarReparations
+	}
+}
+defined_text = { # Protect System
+	name = GetProteccRegion
+	text = {
+		trigger = {
+			has_country_flag=Emperor_Protecc
+		}
+		localization_key = LK_Emperor_Protecc
+	}
+	text = {
+		trigger = {
+			has_country_flag=Shogunate_Protecc
+		}
+		localization_key = LK_Shogunate_Protecc
+	}
+}

@@ -1,0 +1,30 @@
+
+state={
+	id=20
+	name="STATE_20"
+	manpower=376010
+	buildings_max_level_factor=1
+	state_category=town
+	resources={
+		chromium=37
+	}
+
+	history={
+		owner=FRA
+		add_core_of=FRA
+		add_core_of=DAU
+		victory_points={
+			13360 5
+		}
+		buildings={
+			infrastructure=4
+			arms_factory=1
+			industrial_complex=1
+			powder_mill=1
+		}
+	}
+
+	provinces={
+		3589 3770 6613 6786 11593 13360 
+	}
+}

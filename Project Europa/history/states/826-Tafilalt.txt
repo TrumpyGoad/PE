@@ -1,0 +1,28 @@
+state={
+	id=826
+	name="STATE_826"
+	manpower=129050
+	buildings_max_level_factor=1
+	state_category=large_settlement
+	resources={
+		oil=2
+	}
+
+	history={
+		owner=TFL
+		add_core_of=TFL
+		add_core_of=MOR
+		victory_points={
+			13751 3
+		}
+		buildings={
+			infrastructure=3
+			arms_factory=1
+			industrial_complex=1
+		}
+	}
+
+	provinces={
+		4933 8046 13744 13751 13752 
+	}
+}

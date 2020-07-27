@@ -1,0 +1,29 @@
+
+state={
+	id=74
+	name="STATE_74"
+	manpower=228913
+	buildings_max_level_factor=1
+	state_category=town
+	resources={
+		oil=11
+	}
+
+	history={
+		owner=CZE
+		add_core_of=CZE
+		add_core_of=MVA
+		victory_points={
+			13710 5
+		}
+		buildings={
+			infrastructure=4
+			arms_factory=1
+			industrial_complex=1
+		}
+	}
+
+	provinces={
+		421 3414 3583 6562 6590 13710 
+	}
+}

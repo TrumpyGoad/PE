@@ -1,0 +1,53 @@
+﻿capital = 289
+
+oob = "SIA_1444"
+
+set_research_slots = 3
+
+add_ideas = {
+	limited_conscription
+	kingdom_rank
+	monarchy_type
+	despotic_monarchy
+}
+set_technology = {
+	pike_weapons = 1
+	infantry_sword_weapons = 1
+	padded_armour_tech = 1
+	plate_armour_tech = 1
+	arbalest_weapons = 1
+	arquebus_weapons = 1
+	war_horse_tech = 1
+	spear_cav_tech = 1
+	lance_cavalry_tech = 1
+	cav_archers_tech = 1
+	cog_tech = 1
+	barque_tech = 1
+	galley_tech = 1
+	carrack_tech = 1
+}
+
+
+set_convoys = 8
+
+set_politics = {	
+	ruling_party = theravada
+	last_election = "1444.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+    theravada = 100
+}
+
+create_country_leader = {
+	name = "Borommaracha II"
+	desc = ""
+	picture = "Borommaracha_II.dds"
+	expire = "9999.1.1"
+	ideology = thv
+	traits = {
+		#
+	}
+}

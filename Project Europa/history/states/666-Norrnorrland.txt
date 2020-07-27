@@ -1,0 +1,28 @@
+
+state={
+	id=666
+	name="STATE_666"
+	manpower=15162
+	buildings_max_level_factor=1
+	state_category=settlement
+	resources={
+		chromium=7
+	}
+
+	history={
+		owner=SWE
+		add_core_of=SWE
+		victory_points={
+			3138 1
+		}
+		buildings={
+			infrastructure=2
+			arms_factory=0
+			industrial_complex=0
+		}
+	}
+
+	provinces={
+		11 109 145 184 3003 3044 3062 3138 3173 6067 6200 9141 9211 11026 11069 11112 11120 11152 11190 13900 13903 13905 
+	}
+}

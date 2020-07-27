@@ -1,0 +1,32 @@
+
+state={
+	id=114
+	name="STATE_114"
+	manpower=106154
+	buildings_max_level_factor=1
+	state_category=large_settlement
+	resources={
+	}
+
+	history={
+		owner=ARA
+		add_core_of=ARA
+		add_core_of=SAR
+		victory_points={
+			11824 3
+		}
+		buildings={
+			infrastructure=3
+			arms_factory=0
+			industrial_complex=1
+			dockyard=1
+			11824={
+				naval_base=1
+			}
+		}
+	}
+
+	provinces={
+		6891 9772 9863 11824 13406 
+	}
+}

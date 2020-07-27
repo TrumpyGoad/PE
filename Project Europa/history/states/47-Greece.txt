@@ -1,0 +1,33 @@
+
+state={
+	id=47
+	name="STATE_47"
+	manpower=227512
+	buildings_max_level_factor=1
+	state_category=town
+	resources={
+		oil=11
+	}
+
+	history={
+		owner=ATH
+		add_core_of=ATH
+		add_core_of=BYZ
+		victory_points={
+			3988 5
+		}
+		buildings={
+			infrastructure=4
+			arms_factory=1
+			industrial_complex=1
+			dockyard=1
+			3988={
+				naval_base=2
+			}
+		}
+	}
+
+	provinces={
+		976 1109 3864 3988 4109 
+	}
+}

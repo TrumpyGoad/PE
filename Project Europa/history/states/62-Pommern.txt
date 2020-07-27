@@ -1,0 +1,32 @@
+
+state={
+	id=62
+	name="STATE_62"
+	manpower=127668
+	buildings_max_level_factor=1
+	state_category=large_settlement
+	resources={
+		chromium=23
+	}
+
+	history={
+		owner=POM
+		add_core_of=POM
+		victory_points={
+			13699 3
+		}
+		buildings={
+			infrastructure=3
+			arms_factory=0
+			industrial_complex=1
+			dockyard=1
+			6334={
+				naval_base=1
+			}
+		}
+	}
+
+	provinces={
+		6334 6390 13695 13699 13704 
+	}
+}

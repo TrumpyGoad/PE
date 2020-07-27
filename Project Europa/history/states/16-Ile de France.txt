@@ -1,0 +1,29 @@
+
+state={
+	id=16
+	name="STATE_16"
+	manpower=528970
+	buildings_max_level_factor=1
+	state_category=city
+	resources={
+		oil=14
+	}
+
+	history={
+		owner=FRA
+		add_core_of=FRA
+		victory_points={
+			9523 10
+		}
+		buildings={
+			infrastructure=5
+			arms_factory=1
+			industrial_complex=2
+			powder_mill=1
+		}
+	}
+
+	provinces={
+		9523 9725 11491 11506 13391 13399 
+	}
+}

@@ -1,0 +1,27 @@
+state={
+	id=829
+	name="STATE_829"
+	manpower=31320
+	buildings_max_level_factor=1
+	state_category=settlement
+	resources={
+		oil=1
+	}
+
+	history={
+		owner=TLM
+		add_core_of=TLM
+		victory_points={
+			13786 1
+		}
+		buildings={
+			infrastructure=2
+			arms_factory=0
+			industrial_complex=0
+		}
+	}
+
+	provinces={
+		4018 7008 12018 13074 13786 13797 
+	}
+}

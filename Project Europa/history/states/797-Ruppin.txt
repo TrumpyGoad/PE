@@ -1,0 +1,27 @@
+state={
+	id=797
+	name="STATE_797"
+	manpower=91249
+	buildings_max_level_factor=1
+	state_category=large_settlement
+	resources={
+		chromium=16
+	}
+
+	history={
+		owner=BRN
+		add_core_of=BRN
+		victory_points={
+			375 3
+		}
+		buildings={
+			infrastructure=3
+			arms_factory=0
+			industrial_complex=1
+		}
+	}
+
+	provinces={
+		375 3367 11219 13683 13686 13688 13689 
+	}
+}

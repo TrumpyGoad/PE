@@ -1,0 +1,32 @@
+state={
+	id=135
+	name="STATE_135"
+	manpower=67451
+	buildings_max_level_factor=1
+	state_category=large_settlement
+	resources={
+		tungsten=24
+		chromium=21
+	}
+
+	history={
+		owner=DES
+		add_core_of=DES
+		victory_points={
+			7394 3
+		}
+		buildings={
+			infrastructure=3
+			arms_factory=0
+			industrial_complex=1
+			dockyard=1
+			11237={
+				naval_base=1
+			}
+		}
+	}
+
+	provinces={
+		7394 9284 9310 9405 11237 11267 13242 13254 
+	}
+}

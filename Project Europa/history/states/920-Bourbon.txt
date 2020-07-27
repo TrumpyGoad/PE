@@ -1,0 +1,29 @@
+state={
+	id=920
+	name="STATE_920"
+	manpower=205893
+	buildings_max_level_factor=1
+	state_category=large_settlement
+	resources={
+		steel=36
+		chromium=27
+	}
+
+	history={
+		owner=FRA
+		add_core_of=FRA
+		add_core_of=BOU
+		victory_points={
+			6644 3
+		}
+		buildings={
+			infrastructure=3
+			arms_factory=1
+			industrial_complex=1
+		}
+	}
+
+	provinces={
+		3594 6644 6648 9607 9609 11576 
+	}
+}

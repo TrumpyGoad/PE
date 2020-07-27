@@ -1,0 +1,1370 @@
+focus_tree = {
+	id = new_hungarian_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			OR={
+				original_tag = HUN
+				tag = HUN
+				has_country_flag=chosen_ladislaus
+				has_country_flag=chosen_vladislav
+			}
+		}
+	}
+	
+	default = no
+
+	continuous_focus_position = { x = 50 y = 1600 }
+
+	###############################
+	###### SUCCESSION CRISIS ######
+	###############################
+
+	focus = {
+		id = HUN_focus_debate_succession
+		icon = GFX_focus_eng_concessions_to_the_trade_unions
+		
+		x = 8
+		y = 0
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if={
+			limit={ NOT= { has_global_flag = hungarian_civil_war } }
+			add_political_power = 50
+			country_event = { id = HUN_CW_event.1 }
+			}
+		}
+	}
+	focus = {
+		id = HUN_focus_choose_hunyadi
+		icon = GFX_focus_hun_crown
+		prerequisite = { focus = HUN_focus_debate_succession }
+		mutually_exclusive = { 
+			focus = HUN_focus_choose_vladislav
+			focus = HUN_focus_choose_ladislaus
+		}
+		x = 8
+		y = 1
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = 100
+			set_country_flag=chosen_hunyadi
+			country_event = { id = HUN_CW_event.2 }
+		}
+	}
+	focus = {
+		id = HUN_focus_choose_ladislaus
+		icon = GFX_focus_aus_crown
+		prerequisite = { focus = HUN_focus_debate_succession }
+		mutually_exclusive = { 
+			focus = HUN_focus_choose_vladislav
+			focus = HUN_focus_choose_hunyadi
+		}
+		x = 2
+		y = 1
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if={
+			limit={ NOT= { has_global_flag = hungarian_civil_war } }
+			add_political_power = 100
+			set_country_flag=chosen_ladislaus	
+			country_event = { id = HUN_CW_event.2 }
+			}
+		}
+	}
+	focus = {
+		id = HUN_focus_choose_vladislav
+		icon = GFX_focus_pol_crown
+		prerequisite = { focus = HUN_focus_debate_succession }
+		mutually_exclusive = { 
+			focus = HUN_focus_choose_ladislaus
+			focus = HUN_focus_choose_hunyadi
+		}
+		x = 14
+		y = 1
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if={
+			limit={ NOT= { has_global_flag = hungarian_civil_war } }
+			add_political_power = 100
+			set_country_flag=chosen_vladislav
+			country_event = { id = HUN_CW_event.2 }
+			}
+		}
+	}
+	focus = {
+		id = HUN_focus_czech_merc
+		icon = GFX_focus_mex_soldaderas
+		prerequisite = {
+			focus = HUN_focus_choose_ladislaus
+			focus = HUN_focus_choose_hunyadi
+			focus = HUN_focus_choose_vladislav
+		}
+		mutually_exclusive = { focus = HUN_focus_restructure_domestic_mil }
+		x = 6
+		y = 2
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas=HCW_idea_czech_merc
+		}
+	}
+	focus = {
+		id = HUN_focus_imperial_tactics
+		icon = GFX_focus_eng_move_to_secure_the_dominions
+		mutually_exclusive={ focus = HUN_focus_hussite_tactics }
+		prerequisite = {
+			focus = HUN_focus_czech_merc
+			focus = HUN_focus_restructure_domestic_mil
+		}
+		x = 6
+		y = 3
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas=HCW_idea_imperial_tactics
+		}
+	}
+	focus = {
+		id = HUN_focus_hussite_tactics
+		icon = GFX_focus_eng_special_air_service
+		mutually_exclusive={ focus = HUN_focus_imperial_tactics }
+		prerequisite = { 
+			focus = HUN_focus_czech_merc
+			focus = HUN_focus_restructure_domestic_mil
+		}
+		x = 10
+		y = 3
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas=HCW_idea_hussite_tactics
+		}
+	}
+	focus = {
+		id = HUN_focus_HRE_volunteers
+		icon = GFX_focus_ger_revive_kaiserreich
+		prerequisite = { 
+			focus = HUN_focus_hussite_weaponry
+			focus = HUN_focus_professional_army
+		}
+		prerequisite = { 
+			focus = HUN_focus_expand_mining_towns
+		}
+		prerequisite = { 
+			focus = HUN_focus_fortify_dalmatian_alps
+		}
+		x = 2
+		y = 5
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			every_country={
+				limit={ has_idea = hre_elector }
+				country_event = { id = HUN_CW_event.7 days=1 }
+			}
+			set_variable = {
+				var = HCW_HRE_accept_count
+				value = 0
+			}
+			set_variable = {
+				var = HCW_HRE_response_count
+				value = 0
+			}
+		}
+	}
+	focus = {
+		id = HUN_focus_hussite_weaponry
+		icon = GFX_goal_generic_cavalry
+		prerequisite = { focus = HUN_focus_hussite_tactics }
+		x = 10
+		y = 4
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = HUN_focus_fortify_slovakia
+		icon = GFX_goal_generic_defence
+		prerequisite = { 
+			focus = HUN_focus_choose_ladislaus
+			focus = HUN_focus_choose_hunyadi
+		}
+		x = 2
+		y = 2
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if={
+				limit={ ROOT={ controls_state = 72 } }
+				72 = {
+					add_building_construction = {
+						type = bunker
+						province = 9551
+						level = 4
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						province = {
+							all_provinces=yes
+							limit_to_border=yes
+						}
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			if={
+				limit={ ROOT={ controls_state = 70 } }
+				70 = {
+					add_building_construction = {
+						type = bunker
+						province = 9692
+						level = 4
+						instant_build = yes
+					}
+				}
+			}
+			if={
+				limit={ ROOT={ controls_state = 1229 } }
+				1229 = {
+					add_building_construction = {
+						type = bunker
+						province = 6561
+						level = 4
+						instant_build = yes
+					}
+				}
+			}
+			if={
+				limit={ ROOT={ controls_state = 1228 } }
+				1228 = {
+					add_building_construction = {
+						type = bunker
+						province = 9537
+						level = 4
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						province = {
+							all_provinces=yes
+							limit_to_border=yes
+						}
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			if={
+				limit={ ROOT={ controls_state = 71 } }
+				71 = {
+					add_building_construction = {
+						type = bunker
+						province = 3581
+						level = 4
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						province = {
+							all_provinces=yes
+							limit_to_border=yes
+						}
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = HUN_focus_appease_peasantry
+		icon = GFX_focus_generic_support_the_left_right
+		prerequisite = { focus = HUN_focus_fortify_slovakia }
+		prerequisite = { focus = HUN_focus_choose_ladislaus }
+		x = 0
+		y = 3
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas=HCW_idea_appease_peasantry
+		}
+	}
+	focus = {
+		id = HUN_focus_expand_mining_towns
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = HUN_focus_appease_peasantry }
+		x = 0
+		y = 4
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if={
+				limit={ ROOT={ controls_state=70 } }
+				70={
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = powder_mill
+						level = 1
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			if={
+				limit={ ROOT={ controls_state=1229 } }
+				1229={
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			if={
+				limit={ ROOT={ controls_state=72 } }
+				add_resource = {
+					type = steel
+					amount = 20
+					state = 72
+				}
+				72={
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			if={
+				limit={ ROOT={ controls_state=1228 } }
+				add_resource = {
+					type = tungsten
+					amount = 20
+					state = 1228
+				}
+				1228={
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = HUN_focus_develop_transdanubia
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = {
+			focus = HUN_focus_choose_ladislaus
+			focus = HUN_focus_choose_hunyadi
+		}
+		x = 4
+		y = 2
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if={
+				limit={ ROOT={ controls_state=1225 } }
+				1225={
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			if={
+				limit={ ROOT={ controls_state=155 } }
+				155={
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			if={
+				limit={ ROOT={ controls_state=664 } }
+				664={
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = HUN_focus_rectify_utn
+		icon = GFX_focus_hol_the_foundations_of_defense
+		prerequisite = {
+			focus = HUN_focus_develop_transdanubia
+		}
+		x = 4
+		y = 3
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas=HCW_idea_utn
+		}
+	}
+	focus = {
+		id = HUN_focus_fortify_dalmatian_alps
+		icon = GFX_goal_generic_construct_military
+		prerequisite = {
+			focus = HUN_focus_rectify_utn
+		}
+		x = 4
+		y = 4
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if={
+				limit={ ROOT={ controls_state = 109 } }
+				109 = {
+					add_building_construction = {
+						type = bunker
+						province = 624
+						level = 1
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						province = 3596
+						level = 1
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						province = 3592
+						level = 1
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						province = 11581
+						level = 4
+						instant_build = yes
+					}
+				}
+			}
+			if={
+				limit={ ROOT={ controls_state = 1212 } }
+				1212 = {
+					add_building_construction = {
+						type = bunker
+						province = {
+							all_provinces=yes
+							limit_to_border=yes
+						}
+						level = 1
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						province = 9608
+						level = 4
+						instant_build = yes
+					}
+				}
+			}
+			if={
+				limit={ ROOT={ controls_state = 1215 } }
+				1215 = {
+					add_building_construction = {
+						type = bunker
+						province = {
+							all_provinces=yes
+							limit_to_border=yes
+						}
+						level = 1
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						province = 619
+						level = 4
+						instant_build = yes
+					}
+				}
+			}
+			if={
+				limit={ ROOT={ controls_state = 1216 } }
+				1216 = {
+					add_building_construction = {
+						type = bunker
+						province = {
+							all_provinces=yes
+							limit_to_border=yes
+						}
+						level = 1
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						province = 13935
+						level = 3
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = HUN_focus_align_balkan_despots
+		icon = GFX_focus_generic_little_entente
+		prerequisite = {
+			focus = HUN_focus_professional_army
+			focus = HUN_focus_hussite_weaponry
+		}
+		prerequisite = { focus = HUN_focus_fortify_ottoman_borderlands }
+		prerequisite = { focus = HUN_focus_fortify_dalmatian_alps }
+		x = 8
+		y = 5
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_faction = "Balkan Coalition"
+			BOS={ country_event = { id = HUN_CW_event.10 days=1 } }
+			SER={ country_event = { id = HUN_CW_event.10 days=1 } }
+			WAL={ country_event = { id = HUN_CW_event.10 days=1 } }
+			add_ideas=HUN_balkan_bulwark
+		}
+	}
+	focus = {
+		id = HUN_focus_restructure_domestic_mil
+		icon = GFX_focus_generic_military_academy
+		prerequisite = {
+			focus = HUN_focus_choose_hunyadi
+			focus = HUN_focus_choose_vladislav
+			focus = HUN_focus_choose_ladislaus
+		}
+		mutually_exclusive = { focus = HUN_focus_czech_merc }
+		x = 10
+		y = 2
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas=HCW_idea_restructure_dom_mil
+		}
+	}
+	focus = {
+		id = HUN_focus_professional_army
+		icon = GFX_focus_generic_military_mission
+		prerequisite = {
+			focus = HUN_focus_imperial_tactics
+		}
+		x = 6
+		y = 4
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas=HCW_idea_professional_army
+		}
+	}
+	focus = {
+		id = HUN_focus_assistance_holy_see
+		icon = GFX_focus_generic_strike_at_democracy1
+		#icon = GFX_focus_holy_assistance
+		prerequisite = { focus = HUN_focus_fortify_ottoman_borderlands }
+		prerequisite = { focus = HUN_focus_develop_transylvania }
+		prerequisite = {
+			focus = HUN_focus_professional_army
+			focus = HUN_focus_hussite_weaponry
+		}
+		x = 14
+		y = 5
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			PAP={ country_event={ id=HUN_CW_event.13 days=1 } }
+		}
+	}
+	focus = {
+		id = HUN_focus_reinforce_danube
+		icon = GFX_focus_generic_coastal_fort
+		prerequisite = {
+			focus = HUN_focus_choose_vladislav
+			focus = HUN_focus_choose_hunyadi
+		}
+		x = 14
+		y = 2
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if={
+				limit={ ROOT={ controls_state = 43 } }
+				43 = {
+					add_building_construction = {
+						type = bunker
+						province = 9690
+						level = 1
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						province = 9660
+						level = 4
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						province = 11625
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			if={
+				limit={ ROOT={ controls_state = 1233 } }
+				1233 = {
+					add_building_construction = {
+						type = bunker
+						province = 6670
+						level = 1
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						province = 3623
+						level = 1
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						province = 3614
+						level = 4
+						instant_build = yes
+					}
+				}
+			}
+			if={
+				limit={ ROOT={ controls_state = 1215 } }
+				1215 = {
+					add_building_construction = {
+						type = bunker
+						province = 13950
+						level = 1
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						province = 11577
+						level = 1
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						province = 619
+						level = 4
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = HUN_focus_nobility_privileges
+		icon = GFX_focus_generic_concessions
+		prerequisite = { focus = HUN_focus_reinforce_danube }
+		prerequisite = { focus = HUN_focus_choose_vladislav }
+		x = 16
+		y = 3
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas=HCW_idea_nobility_priveleges
+		}
+	}
+	focus = {
+		id = HUN_focus_develop_capital_provinces
+		icon = GFX_goal_generic_fortify_city
+		prerequisite = {
+			focus = HUN_focus_choose_hunyadi
+			focus = HUN_focus_choose_vladislav
+		}
+		x = 12
+		y = 2
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if={
+				limit={ ROOT={ controls_state=43 } }
+				43={
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = powder_mill
+						level = 1
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			if={
+				limit={ ROOT={ controls_state=154 } }
+				154={
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			if={
+				limit={ ROOT={ controls_state=1233 } }
+				1233={
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = HUN_focus_reorganise_administration
+		icon = GFX_goal_generic_neutrality_focus
+		prerequisite = {
+			focus = HUN_focus_develop_capital_provinces
+		}
+		x = 12
+		y = 3
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas=HCW_idea_reorganise_administration
+		}
+	}
+	focus = {
+		id = HUN_focus_fortify_ottoman_borderlands
+		icon = GFX_focus_generic_provoke_border_clashes
+		prerequisite = { 
+			focus = HUN_focus_reorganise_administration
+		}
+		x = 12
+		y = 4
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if={
+				limit={ ROOT={ controls_state = 84 } }
+				84 = {
+					add_building_construction = {
+						type = bunker
+						province = {
+							all_provinces=yes
+							limit_to_border=yes
+						}
+						level = 1
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						province = 13953
+						level = 4
+						instant_build = yes
+					}
+				}
+			}
+			if={
+				limit={ ROOT={ controls_state = 83 } }
+				83 = {
+					add_building_construction = {
+						type = bunker
+						province = {
+							all_provinces=yes
+							limit_to_border=yes
+						}
+						level = 1
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						province = 3665
+						level = 4
+						instant_build = yes
+					}
+				}
+			}
+			if={
+				limit={ ROOT={ controls_state = 82 } }
+				82 = {
+					add_building_construction = {
+						type = bunker
+						province = {
+							all_provinces=yes
+							limit_to_border=yes
+						}
+						level = 1
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						province = 11608
+						level = 4
+						instant_build = yes
+					}
+				}
+			}
+			if={
+				limit={ ROOT={ controls_state = 45 } }
+				45 = {
+					add_building_construction = {
+						type = bunker
+						province = {
+							all_provinces=yes
+							limit_to_border=yes
+						}
+						level = 1
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						province = 614
+						level = 4
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = HUN_focus_develop_transylvania
+		icon = GFX_goal_generic_construct_civilian
+		prerequisite = { 
+			focus = HUN_focus_nobility_privileges
+		}
+		x = 16
+		y = 4
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if={
+				limit={ ROOT={ controls_state=83 } }
+				83={
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+				add_resource = {
+					type = steel
+					amount = 20
+					state = 83
+				}
+			}
+			if={
+				limit={ ROOT={ controls_state=1230 } }
+				1230={
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			if={
+				limit={ ROOT={ controls_state=76 } }
+				76={
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			if={
+				limit={ ROOT={ controls_state=84 } }
+				add_resource = {
+					type = aluminium
+					amount = 10
+					state = 84
+				}
+			}
+			if={
+				limit={ ROOT={ controls_state=1231 } }
+				add_resource = {
+					type = aluminium
+					amount = 10
+					state = 1231
+				}
+			}
+		}
+	}
+	focus = {
+		id = HUN_focus_secure_hungary
+		icon = GFX_focus_hun_elect_a_king
+		prerequisite = { 
+			focus = HUN_focus_HRE_volunteers
+			focus = HUN_focus_align_balkan_despots
+			focus = HUN_focus_assistance_holy_see
+		}
+		x = 8
+		y = 6
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		available = {
+			NOT={
+				OR={
+					has_war=yes
+					has_civil_war=yes
+				}
+			}
+		}
+
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = 120
+			country_event={ id=HUN_CW_event.16 days=1 }
+		}
+	}
+}

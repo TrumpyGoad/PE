@@ -1,0 +1,26 @@
+state={
+	id=804
+	name="STATE_804"
+	manpower=218785
+	buildings_max_level_factor=1
+	state_category=large_settlement
+	resources={
+	}
+
+	history={
+		owner=CZE
+		add_core_of=CZE
+		victory_points={
+			9541 3
+		}
+		buildings={
+			infrastructure=3
+			arms_factory=0
+			industrial_complex=1
+		}
+	}
+
+	provinces={
+		543 5283 9541 9569 11556 13659 13660 
+	}
+}

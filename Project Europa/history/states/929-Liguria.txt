@@ -1,0 +1,32 @@
+state={
+	id=929
+	name="STATE_929"
+	manpower=450721
+	buildings_max_level_factor=1
+	state_category=city
+	resources={
+		chromium=56
+	}
+
+	history={
+		owner=GEN
+		add_core_of=GEN
+		victory_points={
+			6788 10
+		}
+		buildings={
+			infrastructure=5
+			arms_factory=1
+			industrial_complex=2
+			dockyard=2
+			powder_mill=1
+			6788={
+				naval_base=3
+			}
+		}
+	}
+
+	provinces={
+		771 6788 13458 
+	}
+}

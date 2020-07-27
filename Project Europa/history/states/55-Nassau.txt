@@ -1,0 +1,29 @@
+
+state={
+	id=55
+	name="STATE_55"
+	manpower=116917
+	buildings_max_level_factor=1
+	state_category=large_settlement
+	resources={
+		aluminium=9
+		chromium=21
+	}
+
+	history={
+		owner=HES
+		add_core_of=HES
+		victory_points={
+			3524 3
+		}
+		buildings={
+			infrastructure=3
+			arms_factory=0
+			industrial_complex=1
+		}
+	}
+
+	provinces={
+		3397 3524 6549 11533 13598 
+	}
+}

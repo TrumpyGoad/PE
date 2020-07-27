@@ -1,0 +1,36 @@
+state={
+	id=196
+	name="STATE_196"
+	resources={
+		oil=6
+	}
+
+	history={
+		1439.10.27={
+			owner = GOL
+			add_core_of = GOL
+			add_core_of = CRI
+		}
+		1444.11.11={
+			owner = CRI
+			add_core_of = CRI
+		}
+		victory_points = {
+			767 10 
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			11700 = {
+				naval_base = 2
+			}
+		}
+	}
+
+	provinces={
+		568 588 721 737 767 3573 6596 6771 9712 11700 
+	}
+	manpower=90668
+	buildings_max_level_factor=1.000
+	state_category=town
+}

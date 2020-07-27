@@ -1,0 +1,29 @@
+
+state={
+	id=72
+	name="STATE_72"
+	manpower=109392
+	buildings_max_level_factor=1
+	state_category=large_settlement
+	resources={
+		steel=18
+	}
+
+	history={
+		owner=HUN
+		add_core_of=HUN
+		add_core_of=SLO
+		victory_points={
+			9551 3
+		}
+		buildings={
+			infrastructure=3
+			arms_factory=0
+			industrial_complex=0
+		}
+	}
+
+	provinces={
+		3484 9551 11554 13949 
+	}
+}

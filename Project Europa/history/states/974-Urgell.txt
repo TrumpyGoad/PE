@@ -1,0 +1,27 @@
+state={
+	id=974
+	name="STATE_974"
+	resources={
+		aluminium=7
+		chromium=13
+	}
+	
+	history={
+		owner = ARA
+		add_core_of = ARA
+		add_core_of = CAT
+		victory_points = { 872 3 }
+		buildings={
+			infrastructure = 3
+			arms_factory = 0
+			industrial_complex = 1
+		}
+	}
+	
+	provinces={
+		3899 3898 872 897 6865 
+	}
+	manpower=105345
+	buildings_max_level_factor=1.000
+	state_category=town
+}

@@ -1,0 +1,29 @@
+
+state={
+	id=84
+	name="STATE_84"
+	manpower=132597
+	buildings_max_level_factor=1
+	state_category=large_settlement
+	resources={
+		aluminium=7
+	}
+
+	history={
+		owner=HUN
+		add_core_of=HUN
+		add_core_of=TRA
+		victory_points={
+			13953 3
+		}
+		buildings={
+			infrastructure=3
+			arms_factory=0
+			industrial_complex=1
+		}
+	}
+
+	provinces={
+		676 3676 6679 6709 11639 13953 
+	}
+}

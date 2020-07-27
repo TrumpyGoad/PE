@@ -1,0 +1,30 @@
+
+state={
+	id=35
+	name="STATE_35"
+	manpower=253909
+	buildings_max_level_factor=1
+	state_category=town
+	resources={
+		aluminium=18
+		chromium=44
+	}
+
+	history={
+		owner=BRB
+		add_core_of=BRB
+		victory_points={
+			13579 5
+		}
+		buildings={
+			infrastructure=4
+			arms_factory=1
+			industrial_complex=1
+			powder_mill=1
+		}
+	}
+
+	provinces={
+		3262 6496 6500 11456 13579 
+	}
+}

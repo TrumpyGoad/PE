@@ -1,0 +1,32 @@
+
+state={
+	id=160
+	name="STATE_160"
+	manpower=471202
+	buildings_max_level_factor=1
+	state_category=city
+	resources={
+	}
+
+	history={
+		owner=VNC
+		add_core_of=VNC
+		victory_points={
+			11584 10
+		}
+		buildings={
+			infrastructure=5
+			arms_factory=1
+			industrial_complex=2
+			dockyard=2
+			powder_mill=1
+			11584={
+				naval_base=3
+			}
+		}
+	}
+
+	provinces={
+		11584 
+	}
+}

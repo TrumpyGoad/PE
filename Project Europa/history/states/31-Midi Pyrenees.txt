@@ -1,0 +1,33 @@
+
+state={
+	id=31
+	name="STATE_31"
+	manpower=244407
+	buildings_max_level_factor=1
+	state_category=town
+	resources={
+		oil=8
+	}
+
+	history={
+		owner=FRA
+		add_core_of=FRA
+		add_core_of=TOU
+		victory_points={
+			6960 5
+		}
+		buildings={
+			infrastructure=4
+			arms_factory=1
+			industrial_complex=1
+			dockyard=1
+			6960={
+				naval_base=2
+			}
+		}
+	}
+
+	provinces={
+		3946 6960 9723 
+	}
+}

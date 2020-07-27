@@ -1,0 +1,28 @@
+
+state={
+	id=158
+	name="STATE_158"
+	manpower=255000
+	buildings_max_level_factor=1
+	state_category=town
+	resources={
+	}
+
+	history={
+		owner=SAV
+		add_core_of=SAV
+		victory_points={
+			6780 5
+		}
+		buildings={
+			infrastructure=4
+			arms_factory=1
+			industrial_complex=1
+			powder_mill=1
+		}
+	}
+
+	provinces={
+		611 3782 6780 
+	}
+}

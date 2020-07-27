@@ -1,0 +1,56 @@
+﻿division_template = {
+	name = "Infantry Regiment"
+	division_names_group = VIN_INF_01
+
+	regiments = {
+		pikemen = { x = 0 y = 0 }
+		pikemen = { x = 0 y = 1 }
+		pikemen = { x = 1 y = 0 }
+		swordsmen = { x = 1 y = 1 }
+	}
+	support = {
+		arbalests_support = { x = 0 y = 0 }
+		arbalests_support = { x = 0 y = 1 } 
+	}
+}
+division_template = {
+	name = "Cavalry Regiment"
+	division_names_group = VIN_CAV_01
+
+	regiments = {
+		spear_cav = { x = 0 y = 0 }
+		cav_archers = { x = 0 y = 1 }
+		spear_cav = { x = 1 y = 0 }
+		spear_cav = { x = 1 y = 1 }
+	}
+}
+units = {
+	#VIJAYA#
+	division= {	
+		location = 1300
+		division_template = "Infantry Regiment"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+
+	}
+	division= {	
+		location = 1300
+		division_template = "Infantry Regiment"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+
+	}
+	navy = {
+		base = 4334
+		location = 4334
+		#Barques
+		ship = { name = "Barque 1" definition = barque equipment = { barque_1 = {amount = 1 owner = CHA } } }
+		ship = { name = "Barque 2" definition = barque equipment = { barque_1 = {amount = 1 owner = CHA } } }
+		ship = { name = "Barque 3" definition = barque equipment = { barque_1 = {amount = 1 owner = CHA } } }
+		ship = { name = "Barque 4" definition = barque equipment = { barque_1 = {amount = 1 owner = CHA } } }
+		ship = { name = "Barque 5" definition = barque equipment = { barque_1 = {amount = 1 owner = CHA } } }
+		ship = { name = "Barque 6" definition = barque equipment = { barque_1 = {amount = 1 owner = CHA } } }
+		ship = { name = "Barque 7" definition = barque equipment = { barque_1 = {amount = 1 owner = CHA } } }
+		ship = { name = "Barque 8" definition = barque equipment = { barque_1 = {amount = 1 owner = CHA } } }
+	}
+}

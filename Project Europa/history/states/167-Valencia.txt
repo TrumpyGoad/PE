@@ -1,0 +1,30 @@
+state={
+	id=167
+	name="STATE_167"
+	resources={
+		oil=6
+		aluminium=16
+	}
+
+	history={
+		owner = ARA
+		add_core_of = ARA
+		add_core_of = VAL
+		victory_points = { 9896 5 }
+		buildings={
+			infrastructure = 4
+			arms_factory = 1
+			industrial_complex = 1
+			dockyard = 1
+			6817 = { naval_base = 2 }
+			powder_mill = 1
+		}
+	}
+
+	provinces={
+		871 6817 6906 9896 
+	}
+	manpower=220035
+	buildings_max_level_factor=1.000
+	state_category=town
+}

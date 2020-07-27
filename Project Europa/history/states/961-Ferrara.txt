@@ -1,0 +1,31 @@
+state={
+	id=961
+	name="STATE_961"
+	manpower=242308
+	buildings_max_level_factor=1
+	state_category=town
+	resources={
+		oil=8
+	}
+
+	history={
+		owner=FER
+		add_core_of=FER
+		victory_points={
+			11734 5
+		}
+		buildings={
+			infrastructure=4
+			arms_factory=0
+			industrial_complex=1
+			dockyard=1
+			6793={
+				naval_base=2
+			}
+		}
+	}
+
+	provinces={
+		6793 9582 11734 13453 
+	}
+}

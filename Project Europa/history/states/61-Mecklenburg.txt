@@ -1,0 +1,32 @@
+
+state={
+	id=61
+	name="STATE_61"
+	manpower=130356
+	buildings_max_level_factor=1
+	state_category=large_settlement
+	resources={
+		chromium=23
+	}
+
+	history={
+		owner=MKL
+		add_core_of=MKL
+		victory_points={
+			321 3
+		}
+		buildings={
+			infrastructure=3
+			arms_factory=0
+			industrial_complex=1
+			dockyard=1
+			321={
+				naval_base=1
+			}
+		}
+	}
+
+	provinces={
+		293 321 13698 13702 
+	}
+}

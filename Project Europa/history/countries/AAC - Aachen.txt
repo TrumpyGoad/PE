@@ -1,0 +1,53 @@
+﻿capital = 764
+
+oob = "AAC_1444"
+
+set_research_slots = 3
+
+add_ideas = {
+	limited_conscription
+	hre_member
+}
+set_technology = {
+	pike_weapons = 1
+	infantry_sword_weapons = 1
+	padded_armour_tech = 1
+	plate_armour_tech = 1
+	arbalest_weapons = 1
+	arquebus_weapons = 1
+	war_horse_tech = 1
+	spear_cav_tech = 1
+	lance_cavalry_tech = 1
+	cav_archers_tech = 1
+	cog_tech = 1
+	barque_tech = 1
+	galley_tech = 1
+	carrack_tech = 1
+}
+
+
+set_convoys = 0
+
+set_politics = {	
+	ruling_party = neutrality
+	last_election = "1444.11.11"
+	election_frequency = 48
+	elections_allowed = yes
+}
+
+set_popularities = {
+    neutrality = 100
+}
+
+
+
+create_country_leader = {
+	name = "N/A (City Council)"
+	desc = ""
+	picture = "AAC_Council.dds"
+	expire = "9999.1.1"
+	ideology = cat
+	traits = {
+		#
+	}
+}

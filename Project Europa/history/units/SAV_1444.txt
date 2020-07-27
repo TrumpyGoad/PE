@@ -1,0 +1,67 @@
+﻿division_template = {
+	name = "Infantry Regiment"
+	division_names_group = ITA_INF_01
+
+	regiments = {
+		pikemen = { x = 0 y = 0 }
+		swordsmen = { x = 0 y = 1 }
+		pikemen = { x = 1 y = 0 }
+		arbalests = { x = 1 y = 1 }
+	}
+	support = {
+		arquebusiers_support = { x = 0 y = 0 }
+		arbalests_support = { x = 0 y = 1 } 
+	}
+}
+division_template = {
+	name = "Cavalry Regiment"
+	division_names_group = ITA_CAV_01
+
+	regiments = {
+		spear_cav = { x = 0 y = 0 }
+		lance_cavalry = { x = 0 y = 1 }
+		spear_cav = { x = 1 y = 0 }
+		lance_cavalry = { x = 1 y = 1 }
+	}
+}
+units = {
+	#CHAMBERY#
+	division= {	
+		location = 6784
+		division_template = "Infantry Regiment"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+
+	}
+	division= {	
+		location = 6784
+		division_template = "Infantry Regiment"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+
+	}
+	division= {	
+		location = 6784
+		division_template = "Infantry Regiment"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+
+	}
+	division= {	
+		location = 6784
+		division_template = "Cavalry Regiment"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+
+	}
+	navy = {
+		base = 9909
+		location = 9909
+		#Barques
+		ship = { name = "Barque 1" definition = barque equipment = { barque_1 = {amount = 1 owner = SAV } } }
+		#Galleys
+		ship = { name = "Galley 1" definition = galley equipment = { galley_1 = {amount = 1 owner = SAV } } }
+		ship = { name = "Galley 2" definition = galley equipment = { galley_1 = {amount = 1 owner = SAV } } }
+		ship = { name = "Galley 3" definition = galley equipment = { galley_1 = {amount = 1 owner = SAV } } }
+	}
+}
